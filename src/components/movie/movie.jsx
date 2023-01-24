@@ -8,7 +8,7 @@ export default function Movie({id}) {
     let showcaseImage = "./public/images/" + images
 
     return <div className="movie">
-        <h1>{title}</h1>
+        <h1 className="movieTitle">{title}</h1>
         <div className="moviePreview">
             <img src={showcaseImage} />
         </div>
