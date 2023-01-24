@@ -4,9 +4,13 @@ export default function Movie({id}) {
     let s = useStates('main');
 
     let movie = s.films.find(movie => movie.id === id);
-    let {title, length, subtitles} = movie;
+    let {title, length, subtitles, description, images} = movie;
+    let showcaseImage = "./public/images/" + images
 
     return <div className="movie">
-        <h1>{title} {length}</h1>
+        <h1>{title}</h1>
+        <div className="moviePreview">
+            <img src={showcaseImage} />
+        </div>
     </div>
 }

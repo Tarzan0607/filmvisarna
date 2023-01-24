@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import MovieList from './components/movie/movieList';
+import Navbar from './components/main/navbar';
 // useful hooks, comment these in, when needed:
 // import { useStates } from './utilities/states.js';
 // import { useEffect } from 'react';
@@ -26,8 +27,12 @@ export default function App() {
     })();
   }, []);
 
-  return <div>
+  return <>
+    <Navbar />
     <h1>All available Films</h1>
     <MovieList />
-  </div>;
+    <footer>
+      FOOTER
+    </footer>
+  </>;
 }
