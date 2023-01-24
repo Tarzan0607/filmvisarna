@@ -1,0 +1,226 @@
+[
+  {
+    "id": 1,
+    "title": "Call me by your name",
+    "productionCountries": [
+      "Italien",
+      "USA"
+    ],
+    "productionYear": 2017,
+    "length": 132,
+    "genre": "Drama",
+    "distributor": "UIP",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Luca Guadagnino",
+    "actors": [
+      "Armie Hammer",
+      "Timothée Chalamet",
+      "Michael Stuhlbarg"
+    ],
+    "description": "<p>Filmen utspelas i norra Italien sommaren 1983. En ung amerikansk-italienare blir förälskad i en amerikansk student som kommer för att studera och bo hos hans familj.</p><p>Tillsammans upplever de en oförglömlig sommar - full av musik, mat och kärlek - som för evigt kommer att förändra dem.</p>",
+    "images": [
+      "call-me-poster1.jpg",
+      "call-me-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "reviews": [
+      {
+        "source": "Sydsvenskan",
+        "quote": "ett drama berättat med stor ömhet",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "Svenska Dagbladet",
+        "quote": "en film att förälska sig i",
+        "stars": 5,
+        "max": 5
+      },
+      {
+        "source": "DN",
+        "quote": "en het romans i åttiotalskostym",
+        "stars": 4,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dune",
+    "productionCountries": [
+      "Kanada",
+      "USA"
+    ],
+    "productionYear": 2021,
+    "length": 155,
+    "genre": "Sci-Fi",
+    "distributor": "Fox/Warner",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Denis Villeneuve",
+    "actors": [
+      "Zendaya",
+      "Timothée Chalamet",
+      "Rebecca Ferguson",
+      "Jason Momoa",
+      "Josh Brolin",
+      "Dave Bautista",
+      "Stellan Skarsgård"
+    ],
+    "description": "<p>DUNE berättar historien om Paul Atreides, en briljant och talangfull ung man född med ett storslaget öde,</p><p> som måste resa till den farligaste planeten i universum för att säkra sin familjs och sitt folks framtid.</p><p>När illasinnade krafter kastas in i en konflikt över tillgången på planetens mest värdefulla råvara - ett ämne med förmåga att låsa upp mänsklighetens fulla potential - kommer bara de som övervinner sina rädslor att överleva.</p>",
+    "images": [
+      "call-me-poster1.jpg",
+      "call-me-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "reviews": [
+      {
+        "source": "Sydsvenskan",
+        "quote": "en pampig, mystisk och vacker rymdopera",
+        "stars": 3,
+        "max": 5
+      },
+      {
+        "source": "Dagens Nyheter",
+        "quote": "en poetisk och skrämmande intensitet",
+        "stars": 4,
+        "max": 5
+      },
+      {
+        "source": "SVT",
+        "quote": "bör absolut åtnjutas i biograf",
+        "stars": 3,
+        "max": 5
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Spider-man: Into the Spider-verse",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2018,
+    "length": "117",
+    "genre": "Familjefilm",
+    "distributor": "Sony Pictures",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Bob Persichetti",
+    "actors": [
+      "Shameik Moore",
+      "Jake Johnson",
+      "Hailee Steinfeld"
+    ],
+    "description": "<p>Miles Morales är en 13-åring från Broooklyn och en Spider-Man olik alla andra vi någonsin sett tidigare.</p><p> Han är en klipsk tonåring som gillar att hänga med sina vänner och vara som barn i den åldern är mest.</p><p>Men vad hans vänner inte vet är att Miles också lär sig att omfamna ett helt nytt och oväntat liv som den helt nye Spider-Man! Med hjälp av några överraskande nya vänner lär Miles sig att hitta hjälten inom sig.</p>",
+    "images": [
+      "call-me-poster1.jpg",
+      "call-me-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "reviews": [
+      {
+        "source": "IMDB",
+        "quote": "",
+        "stars": 8.4,
+        "max": 10
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "quote": "Spider-Man: Into the Spider-Verse matches bold storytelling with striking animation for a purely enjoyable adventure with heart, humor, and plenty of superhero action.",
+        "stars": 97,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Sagan Om Konungens Återkomst",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2003,
+    "length": 201,
+    "genre": "Fantasy",
+    "distributor": "FHP",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Peter Jackson",
+    "actors": [
+      "Elijah Wood",
+      "Viggo Mortensen",
+      "Ian McKellen",
+      "Orlando Bloom"
+    ],
+    "description": "<p>Den avslutande delen i trilogin om Härskarringen. Det sista och avgörande slaget om Midgård står för dörren.</p><p> Aragorn återvänder till Gondor för att leda sitt folk i det sista slaget mot ondskans makter.</p><p> Samtidigt närmar sig Sam och Frodo Domedagsberget och sitt mål att förstöra den mäktiga härskarringen.</p>",
+    "images": [
+      "call-me-poster1.jpg",
+      "call-me-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "reviews": [
+      {
+        "source": "IMDB",
+        "quote": "",
+        "stars": 9,
+        "max": 10
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "quote": "Visually breathtaking and emotionally powerful, The Lord of the Rings - The Return of the King is a moving and satisfying conclusion to a great trilogy",
+        "stars": 93,
+        "max": 100
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "John Wick",
+    "productionCountries": [
+      "USA"
+    ],
+    "productionYear": 2014,
+    "length": "101",
+    "genre": "Action",
+    "distributor": "Lionsgate Films",
+    "language": "engelska",
+    "subtitles": "svenska",
+    "director": "Chad Stahelski",
+    "actors": [
+      "Keanu Reeves",
+      "Michael Nyqvist",
+      "Alfie Allen"
+    ],
+    "description": "<p>I första filmen om John Wick bryter ett ryskt maffiagäng in i John Wicks hem för att stjäla hans eftertraktade Mustang. </p><p> I samband med detta råkar de döda Johns hund som han har fått av sin bortgångna fru, vilket leder till att John ger sig ut på en jakt för att mörda männen.</p><p>I jakten stöter han på den ryska maffiabossen Viggo Tarasov och bestämmer sig för att förgöra hans imperium.</p>",
+    "images": [
+      "call-me-poster1.jpg",
+      "call-me-poster2.jpg"
+    ],
+    "youtubeTrailers": [
+      "Z9AYPxH5NTM"
+    ],
+    "reviews": [
+      {
+        "source": "IMDB",
+        "quote": "",
+        "stars": 7.4,
+        "max": 10
+      },
+      {
+        "source": "Rotten Tomatoes",
+        "quote": "Stylish, thrilling, and giddily kinetic, John Wick serves as a satisfying return to action for Keanu Reeves -- and what looks like it could be the first of a franchise.",
+        "stars": 86,
+        "max": 100
+      }
+    ]
+  }
+]
