@@ -7,7 +7,21 @@
   box-sizing: border-box;
 }
 
-body {
+div {
   font-family: 'Arima';
   font-size: 20px;
+}
+
+.movie {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.movieBox {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  border-radius: 10px;
 }
