@@ -29,7 +29,7 @@ export default function App() {
 
   return <>
     <Navbar />
-    <h1>All available Films</h1>
+    <h1 className='movieTitle'>All available Films</h1>
     <MovieList />
     <footer>
       FOOTER
