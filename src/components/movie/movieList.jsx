@@ -1,5 +1,5 @@
 import { useStates } from "../../utilities/states";
-import Movie from './movie'
+import Movie from './Movie'
 
 export default function movieList() {
 

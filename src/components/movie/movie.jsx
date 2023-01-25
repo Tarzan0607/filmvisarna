@@ -10,7 +10,7 @@ export default function Movie({id}) {
     return <div className="movie">
         <h1 className="movieTitle">{title}</h1>
         <div className="moviePreview">
-            <img src={showcaseImage} />
+            <a href="/pathHere"><img src={showcaseImage} /></a>
         </div>
     </div>
 }

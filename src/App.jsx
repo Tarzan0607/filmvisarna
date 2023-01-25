@@ -1,15 +1,22 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
-import MovieList from './components/movie/movieList';
-import Navbar from './components/main/navbar';
-// useful hooks, comment these in, when needed:
-// import { useStates } from './utilities/states.js';
-// import { useEffect } from 'react';
+import Navbar from './components/main/Navbar';
+import Home from './components/main/Home';
+import Error from './components/main/Error';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
 
 export default function App() {
 
   const s = useStates('main', {
-    films: []
+    films: [],
+    routes: [
+      {path: '*', Component: Error},
+      {menuLabel: 'Start', path: '/', Component: Home}
+    ]
   });
 
   useEffect(() => {
@@ -27,12 +34,17 @@ export default function App() {
     })();
   }, []);
 
-  return <>
+  return <BrowserRouter>
+  <header>
     <Navbar />
-    <h1 className='movieTitle'>All available Films</h1>
-    <MovieList />
-    <footer>
+  </header>
+  <main>
+    <Routes>
+      {s.routes.map(({path, Component}) => <Route path={path} element={<Component />} />)}
+    </Routes>
+  </main>
+  <footer>
       FOOTER
-    </footer>
-  </>;
+  </footer>
+  </BrowserRouter>;
 }
