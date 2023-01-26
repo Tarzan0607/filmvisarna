@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
+import Footer from './components/main/Footer';
 import Navbar from './components/main/Navbar';
 import Home from './components/main/Home';
 import Error from './components/main/Error';
@@ -52,7 +53,7 @@ export default function App() {
       </Routes>
     </main>
     <footer>
-      FOOTER
+      <Footer />
     </footer>
   </BrowserRouter>;
 }
