@@ -23,10 +23,13 @@ export default function moveDetails() {
         var minutes = num % 60;
         return hours + " tim "  + minutes + " min";
     }
-
+//<iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
     return <div className='detailsBody'>
-        <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
-        <img src={'/images/' + images} className="moviesPoster" height="750" />
+        <div className="container">
+            <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} frameBorder="0" className="video"></iframe>
+        </div>
+
+        <img src={'/images/' + images} className="moviesPoster" />
         <div className='moviesContainer'>
             <div className='moviesInfo'>
                 <h2 className='moviesTitle'>{title}</h2>
@@ -57,6 +60,6 @@ export default function moveDetails() {
                 <div className='moviesInfoDesc'>{remakeLength(length)}</div>
             </div>
         </div>
-        <button className='moviesBuyTicket'>Köp Biljetter</button>
+        <button className='moviesBuyTicket'><span>Köp Biljetter</span></button>
     </div>
 }
