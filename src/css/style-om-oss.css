@@ -4,8 +4,20 @@
 
 h1 {
   margin-left: 15%;
+  margin-right: 15%;
 }
 
 p {
   margin-left: 15%;
+  margin-right: 15%;
+}
+
+img {
+  display: inline-block;
+  width: 500px;
+}
+
+div .bilder {
+  text-align: center;
+  margin-top: 100px
 }
