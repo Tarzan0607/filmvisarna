@@ -2,9 +2,10 @@
 
 @import 'normalize.css';
 
-h1 {
+.h2omoss {
   margin-left: 15%;
   margin-right: 15%;
+  text-align: left;
 }
 
 p {
