@@ -24,13 +24,13 @@ export default function moveDetails() {
         return hours + " tim "  + minutes + " min";
     }
 
-    return <body className='detailsBody'>
+    return <div className='detailsBody'>
         <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
         <img src={'/images/' + images} className="moviesPoster" height="750" />
         <div className='moviesContainer'>
             <div className='moviesInfo'>
                 <h2 className='moviesTitle'>{title}</h2>
-                <p className='moviesDescription'>{description}</p>
+                <div className='moviesDescription'>{description}</div>
             </div>
             <div className='moviesInfo'>
                 <div className='moviesInfoTitle'>Produktionsår:</div>
@@ -58,5 +58,5 @@ export default function moveDetails() {
             </div>
         </div>
         <button className='moviesBuyTicket'>Köp Biljetter</button>
-    </body>
+    </div>
 }
