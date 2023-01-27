@@ -19,7 +19,7 @@ export default function moveDetails() {
     .map(x => x.replace(/<\/p>/g, ''))
     .map(x => <p>{x}</p>)
     function remakeLength(num) { 
-        var hours = Math.floor(num / 60);  
+        var hours = Math.floor(num / 60);
         var minutes = num % 60;
         return hours + " tim "  + minutes + " min";
     }
