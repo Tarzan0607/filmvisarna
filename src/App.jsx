@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
+import OmOss from './components/main/OmOss';
 import Footer from './components/main/Footer';
 import Navbar from './components/main/Navbar';
 import Home from './components/main/Home';
@@ -20,6 +21,7 @@ export default function App() {
     routes: [
       { path: '*', Component: Error },
       { path: '/:moviePath', Component: moveDetails },
+      { path: '/OmOss', Component: OmOss },
       { menuLabel: 'Start', path: '/', Component: Home }
     ]
   });
