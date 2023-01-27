@@ -6,6 +6,7 @@ import Footer from './components/main/Footer';
 import Navbar from './components/main/Navbar';
 import Home from './components/main/Home';
 import Error from './components/main/Error';
+import Butik from './components/main/Butik';
 import moveDetails from './components/movieDetails';
 import {
   BrowserRouter,
@@ -22,6 +23,7 @@ export default function App() {
       { path: '*', Component: Error },
       { path: '/:moviePath', Component: moveDetails },
       { path: '/OmOss', Component: OmOss },
+      { path: '/butik', Component: Butik },
       { menuLabel: 'Start', path: '/', Component: Home }
     ]
   });
