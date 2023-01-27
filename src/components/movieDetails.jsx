@@ -1,7 +1,7 @@
 export default function moveDetails() {
 
     const { moviePath } = useParams();
-    const movie = s.films.find(movie => movie.path === '/' + moviePath);
+    const movie = s.films.find(movie => movie.path === '/' + movie.Path);
 
 
     return <>
