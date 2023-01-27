@@ -53,18 +53,28 @@ header {
 }
 
 footer {
+  display: inline-block;
   position: fixed;
   width: 100%;
   background-color: rgb(196, 190, 190);
   bottom: 0;
-  text-align: center;
 }
 
-footer a {
-  bottom: 0%;
-  position: absolute;
-  text-align: center;
+footer h4 {
+  margin: 20px 10px 10px 0px;
+  padding-left: 600px;
+}
 
+footer p {
+  display: inline;
+  margin: 0px 3px 3px 0px;
+  padding-left: 20px;
+}
+
+footer p:first-of-type {
+  display: inline;
+  margin: 0px 3px 3px 0px;
+  padding-left: 600px;
 }
 
 img {
@@ -77,13 +87,13 @@ footer img {
   float: right;
   margin-right: .2%;
   display: inline;
-  width: 40px;
+  width: 45px;
   margin-bottom: .2%;
 }
 
 footer img:first-of-type {
   float: right;
-  margin-right: 3%;
+  margin-right: 30%;
   display: inline;
-  width: 40px;
+  width: 45px;
 }
