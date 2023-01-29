@@ -7,14 +7,14 @@ const Spelschema = () => {
       <div>
         <h2>Stora Salong</h2>
         <div>
-          <p>Movie: The Matrix</p>
-          <p>Poster: <img src="the_matrix_poster.jpg" alt="The Matrix poster" /></p>
+          <p>Movie: Call me by your name</p>
+          <p>Poster: <img src="images\call-me-by-your-name.jpg" alt="Call me by your name poster" /></p>
           <p>Datum: 2022-02-20</p>
           <p>Tid: 14:00</p>
         </div>
         <div>
-          <p>Movie: Inception</p>
-          <p>Poster: <img src="inception_poster.jpg" alt="Inception poster" /></p>
+          <p>Movie: Dune</p>
+          <p>Poster: <img src="images\dune.jpg" alt="Dune poster" /></p>
           <p>Datum: 2022-02-21</p>
           <p>Tid: 16:00</p>
         </div>
@@ -22,20 +22,20 @@ const Spelschema = () => {
       <div>
         <h2>Lilla Salong</h2>
         <div>
-          <p>Movie: The Dark Knight</p>
-          <p>Poster: <img src="the_dark_knight_poster.jpg" alt="The Dark Knight poster" /></p>
+          <p>Movie: Spider-man: Into the Spider-verse</p>
+          <p>Poster: <img src=" images\into-the-spider---verse.jpg" alt="Spider-man: Into the Spider-verse" /></p>
           <p>Datum: 2022-02-20</p>
           <p>Tid: 12:00</p>
         </div>
         <div>
-          <p>Movie: The Shawshank Redemption</p>
-          <p>Poster: <img src="shawshank_redemption_poster.jpg" alt="The Shawshank Redemption poster" /></p>
+          <p>Movie: Sagan Om Konungens Återkomst</p>
+          <p>Poster: <img src=" images\the-return-of-the-king.jpg" alt="Sagan Om Konungens Återkomst" /></p>
           <p>Datum: 2022-02-21</p>
           <p>Tid: 18:00</p>
         </div>
         <div>
-          <p>Movie: Pulp Fiction</p>
-          <p>Poster: <img src="pulp_fiction_poster.jpg" alt="Pulp Fiction poster" /></p>
+          <p>Movie: John Wick</p>
+          <p>Poster: <img src=" images\john-wick.jpg" alt="John Wick poster" /></p>
           <p>Datum: 2022-02-22</p>
           <p>Tid: 20:00</p>
         </div>
