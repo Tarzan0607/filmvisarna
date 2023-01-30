@@ -1,5 +1,7 @@
 /* change to your own choice of fonts */
 @import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma&family=Noto+Sans:wght@500&display=swap');
 
 @import 'normalize.css';
 
@@ -8,6 +10,10 @@
   color: rgb(255, 255, 255);
   background-color: #000;
   font-size: 100%;
+}
+
+p {
+  font: 'Karma'
 }
 
 div {
@@ -57,60 +63,8 @@ header {
   background-color: #000;
 }
 
-footer {
-  display: inline-block;
-  position: static;
-  width: 100%;
-  background: rgb(151, 156, 158);
-  background: rgb(151, 156, 158);
-  background: linear-gradient(0deg, rgb(197, 198, 198) 0%, #97999a 95%, rgba(202, 211, 215, 0.1) 100%);
-  bottom: 0;
-}
-
-footer h4 {
-  margin: 20px 10px 10px 0px;
-  padding-left: 20%;
-  color: #000;
-  background-color: transparent;
-}
-
-footer p {
-  display: inline;
-  margin: 0px 3px 3px 0px;
-  padding-left: 1%;
-  background-color: transparent;
-  color: black;
-}
-
-footer h4 {
-  background-color: transparent;
-
-}
-
-footer p:first-of-type {
-  display: inline;
-  margin: 0px 3px 3px 0px;
-  padding-left: 20%;
-}
-
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-footer img {
-  float: right;
-  margin-right: .2%;
-  display: inline;
-  width: 45px;
-  margin-bottom: .2%;
-  background-color: transparent;
-}
-
-footer img:first-of-type {
-  float: right;
-  margin-right: 20%;
-  display: inline;
-  width: 45px;
 }
