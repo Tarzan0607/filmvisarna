@@ -1,19 +1,18 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
-import OmOss from './components/main/OmOss';
-import Footer from './components/main/Footer';
-import Navbar from './components/main/Navbar';
-import Home from './components/main/Home';
-import Error from './components/main/Error';
-import Butik from './components/main/Butik';
-import moveDetails from './components/movieDetails';
+import OmOss from './components/pages/OmOss';
+import Footer from './components/pages/Footer';
+import Navbar from './components/pages/Navbar';
+import Home from './components/pages/Home';
+import Error from './components/pages/Error';
+import Butik from './components/pages/Butik';
+import MoveDetails from './components/pages/MovieDetails';
 import {
   BrowserRouter,
   Routes,
   Route
 } from 'react-router-dom';
-import movieList from './components/movie/MovieList';
 
 export default function App() {
 
@@ -21,7 +20,7 @@ export default function App() {
     films: [],
     routes: [
       { path: '*', Component: Error },
-      { path: '/:moviePath', Component: moveDetails },
+      { path: '/movie/:moviePath', Component: MoveDetails },
       { path: '/OmOss', Component: OmOss },
       { path: '/butik', Component: Butik },
       { menuLabel: 'Start', path: '/', Component: Home }
