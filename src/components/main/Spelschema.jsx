@@ -18,6 +18,7 @@ const Spelschema = () => {
           <p>Datum: 2022-02-21</p>
           <p>Tid: 16:00</p>
         </div>
+
       </div>
       <div>
         <h2>Lilla Salong</h2>
