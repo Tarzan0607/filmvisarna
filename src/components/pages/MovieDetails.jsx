@@ -1,6 +1,5 @@
 import '../../css/MovieDetails.css';
 import {
-    Navigate,
     useParams
 } from 'react-router-dom'
 import { useStates } from '../../utilities/states';

@@ -20,7 +20,7 @@ export default function App() {
     films: [],
     routes: [
       { path: '*', Component: Error },
-      { path: '/movie/:moviePath', Component: MoveDetails },
+      { path: '/movie/:MoviePath', Component: MoveDetails },
       { path: '/OmOss', Component: OmOss },
       { path: '/butik', Component: Butik },
       { menuLabel: 'Start', path: '/', Component: Home }
@@ -38,7 +38,7 @@ export default function App() {
       // set a new value for the state variable people
       s.films = dataFromJson;
       for (let movie of s.films) {
-        movie.path = '/' + urlify(movie.title)
+        movie.path = '/movie/' + urlify(movie.title)
       }
       s.films = films
       // oneliner:
