@@ -8,6 +8,7 @@ import Home from './components/pages/Home';
 import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
+import Spelschema from './components/pages/Spelschema';
 import {
   BrowserRouter,
   Routes,
@@ -18,12 +19,14 @@ export default function App() {
 
   const s = useStates('main', {
     films: [],
+    spelschema: [],
     routes: [
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { path: '/OmOss', Component: OmOss },
       { path: '/butik', Component: Butik },
-      { menuLabel: 'Start', path: '/', Component: Home }
+      { menuLabel: 'Start', path: '/', Component: Home },
+      { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema }
     ]
   });
 
@@ -40,7 +43,11 @@ export default function App() {
       for (let movie of s.films) {
         movie.path = '/movie/' + urlify(movie.title)
       }
-      s.films = films
+
+      let fetchedData2 = await fetch('/json/spelschema.json');
+      // convert it from json to a js data structure
+      let dataFromJson2 = await fetchedData2.json();
+      s.spelschema = dataFromJson2;
       // oneliner:
       // s.people = await (await fetch('/json/people.json')).json();
     })();
