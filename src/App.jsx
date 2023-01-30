@@ -1,16 +1,19 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
-import Footer from './components/pages/Footer';
-import Navbar from './components/pages/Navbar';
-import Home from './components/pages/Home';
-import Error from './components/pages/Error';
-import MovieDetails from './components/pages/MovieDetails';
+import OmOss from './components/main/OmOss';
+import Footer from './components/main/Footer';
+import Navbar from './components/main/Navbar';
+import Home from './components/main/Home';
+import Error from './components/main/Error';
+import Butik from './components/main/Butik';
+import moveDetails from './components/movieDetails';
 import {
   BrowserRouter,
   Routes,
   Route
 } from 'react-router-dom';
+import movieList from './components/movie/MovieList';
 
 export default function App() {
 
@@ -18,7 +21,9 @@ export default function App() {
     films: [],
     routes: [
       { path: '*', Component: Error },
-      { path: '/movie/:MoviePath', Component: MovieDetails },
+      { path: '/:moviePath', Component: moveDetails },
+      { path: '/OmOss', Component: OmOss },
+      { path: '/butik', Component: Butik },
       { menuLabel: 'Start', path: '/', Component: Home }
     ]
   });
@@ -32,9 +37,9 @@ export default function App() {
       // convert it from json to a js data structure
       let dataFromJson = await fetchedData.json();
       // set a new value for the state variable people
-      const films = dataFromJson;
-      for (let movie of films) {
-        movie.path = '/movie/' + urlify(movie.title)
+      s.films = dataFromJson;
+      for (let movie of s.films) {
+        movie.path = '/' + urlify(movie.title)
       }
       s.films = films
       // oneliner:
