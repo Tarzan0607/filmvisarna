@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+
+@import 'normalize.css';
+
+div .bilder-butik {
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 15%;
+}
+
+.bilder-butik img {
+  width: 70px;
+}
+
+.h2butik {
+  margin-left: 15%;
+  font-size: 1.2em;
+}

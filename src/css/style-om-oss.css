@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+
+@import 'normalize.css';
+
+.h2omoss {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+p {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+img {
+  display: inline-block;
+  width: 500px;
+}
+
+div .bilder {
+  text-align: center;
+  margin-top: 100px
+}

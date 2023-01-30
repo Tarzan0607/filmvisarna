@@ -1,29 +1,29 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
-import Footer from './components/main/Footer';
-import Navbar from './components/main/Navbar';
-import Home from './components/main/Home';
-import Error from './components/main/Error';
-import moveDetails from './components/movieDetails';
-import Spelschema from './components/main/Spelschema';
+import OmOss from './components/pages/OmOss';
+import Footer from './components/pages/Footer';
+import Navbar from './components/pages/Navbar';
+import Home from './components/pages/Home';
+import Error from './components/pages/Error';
+import Butik from './components/pages/Butik';
+import MoveDetails from './components/pages/MovieDetails';
 import {
   BrowserRouter,
   Routes,
   Route
 } from 'react-router-dom';
-import movieList from './components/movie/MovieList';
 
 export default function App() {
 
   const s = useStates('main', {
     films: [],
-    spelschema: [],
     routes: [
       { path: '*', Component: Error },
-      { path: '/:moviePath', Component: moveDetails },
-      { menuLabel: 'Start', path: '/', Component: Home },
-      { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema }
+      { path: '/movie/:MoviePath', Component: MoveDetails },
+      { path: '/OmOss', Component: OmOss },
+      { path: '/butik', Component: Butik },
+      { menuLabel: 'Start', path: '/', Component: Home }
     ]
   });
 
@@ -38,14 +38,9 @@ export default function App() {
       // set a new value for the state variable people
       s.films = dataFromJson;
       for (let movie of s.films) {
-        movie.path = '/' + urlify(movie.title)
+        movie.path = '/movie/' + urlify(movie.title)
       }
-      // fetch the data
-      //console.log("FILMTEST: ", filmInfo[0])
-      let fetchedData2 = await fetch('/json/spelschema.json');
-      // convert it from json to a js data structure
-      let dataFromJson2 = await fetchedData2.json();
-      s.spelschema = dataFromJson2;
+      s.films = films
       // oneliner:
       // s.people = await (await fetch('/json/people.json')).json();
     })();

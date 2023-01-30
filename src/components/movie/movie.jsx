@@ -8,7 +8,7 @@ export default function Movie({ id }) {
     let showcaseImage = "./images/" + images
 
     return <div className="movie">
-        <h1 className="movieTitle" href={movie.path}>{title}</h1>
+        <h1 className="movieTitle">{title}</h1>
         <div className="moviePreview">
             <a href={movie.path}><img src={showcaseImage} /></a>
         </div>
