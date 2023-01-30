@@ -59,27 +59,38 @@ header {
 
 footer {
   display: inline-block;
-  position: fixed;
+  position: static;
   width: 100%;
-  background-color: rgb(196, 190, 190);
+  background: rgb(151, 156, 158);
+  background: rgb(151, 156, 158);
+  background: linear-gradient(0deg, rgb(197, 198, 198) 0%, #97999a 95%, rgba(202, 211, 215, 0.1) 100%);
   bottom: 0;
 }
 
 footer h4 {
   margin: 20px 10px 10px 0px;
-  padding-left: 600px;
+  padding-left: 20%;
+  color: #000;
+  background-color: transparent;
 }
 
 footer p {
   display: inline;
   margin: 0px 3px 3px 0px;
-  padding-left: 20px;
+  padding-left: 1%;
+  background-color: transparent;
+  color: black;
+}
+
+footer h4 {
+  background-color: transparent;
+
 }
 
 footer p:first-of-type {
   display: inline;
   margin: 0px 3px 3px 0px;
-  padding-left: 600px;
+  padding-left: 20%;
 }
 
 img {
@@ -94,11 +105,12 @@ footer img {
   display: inline;
   width: 45px;
   margin-bottom: .2%;
+  background-color: transparent;
 }
 
 footer img:first-of-type {
   float: right;
-  margin-right: 30%;
+  margin-right: 20%;
   display: inline;
   width: 45px;
 }
