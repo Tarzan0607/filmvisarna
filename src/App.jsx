@@ -40,7 +40,6 @@ export default function App() {
       for (let movie of s.films) {
         movie.path = '/' + urlify(movie.title)
       }
-      s.films = films
       // fetch the data
       //console.log("FILMTEST: ", filmInfo[0])
       let fetchedData2 = await fetch('/json/spelschema.json');

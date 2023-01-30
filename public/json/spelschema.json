@@ -2,13 +2,25 @@
   {
     "auditorium": "Stora Salongen",
     "film": "Call me by your name",
-    "date": "2018-01-22",
+    "date": "2023-02-07",
+    "time": "18.40"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Ghost",
+    "date": "2023-02-08",
     "time": "18.40"
   },
   {
     "auditorium": "Stora Salongen",
     "film": "Call me by your name",
-    "date": "2018-01-22",
-    "time": "18.40"
+    "date": "2023-02-09",
+    "time": "21.00"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Some other movie",
+    "date": "2023-02-10",
+    "time": "19.00"
   }
 ]
