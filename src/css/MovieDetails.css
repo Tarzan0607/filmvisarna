@@ -51,7 +51,7 @@
 
 .moviesTitle {
     font-family: 'Noto Sans JP', sans-serif;
-    margin-left: 25%;
+    margin-left: 0%;
     margin-bottom: 2.5%;
 }
 
@@ -100,6 +100,10 @@
 
 .moviesBuyTicket:hover {
     transform: scale(1.1);
+}
+
+.moviesDescription p {
+    margin: 0%;
 }
 
 @media screen and (min-width: 577px) and (max-width: 1199px) {
@@ -165,5 +169,67 @@
         margin: 0%;
     }
 
+}
 
+@media screen and (max-width: 576px) {
+    .container {
+        float: left;
+        position: relative;
+        margin: 2.5%;
+        width: 95%;
+        height: auto;
+        padding-bottom: 37.025%;
+    }
+
+    .moviesContainer {
+        position: relative;
+        display: inline-block;
+        margin-left: 4%;
+        width: 92%;
+        margin-bottom: 1.5%;
+        margin-right: 1%;
+        z-index: 1;
+    }
+
+    .moviesTitle {
+        font-family: 'Noto Sans JP', sans-serif;
+        margin-left: 0%;
+        margin-bottom: 2.5%;
+    }
+
+    .moviesDescription {
+        margin-bottom: 2.5%;
+        text-align: left;
+        font-size: 80%;
+    }
+
+    .moviesDescription p {
+        margin: 0%;
+    }
+
+    .moviesPoster {
+        display: none;
+        object-fit: cover;
+        margin: 2.5%;
+        margin-right: 5%;
+        width: 25%;
+    }
+
+    .moviesBuyTicket {
+        position: relative;
+        white-space: nowrap;
+        border-radius: 10px;
+        margin-top: 0vw;
+        margin-left: 80vw;
+        margin-right: 10vw;
+        background: linear-gradient(90deg, #411540 20%, #8949e3 100%);
+        color: white;
+        border: 0;
+        padding: 1%;
+        width: 15vw;
+        font-size: 2vw;
+        text-align: center;
+        cursor: pointer;
+        z-index: 2;
+    }
 }

@@ -61,9 +61,7 @@ div {
     display: inline-block;
     width: 49%;
     height: auto;
-    padding: 10px 0px;
     border: 1px solid #000;
-    margin-bottom: 20px;
     margin-right: 1%;
     border-radius: 10px;
     text-align: center;
@@ -84,7 +82,9 @@ div {
 
 .movieTitle {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 0.8em;
+  margin-bottom: 3%;
+  margin-top: 0%;
 }
 
 .movieBox {
