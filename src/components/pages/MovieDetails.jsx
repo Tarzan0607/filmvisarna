@@ -1,4 +1,5 @@
 import '../../css/MovieDetails.css';
+import '../../css/MovieDetails-phone.css';
 import {
     useParams
 } from 'react-router-dom'
@@ -15,14 +16,14 @@ export default function moveDetails() {
     const { title, images, youtubeTrailers, director, productionYear, actors, language, subtitles, length } = movie;
 
     let description = movie && movie.description.split('<p>')
-    .map(x => x.replace(/<\/p>/g, ''))
-    .map(x => <p>{x}</p>)
-    function remakeLength(num) { 
+        .map(x => x.replace(/<\/p>/g, ''))
+        .map(x => <p>{x}</p>)
+    function remakeLength(num) {
         var hours = Math.floor(num / 60);
         var minutes = num % 60;
-        return hours + " tim "  + minutes + " min";
+        return hours + " tim " + minutes + " min";
     }
-//<iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
+    //<iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
     return <div className='detailsBody'>
         <div className="container">
             <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} frameBorder="0" className="video"></iframe>
