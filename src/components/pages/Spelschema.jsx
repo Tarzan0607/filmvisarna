@@ -1,7 +1,4 @@
-import "../../css/style-spelschema.css";
 import { useStates } from "../../utilities/states";
-
-
 
 const Spelschema = () => {
 
@@ -18,7 +15,7 @@ const Spelschema = () => {
     }
   ];
 
-  return <div className='showingsTitle'>
+  return <div>
     <h1>Spelschema</h1>
     {filtered.map(({ auditorium, films }) => <>
       <h2>{auditorium}</h2>
