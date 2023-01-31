@@ -13,7 +13,14 @@
 }
 
 p {
-  font: 'Karma'
+  font-family: 'Karma'
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Noto Sans'
 }
 
 div {
