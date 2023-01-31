@@ -57,11 +57,11 @@ export default function App() {
     <header>
       <Navbar />
     </header>
-    <main>
+    <body>
       <Routes>
         {s.routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
       </Routes>
-    </main>
+    </body>
     <footer>
       <Footer />
     </footer>
