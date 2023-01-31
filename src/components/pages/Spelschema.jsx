@@ -1,4 +1,7 @@
+import "../../css/style-spelschema.css";
 import { useStates } from "../../utilities/states";
+
+
 
 const Spelschema = () => {
 
