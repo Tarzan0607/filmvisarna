@@ -1,5 +1,4 @@
 import '../../css/MovieDetails.css';
-import '../../css/MovieDetails-phone.css';
 import {
     useParams
 } from 'react-router-dom'
