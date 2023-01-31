@@ -13,7 +13,14 @@
 }
 
 p {
-  font: 'Karma'
+  font-family: 'Karma'
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Noto Sans'
 }
 
 div {
@@ -21,20 +28,55 @@ div {
   font-size: 20px;
 }
 
-.movie {
-  display: inline-block;
-  width: 19%;
-  height: auto;
-  padding: 10px 0px;
-  border: 1px solid #000;
-  margin-bottom: 20px;
-  margin-right: 1%;
-  border-radius: 10px;
-  text-align: center;
+@media screen and (min-width: 1200px) {
+  .movie {
+    display: inline-block;
+    width: 19%;
+    height: auto;
+    padding: 10px 0px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    margin-right: 1%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .movieTitle {
+    margin-bottom: 3%;
+    margin-top: 0%;
+  }
 }
 
+@media screen and (min-width: 577px) and (max-width: 1199px) {
+  .movie {
+    display: inline-block;
+    width: 49%;
+    height: auto;
+    padding: 10px 0px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    margin-right: 1%;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .movie {
+    display: inline-block;
+    width: 49%;
+    height: auto;
+    border: 1px solid #000;
+    margin-right: 1%;
+    border-radius: 10px;
+    text-align: center;
+  }
+}
+
+
 .moviePreview {
-  margin-bottom: 20px;
   border-radius: 10px;
   max-width: auto;
   height: auto;
@@ -47,7 +89,9 @@ div {
 
 .movieTitle {
   text-align: center;
-  font-size: 1.1em;
+  font-size: 0.8em;
+  margin-bottom: 3%;
+  margin-top: 0%;
 }
 
 .movieBox {
