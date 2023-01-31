@@ -18,7 +18,7 @@ const Spelschema = () => {
     }
   ];
 
-  return <div>
+  return <div className='showingsTitle'>
     <h1>Spelschema</h1>
     {filtered.map(({ auditorium, films }) => <>
       <h2>{auditorium}</h2>
