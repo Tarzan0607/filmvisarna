@@ -39,6 +39,12 @@ div {
     margin-right: 1%;
     border-radius: 10px;
     text-align: center;
+    font-size: 1.5em;
+  }
+
+  .movieTitle {
+    margin-bottom: 3%;
+    margin-top: 0%;
   }
 }
 
@@ -53,6 +59,7 @@ div {
     margin-right: 1%;
     border-radius: 10px;
     text-align: center;
+    font-size: 1.3em;
   }
 }
 
