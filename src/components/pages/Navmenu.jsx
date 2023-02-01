@@ -10,7 +10,7 @@ export default function Navmenu() {
   const s = useStates('main');
 
   return <nav>
-    <div className='nav-manu'>
+    <div className='nav-menu'>
       <h1 id="h2title"><u className="trans">FilmVisarna</u></h1>
       <ul id="main-nav">
               {s.routes.map(({ menuLabel, path }) =>

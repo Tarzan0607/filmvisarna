@@ -15,7 +15,7 @@
 
 
 }
-.nav-manu{
+.nav-menu{
   background: linear-gradient(90deg, #210547 50%, #8949e3 100%);
   justify-content: space-between;
   padding: 10px 80px;
@@ -67,6 +67,6 @@ color: greenyellow;
   background-color: transparent;
 }
 
-.nav-manu ul {
+.nav-menu ul {
   margin: 0;
 }
