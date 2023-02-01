@@ -13,12 +13,10 @@ export default function Navmenu() {
     <div className='nav-manu'>
       <h1 id="h2title"><u className="trans">FilmVisarna</u></h1>
       <ul id="main-nav">
-        <li>
               {s.routes.map(({ menuLabel, path }) =>
-      menuLabel ? <NavLink to={path}>{menuLabel}</NavLink> : null
+      menuLabel ? <li><NavLink to={path}>{menuLabel}</NavLink></li>: null
     )}
-        </li>
-        </ul>
+      </ul>
     </div>
     {/* Loop through the menu and display menu items */}
   </nav>;
