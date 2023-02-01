@@ -27,7 +27,7 @@ export default function App() {
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       {menuLabel: 'Butik', path: '/butik', Component: Butik },
-      {menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss },
+      {menuLabel: 'Om oss', path: '/OmOss', Component: OmOss },
       
       
     ]
