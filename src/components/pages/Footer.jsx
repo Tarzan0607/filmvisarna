@@ -5,7 +5,7 @@ export default function Home() {
   return <>
     <div className="wrapperFooter">
       <h4>Filmvisarna © 2022</h4>
-      <p>Östra Fejkadress 28, 213 44 Malmö </p>
+      <p>Östra Fejkadress 28, 213 44 Malmö</p>
       <p>040 - 586 33 00 </p>
       <p>info@filmvisarna.se </p>
       <img src='/images/Twitter_icon.png' />

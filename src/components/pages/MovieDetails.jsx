@@ -1,5 +1,4 @@
 import '../../css/MovieDetails.css';
-import '../../css/MovieDetails-phone.css';
 import {
     useParams
 } from 'react-router-dom'
@@ -31,6 +30,7 @@ export default function moveDetails() {
 
         <img src={'/images/' + images} className="moviesPoster" />
         <div className='moviesContainer'>
+            <button className='moviesBuyTicket'>Köp Biljetter</button>
             <div className='moviesInfo'>
                 <h2 className='moviesTitle'>{title}</h2>
                 <div className='moviesDescription'>{description}</div>
@@ -60,6 +60,5 @@ export default function moveDetails() {
                 <div className='moviesInfoDesc'>{remakeLength(length)}</div>
             </div>
         </div>
-        <button className='moviesBuyTicket'><span>Köp Biljetter</span></button>
     </div>
 }
