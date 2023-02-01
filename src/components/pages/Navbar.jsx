@@ -2,11 +2,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import '../../css/style-navbar.css';
 
-
 export default function Navbar() {
   return (
     <div className='nav-manu'>
-      <h1 id="h2title"><u>FilmVisarna</u></h1>
+      <h1 id="h2title"><u className="trans">FilmVisarna</u></h1>
       <ul id="main-nav">
     <li>
       <Link to="/">Home</Link>
