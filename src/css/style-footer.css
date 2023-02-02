@@ -62,7 +62,7 @@ footer p:first-of-type {
   right: 0;
 }
 
-@media screen and (min-width: 577px) and (max-width: 1199px) {
+@media screen and (min-width: 769px) and (max-width: 1199px) {
   footer {
     display: inline-block;
     width: 112%;
@@ -72,6 +72,17 @@ footer p:first-of-type {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .wrapperFooter h4 {
+    padding-left: 10%;
+  }
+
+  .wrapperFooter p:first-of-type {
+    padding-left: 10%;
+
   }
 }
 
@@ -104,7 +115,7 @@ footer p:first-of-type {
     color: #000;
     background-color: transparent;
   }
-  
+
   footer p {
     display: block;
     margin: 0px 3px 3px 0px;
@@ -113,20 +124,20 @@ footer p:first-of-type {
     color: rgb(32, 32, 32);
     font-size: 0.7em;
   }
-  
+
   footer p:first-of-type {
     display: inline;
     margin: 0px 3px 0px 0px;
     padding-left: 0%;
   }
 
-  
-footer img:first-of-type {
-  float: right;
-  margin-right: 0%;
-  display: inline;
-  width: 45px;
-}
+
+  footer img:first-of-type {
+    float: right;
+    margin-right: 0%;
+    display: inline;
+    width: 45px;
+  }
 
   footer img {
     float: right;
