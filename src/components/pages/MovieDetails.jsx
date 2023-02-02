@@ -44,7 +44,7 @@ export default function moveDetails() {
                 <div className='moviesInfoDesc'>{director}</div>
             </div>
             <div className='moviesInfo'>
-                <div className='moviesInfoTitle'>Cast:</div>
+                <div className='moviesInfoTitle'>Skådespelare:</div>
                 <div className='moviesInfoDesc'>{actors.join(', ')}</div>
             </div>
             <div className='moviesInfo'>
