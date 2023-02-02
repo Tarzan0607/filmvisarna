@@ -1,7 +1,7 @@
 [
   {
     "auditorium": "Lilla Salongen",
-    "film": "Spider-man: Into the Spider-verse",
+    "film": "Dune",
     "date": "2023-02-01",
     "time": "15.00"
   },
@@ -9,414 +9,102 @@
     "auditorium": "Stora Salongen",
     "film": "Call me by your name",
     "date": "2023-02-01",
-    "time": "15.30"
+    "time": "14.40"
   },
   {
     "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
+    "film": "Sagan om Konugenes Återkomst",
     "date": "2023-02-01",
+    "time": "18.00"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "John Wick",
+    "date": "2023-02-01",
+    "time": "17.00"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Spider-man: Into the Spider-verse",
+    "date": "2023-02-01",
+    "time": "19.00"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Spider-man: Into the Spider-verse",
+    "date": "2023-02-01",
+    "time": "21.15"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Sagan om Konugenes Återkomst",
+    "date": "2023-02-02",
+    "time": "14.30"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2023-02-02",
+    "time": "18.00"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Spider-man: Into the Spider-verse",
+    "date": "2023-02-02",
+    "time": "14.30"
+  },
+  {
+    "auditorium": "Stora Salongen",
+    "film": "Call me by your name",
+    "date": "2023-02-02",
     "time": "16.40"
   },
   {
     "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
+    "film": "John Wick",
+    "date": "2023-02-02",
+    "time": "19.00"
   },
   {
     "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "18.50"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
     "film": "Spider-man: Into the Spider-verse",
-    "date": "2023-02-01",
+    "date": "2023-02-02",
+    "time": "21.00"
+  },
+  {
+    "auditorium": "Lilla Salongen",
+    "film": "Dune",
+    "date": "2023-02-03",
     "time": "15.00"
   },
   {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-01",
-    "time": "15.30"
-  },
-  {
     "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "16.40"
+    "film": "Sagan om Konugenes Återkomst",
+    "date": "2023-02-03",
+    "time": "18.00"
   },
   {
     "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
+    "film": "John Wick",
+    "date": "2023-02-03",
+    "time": "14.30"
   },
   {
     "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "18.50"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
     "film": "Spider-man: Into the Spider-verse",
-    "date": "2023-02-01",
-    "time": "15.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-01",
-    "time": "15.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
+    "date": "2023-02-03",
     "time": "16.40"
   },
   {
     "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "18.50"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
     "film": "Spider-man: Into the Spider-verse",
-    "date": "2023-02-01",
-    "time": "15.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-01",
-    "time": "15.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "16.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
+    "date": "2023-02-03",
     "time": "18.50"
   },
   {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
     "auditorium": "Stora Salongen",
     "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Spider-man: Into the Spider-verse",
-    "date": "2023-02-01",
-    "time": "15.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-01",
-    "time": "15.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "16.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "18.50"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Spider-man: Into the Spider-verse",
-    "date": "2023-02-01",
-    "time": "15.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-01",
-    "time": "15.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "16.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "18.50"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Spider-man: Into the Spider-verse",
-    "date": "2023-02-01",
-    "time": "15.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-01",
-    "time": "15.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "16.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "17.10"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "18.20"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "18.50"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "20.00"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "20.30"
-  },
-  {
-    "auditorium": "Lilla Salongen",
-    "film": "Some other movie",
-    "date": "2023-02-10",
-    "time": "21.40"
-  },
-  {
-    "auditorium": "Stora Salongen",
-    "film": "Call me by your name",
-    "date": "2023-02-09",
-    "time": "22.10"
+    "date": "2023-02-03",
+    "time": "21.00"
   }
 ]

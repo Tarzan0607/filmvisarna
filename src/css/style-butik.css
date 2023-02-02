@@ -16,3 +16,8 @@ div .bilder-butik {
   margin-left: 15%;
   font-size: 1.2em;
 }
+
+.textButik p {
+  margin-left: 15%;
+  width: 70%
+}
