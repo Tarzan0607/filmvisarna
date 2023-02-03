@@ -23,12 +23,13 @@
 }
 
 .bilder {
-  margin-left: 20%;
+  margin-left: 22.5%;
 }
 
 .bilder img {
   display: inline-block;
   width: 500px;
+  height: 250px;
   margin-right: 2.5%;
 }
 

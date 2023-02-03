@@ -13,7 +13,7 @@ export default function OmOss() {
     </ul>
     <h2 className="h2omoss">Information</h2>
     <p>Pris: 130kr/biljett </p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aliquam perspiciatis modi voluptatum facere nesciunt, aliquid aperiam at accusamus tempora, nulla vitae autem magni laborum illum expedita quibusdam itaque doloremque! Ex qui tempore nobis, perferendis, consequatur omnis quo optio eligendi aperiam, possimus ducimus voluptate quaerat modi deserunt quod. Similique itaque veniam consequatur fuga distinctio accusamus cumque error vel dolorum quibusdam.Porro quidem atque quisquam maxime, doloribus facere suscipit accusantium qui in natus eius eaque optio similique minus, iure adipisci. Blanditiis officia magni ut perferendis vero rem est quidem, dolore magnam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum enim libero, non vulputate nunc mattis eget. Nullam tempor nisl nec facilisis sollicitudin. Morbi ultricies egestas justo eget pretium. Donec ut velit eget lorem varius lacinia. Nam sodales dictum elit, ac placerat massa fringilla vitae. Sed feugiat, erat quis convallis.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
   </div>
   <div className="bilder">
