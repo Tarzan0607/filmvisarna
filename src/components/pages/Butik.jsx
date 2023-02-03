@@ -2,8 +2,9 @@ export default function Butik() {
 
 
   return <>
-    <h2 className="h2butik">Butiken</h2>
+
     <div className="textbutik">
+      <h2 className="h2butik">Butiken</h2>
       <p>I lobbyn finner du vår butik som erbjuder godis, läsk och lättare snacks från flera populära aktörer</p>
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aliquam perspiciatis modi voluptatum facere nesciunt, aliquid aperiam at accusamus tempora, nulla vitae autem magni laborum illum expedita quibusdam itaque doloremque! .</p>
