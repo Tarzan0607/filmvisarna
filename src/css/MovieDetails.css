@@ -59,13 +59,17 @@
     margin-bottom: 2.5%;
 }
 
+.moviesDescription p {
+    margin-bottom: 0.5%;
+}
+
 .moviesInfo {
     margin-bottom: 0.5%;
 }
 
 .moviesInfoTitle {
     height: 15%;
-    color: #a19fa1;
+    color: #c0bec0;
     line-height: 200%;
     font-size: 15px;
     font-family: 'noto sans';
@@ -101,11 +105,9 @@
     transform: scale(1.1);
 }
 
-.moviesDescription p {
-    margin: 0%;
-}
 
-@media screen and (min-width: 577px) and (max-width: 1199px) {
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
 
     .container {
         float: left;
@@ -168,6 +170,33 @@
         margin: 0%;
     }
 
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .moviesTitle {
+        margin-bottom: 2.5%;
+        padding-left: 0%;
+    }
+
+    .moviesContainer {
+        margin-left: 5%;
+        width: 60%;
+    }
+
+    .moviesBuyTicket {
+        margin-left: 72.5%;
+    }
+
+    .moviesTitle {
+        font-size: 3.5vw;
+    }
+
+    .moviesDescription p {
+        margin-left: 0%;
+        margin-bottom: 4%;
+        padding-left: 0%;
+        font-size: 2.7vw;
+    }
 }
 
 @media screen and (max-width: 576px) {
