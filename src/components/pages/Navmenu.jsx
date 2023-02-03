@@ -11,7 +11,7 @@ export default function Navmenu() {
 
   return <nav>
     <div className='nav-manu'>
-      <h1 id="h2title"><u className="trans">FilmVisarna</u></h1>
+      <h1 id="h2title"><u className="trans">Filmvisarna</u></h1>
       <ul id="main-nav">
               {s.routes.map(({ menuLabel, path }) =>
       menuLabel ? <li><NavLink to={path}>{menuLabel}</NavLink></li>: null

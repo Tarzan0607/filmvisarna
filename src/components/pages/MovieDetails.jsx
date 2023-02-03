@@ -10,7 +10,7 @@ export default function moveDetails() {
 
     const { MoviePath } = useParams();
     const movie = s.films.find(movie => movie.path === '/movie/' + MoviePath);
-    if (!movie) return <h1>No movie could be found!</h1>
+    if (!movie) return <></>
 
     const { title, images, youtubeTrailers, director, productionYear, actors, language, subtitles, length } = movie;
 

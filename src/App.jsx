@@ -9,7 +9,7 @@ import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
 import Spelschema from './components/pages/Spelschema';
-import Navmenu from './components/pages/Navmenu';
+import Navmenu  from './components/pages/Navmenu';
 import {
   BrowserRouter,
   Routes,
@@ -26,10 +26,10 @@ export default function App() {
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
-      { menuLabel: 'Butik', path: '/butik', Component: Butik },
-      { menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss },
-
-
+      {menuLabel: 'Butik', path: '/butik', Component: Butik },
+      {menuLabel: 'Om oss', path: '/OmOss', Component: OmOss },
+      
+      
     ]
   });
 
@@ -60,13 +60,11 @@ export default function App() {
     <header>
       <Navmenu />
     </header>
-    <div className='root'>
-      <main>
-        <Routes>
-          {s.routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
-        </Routes>
-      </main>
-    </div>
+    <main>
+      <Routes>
+        {s.routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
+      </Routes>
+    </main>
     <footer>
       <Footer />
     </footer>
