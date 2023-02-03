@@ -3,23 +3,38 @@
 @import 'normalize.css';
 
 .h2omoss {
-  margin-left: 15%;
+  margin-left: 25%;
   margin-right: 15%;
   text-align: left;
   font-size: 1.2em;
+  margin-top: 1%;
 }
 
 p {
   margin-left: 15%;
   margin-right: 15%;
+  font-size: 20px;
 }
 
 img {
   display: inline-block;
   width: 500px;
+  margin-right: 1%;
 }
 
 div .bilder {
-  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: left;
   margin-top: 100px
+}
+
+.textomoss {
+  margin-left: 25%;
+  margin-right: 25%;
+
+}
+
+.textomoss p {
+  margin-bottom: 0.5%;
 }

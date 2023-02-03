@@ -59,6 +59,10 @@
     margin-bottom: 2.5%;
 }
 
+.moviesDescription p {
+    margin-bottom: 0.5%;
+}
+
 .moviesInfo {
     margin-bottom: 0.5%;
 }
@@ -101,9 +105,6 @@
     transform: scale(1.1);
 }
 
-.moviesDescription p {
-    margin: 0%;
-}
 
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {

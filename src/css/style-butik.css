@@ -4,8 +4,8 @@
 
 div .bilder-butik {
   text-align: left;
-  margin-top: 100px;
-  margin-left: 15%;
+  margin-top: 2%;
+  margin-left: 25%;
 }
 
 .bilder-butik img {
@@ -13,6 +13,17 @@ div .bilder-butik {
 }
 
 .h2butik {
-  margin-left: 15%;
+  margin-top: 1%;
+  margin-left: 25%;
   font-size: 1.2em;
+}
+
+.textbutik {
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 0.5%;
+}
+
+.textbutik p {
+  margin-bottom: 0.5%;
 }
