@@ -19,7 +19,7 @@
   margin-left: 15%;
   margin-right: 15%;
   margin-bottom: 1%;
-  width: 70%
+  width: 70%;
 }
 
 .bilder {
@@ -36,6 +36,7 @@
   text-align: center;
   margin-top: 100px
 }
+
 .textOmOss ul {
   font-family: 'Noto Sans JP', sans-serif;
   text-align: left;
@@ -43,6 +44,7 @@
   margin-left: 15%;
   padding: 0;
 }
+
 .textOmOss li {
   font-family: 'Karma', serif;
   font-size: 18px;

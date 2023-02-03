@@ -5,10 +5,11 @@
 div .bilder-butik {
   text-align: left;
   margin-top: 100px;
-  margin-left: 15%;
+  margin-left: 25.5%;
 }
 
 .bilder-butik img {
+  display: inline-block;
   width: 70px;
 }
 
@@ -19,6 +20,12 @@ div .bilder-butik {
 
 .textbutik p {
   margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 1%;
   width: 70%;
-  margin-bottom: 0.5%;
+}
+
+.textbutik {
+  margin-left: 15%;
+  margin-right: 15%;
 }
