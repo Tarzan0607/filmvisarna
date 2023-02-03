@@ -25,7 +25,7 @@ export default function moveDetails() {
     //<iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
     return <div className='detailsBody'>
         <div className="container">
-            <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} frameBorder="0" className="video"></iframe>
+            <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} allowFullScreen frameBorder="0" className="video"></iframe>
         </div>
 
         <img src={'/images/' + images} className="moviesPoster" />
@@ -44,7 +44,7 @@ export default function moveDetails() {
                 <div className='moviesInfoDesc'>{director}</div>
             </div>
             <div className='moviesInfo'>
-                <div className='moviesInfoTitle'>Cast:</div>
+                <div className='moviesInfoTitle'>Skådespelare:</div>
                 <div className='moviesInfoDesc'>{actors.join(', ')}</div>
             </div>
             <div className='moviesInfo'>

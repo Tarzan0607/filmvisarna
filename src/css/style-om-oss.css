@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@500&display=swap');
 
 @import 'normalize.css';
 
@@ -9,26 +10,41 @@
   font-size: 1.2em;
 }
 
+.textOmOss {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .textOmOss p {
   margin-left: 15%;
   margin-right: 15%;
+  margin-bottom: 1%;
   width: 70%
 }
 
-img {
-  display: inline-block;
-  width: 500px;
+.bilder {
+  margin-left: 20%;
 }
 
-div .bilder {
+.bilder img {
+  display: inline-block;
+  width: 500px;
+  margin-right: 2.5%;
+}
+
+.textOmOss div .bilder {
   text-align: center;
   margin-top: 100px
 }
-ul{
-  margin-left: 15%;
+.textOmOss ul {
+  font-family: 'Noto Sans JP', sans-serif;
   text-align: left;
   font-size: 25px;
+  margin-left: 15%;
+  padding: 0;
 }
-li{
+.textOmOss li {
+  font-family: 'Karma', serif;
   font-size: 18px;
+  list-style-position: inside;
 }
