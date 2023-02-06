@@ -15,9 +15,18 @@ export default function Navmenu() {
       <ul id="main-nav">
               {s.routes.map(({ menuLabel, path }) =>
       menuLabel ? <li><NavLink to={path}>{menuLabel}</NavLink></li>: null
-    )}
-      </ul>
+        )}
+         </ul>
+         <div className='nav_toggler'>
+      <div className='line1'></div>
+      <div className='line2'></div>
+      <div className='line3'></div>
+      </div>
+     
+      
     </div>
+    
     {/* Loop through the menu and display menu items */}
+   
   </nav>;
 }
