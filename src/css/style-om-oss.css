@@ -131,17 +131,24 @@
   .bilder img {
     margin-bottom: 2%;
   }
+
+  .h2omoss {
+    margin-left: -2%;
+
+  }
 }
 
 @media screen and (max-width: 576px) {
 
   .textOmOss {
     margin-left: 8%;
+    margin-right: 8%;
   }
 
   .textOmOss p {
     margin-left: 0%;
     margin-right: 0%;
+    width: 100%;
   }
 
   .textOmOss h2 {
@@ -151,6 +158,12 @@
 
   .bilder {
     margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;
+  }
+
+  .bilder img {
+    width: 100%;
   }
 
   .textOmOss ul {

@@ -15,7 +15,7 @@ div .bilder-butik {
 
 .h2butik {
   margin-left: 15%;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .textbutik p {
@@ -28,4 +28,45 @@ div .bilder-butik {
 .textbutik {
   margin-left: 15%;
   margin-right: 15%;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+
+  .textbutik p {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .h2butik {
+    margin-left: -2%;
+    font-size: 1.1em;
+  }
+
+  div .bilder-butik {
+    text-align: left;
+    margin-top: 100px;
+    margin-left: 16%;
+  }
+
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+  .h2butik {
+    margin-left: -2%;
+  }
+
+  .textbutik p {
+    margin-left: 0%;
+    font-size: 18px;
+  }
+
+  .bilder-butik {
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 0%;
+  }
 }
