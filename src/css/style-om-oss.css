@@ -7,7 +7,7 @@
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .textOmOss {
@@ -23,7 +23,8 @@
 }
 
 .bilder {
-  margin-left: 22.5%;
+  margin-top: 4%;
+  margin-left: 25.5%;
 }
 
 .bilder img {
@@ -50,4 +51,110 @@
   font-family: 'Karma', serif;
   font-size: 18px;
   list-style-position: inside;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+
+  .h2omoss {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 1%;
+    text-align: left;
+    font-size: 1.1em;
+  }
+
+  .textOmOss p {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .textOmOss ul {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
+
+  .textOmOss ul h2 {
+    margin-left: -2%;
+    font-size: 1.1em;
+  }
+
+  .textOmOss li {
+    font-family: 'Karma', serif;
+    font-size: 18px;
+    list-style-position: inside;
+  }
+
+  .bilder {
+    margin-left: 15%;
+  }
+
+  .bilder img {
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+
+
+  .textOmOss p {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .textOmOss ul {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
+
+  .textOmOss ul h2 {
+    margin-left: -2%;
+    font-size: 1.1em;
+  }
+
+  .textOmOss li {
+    font-family: 'Karma', serif;
+    font-size: 18px;
+    list-style-position: inside;
+  }
+
+  .bilder {
+    margin-left: 15%;
+  }
+
+  .bilder img {
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .textOmOss {
+    margin-left: 8%;
+  }
+
+  .textOmOss p {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .textOmOss h2 {
+    margin-left: 0%;
+  }
+
+
+  .bilder {
+    margin-left: 2%;
+  }
+
+  .textOmOss ul {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
 }
