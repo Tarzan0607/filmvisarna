@@ -70,3 +70,25 @@ div .bilder-butik {
     margin-left: 0%;
   }
 }
+
+@media screen and (max-width: 576px) {
+
+  .textbutik {
+    margin-left: 4%;
+  }
+
+  .textbutik p {
+    margin-left: 0%;
+    width: 85%;
+    font-size: 18px;
+    margin-bottom: 2%;
+  }
+
+  .textbutik h2 {
+    margin-left: -0%;
+  }
+
+  .bilder-butik {
+    margin-left: 4%;
+  }
+}

@@ -5,18 +5,30 @@
 
 @import 'normalize.css';
 
-* {
-  box-sizing: border-box;
+body {
   color: rgb(255, 255, 255);
   background-color: #000;
   font-size: 100%;
 }
 
-main {
-
-  flex: 1;
-
+/* border-box include paddings and borders in widths */
+* {
+  box-sizing: border-box;
 }
+
+/* sticky footer fix */
+#root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* end of sticky footer fix */
+
 
 .root {
 
@@ -54,7 +66,8 @@ div {
     padding: 10px 0px;
     border: 1px solid #000;
     margin-bottom: 20px;
-    margin-right: 1%;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
     border-radius: 10px;
     text-align: center;
     font-size: 1.5em;
@@ -118,7 +131,8 @@ div {
   border: 1px solid #000;
   margin-bottom: 20px;
   border-radius: 10px;
-
+  display: flex;
+  text-align: end;
 
 }
 
@@ -130,4 +144,22 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+header {
+  margin-bottom: 0px;
+}
+
+.movieTitle {
+  min-height: 19%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie {
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+  bottom: 0;
 }
