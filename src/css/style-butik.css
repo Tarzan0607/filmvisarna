@@ -4,7 +4,7 @@
 
 div .bilder-butik {
   text-align: left;
-  margin-top: 100px;
+  margin-top: 2%;
   margin-left: 25.5%;
 }
 
@@ -64,10 +64,11 @@ div .bilder-butik {
     font-size: 18px;
   }
 
-  .bilder-butik {
+  div .bilder-butik {
     text-align: left;
     margin-top: 5%;
-    margin-left: 0%;
+    margin-left: 15%;
+    margin-bottom: 2%;
   }
 }
 
@@ -88,7 +89,9 @@ div .bilder-butik {
     margin-left: -0%;
   }
 
-  .bilder-butik {
-    margin-left: 4%;
+  div .bilder-butik {
+    margin-left: 5%;
+    margin-bottom: 3%;
+    margin-top: 8%;
   }
 }
