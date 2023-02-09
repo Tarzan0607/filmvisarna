@@ -59,7 +59,6 @@
     margin-left: 0%;
     margin-right: 0%;
     padding-left: 1%;
-    text-align: left;
     font-size: 1.1em;
   }
 
@@ -79,12 +78,6 @@
   .textOmOss ul h2 {
     margin-left: -2%;
     font-size: 1.1em;
-  }
-
-  .textOmOss li {
-    font-family: 'Karma', serif;
-    font-size: 18px;
-    list-style-position: inside;
   }
 
   .bilder {
@@ -98,8 +91,6 @@
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
 
-
-
   .textOmOss p {
     margin-left: 0%;
     margin-right: 0%;
@@ -116,12 +107,6 @@
   .textOmOss ul h2 {
     margin-left: -2%;
     font-size: 1.1em;
-  }
-
-  .textOmOss li {
-    font-family: 'Karma', serif;
-    font-size: 18px;
-    list-style-position: inside;
   }
 
   .bilder {
