@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
+import React from 'react';
 import OmOss from './components/pages/OmOss';
 import Footer from './components/pages/Footer';
 import Navbar from './components/pages/Navbar';
@@ -9,7 +10,7 @@ import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
 import Spelschema from './components/pages/Spelschema';
-import Navmenu  from './components/pages/Navmenu';
+//import Navmenu  from './components/pages/Navmenu';
 import {
   BrowserRouter,
   Routes,
@@ -27,9 +28,7 @@ export default function App() {
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       {menuLabel: 'Butik', path: '/butik', Component: Butik },
-      {menuLabel: 'Om oss', path: '/OmOss', Component: OmOss },
-      
-      
+      {menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss }, 
     ]
   });
 
@@ -57,9 +56,9 @@ export default function App() {
   }, []);
 
   return <BrowserRouter>
-    <header>
-      <Navmenu />
-    </header>
+		<React.Fragment>
+			<Navbar/>
+		</React.Fragment>
     <main>
       <Routes>
         {s.routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
