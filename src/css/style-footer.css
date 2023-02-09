@@ -72,42 +72,26 @@ footer p:first-of-type {
 @media screen and (min-width: 769px) and (max-width: 1199px) {
   footer {
     margin-top: 30px;
-    background: rgb(233, 233, 233);
-    /*background: linear-gradient(0deg, rgb(255, 255, 255) 0%, #f1f1f1 95%, rgba(235, 236, 237, 0.1) 100%);*/
-    position: static;
-    bottom: 0;
-    left: 0;
-    right: 0;
   }
 
   footer img:first-of-type {
-    float: right;
     margin-right: 15%;
-    display: inline;
-    width: 45px;
   }
 
   footer p:first-of-type {
-    display: inline;
     margin: 0px 3px 3px 0px;
     padding-left: 10%;
   }
 
   footer h4 {
-    margin: 0.5% 0.5% .3% 0px;
     padding-left: 10%;
-    color: #000;
-    background-color: transparent;
     font-size: 90%;
   }
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
 
-
-
   footer p:first-of-type {
-    display: inline;
     margin: 0px 3px 3px 0px;
     padding-left: 5%;
   }
@@ -122,41 +106,22 @@ footer p:first-of-type {
 }
 
 @media screen and (max-width: 576px) {
-  footer {
-    display: inline-block;
-    width: 100%;
-    background: rgb(233, 233, 233);
-    /*background: linear-gradient(0deg, rgb(255, 255, 255) 0%, #f1f1f1 95%, rgba(235, 236, 237, 0.1) 100%);*/
-    position: static;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
 
   .wrapperFooter {
-    background: rgb(233, 233, 233);
-    position: relative;
     width: 75%;
     margin-left: 10%;
-    bottom: 0;
-    left: 0;
-    right: 0;
   }
 
   footer h4 {
     margin: 5px 0.5% .5% 0px;
     padding-left: 0%;
     font-size: 15px;
-    color: #000;
-    background-color: transparent;
   }
 
   footer p {
     display: block;
     margin: 0px 3px 3px 0px;
     padding-left: 0%;
-    background-color: transparent;
-    color: rgb(32, 32, 32);
     font-size: 0.7em;
   }
 
@@ -168,28 +133,18 @@ footer p:first-of-type {
 
 
   footer img:first-of-type {
-    float: right;
     margin-right: 0%;
-    display: inline;
     width: 45px;
   }
 
   footer img {
-    float: right;
     margin-right: 1%;
-    display: inline;
     max-width: 35px;
     margin-bottom: .2%;
-    background-color: transparent;
   }
 
   .imagesFooter {
-    width: 100%;
-    background-color: transparent;
-    position: absolute;
     top: 50%;
     right: -15%;
-    margin: 0;
-    padding: 0;
   }
 }
