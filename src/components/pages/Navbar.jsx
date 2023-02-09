@@ -13,7 +13,7 @@ function Navbar() {
    
 	return (
 		<header>
-			<h>Filmvisarna</h>
+			<h2>Filmvisarna</h2>
       <nav ref={navRef}>
         
         {s.routes.map(({ menuLabel, path }) =>
