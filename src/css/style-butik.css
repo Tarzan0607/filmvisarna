@@ -2,30 +2,97 @@
 
 @import 'normalize.css';
 
-div .bilder-butik {
-  text-align: left;
-  margin-top: 100px;
-  margin-left: 25.5%;
+body {
+  margin: 0;
+  padding: 0;
+  color: rgb(39, 5, 40);
+  background-color: rgb(39, 5, 40);
 }
 
-.bilder-butik img {
-  display: inline-block;
-  width: 70px;
+img {
+ width: 100%;
+ height: 30%;
+ object-fit: cover;
+ margin-top: 2rem;
+}
+.butik {
+ margin: 100px 200px;
+ margin-top: 50px;
+ background-color: rgb(39, 5, 40);
 }
 
-.h2butik {
-  margin-left: 15%;
-  font-size: 1.2em;
+
+.title {
+ font-size: 36px;
+ margin-top: 50px;
 }
 
-.textbutik p {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 1%;
-  width: 70%;
+
+.description {
+ margin-top: 12px;
+ font-size: 18px;
+ color: rgb(251, 249, 249);
+ max-width: 1800px;
+ margin-left: 10px;
+ margin-right: 10px;
 }
 
-.textbutik {
-  margin-left: 15%;
-  margin-right: 15%;
+
+.section-title {
+ font-size: 36px;
+ margin-top: 48px;
+ background-color: rgb(39, 5, 40);
 }
+
+
+.carousel-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: rgb(39, 5, 40);
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10 10px;
+  background-color: rgb(39, 5, 40);
+  box-shadow: 0 0 5px rgb(39, 5, 40);
+  border-radius: 15px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.carousel-item h3 {
+  font-size: 18px;
+  text-decoration-color: #f9f9f9;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 24px;
+  color: rgb(166, 154, 154);
+  content: '\f060'; /* Content code for the left arrow */
+  background-color: rgb(39, 5, 40);
+}
+
+.slick-next:before {
+  content: '\f061';
+  background-color: rgb(39, 5, 40); /* Content code for the right arrow */
+}
+
+
+
+
+

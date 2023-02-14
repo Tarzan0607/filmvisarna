@@ -1,20 +1,60 @@
-export default function Butik() {
+import React from "react";
+import Slider from "react-slick";
 
 
-  return <>
 
-    <div className="textbutik">
-      <h2 className="h2butik">Butiken</h2>
-      <p>I lobbyn finner du vår butik som erbjuder godis, läsk och lättare snacks från flera populära aktörer</p>
 
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aliquam perspiciatis modi voluptatum facere nesciunt, aliquid aperiam at accusamus tempora, nulla vitae autem magni laborum illum expedita quibusdam itaque doloremque! .</p>
+const Butik = () => {
 
+   const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    };
+  return (
+    <div className="butik">
+      <img src= './images/Butik/popcorn.jpg' alt="Cover Photo" />
+      <h1 className="title">Butik</h1>
+      <p className="description"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
+      </p>
+       <h1 className="title">Food & Drinks</h1>
+     <div className="carousel-container">
+      <Slider {...settings}>
+        <div className="carousel-item">
+          <img src='./images/Butik/marabou.jpg'  />
+          <h3>Marabou</h3>
+        </div>
+        <div className="carousel-item">
+          <img src='./images/Butik/chips.jpg'  />
+          <h3>Olw</h3>
+        </div>
+        <div className="carousel-item">
+         <img src='./images/Butik/coffe.jpg'  />
+          <h3>Coffee</h3>
+        </div>
+        <div className="carousel-item">
+          <img src='./images/Butik/combo.png'  />
+          <h3>Pop-Combo</h3>
+        </div>
+        <div className="carousel-item">
+          <img src='./images/Butik/slash.jpg'  />
+          <h3>Slash</h3>
+        </div>
+        <div className="carousel-item">
+          <img src='./images/Butik/chips2.jpg'  />
+          <h3>Pringles</h3>
+        </div>
+      </Slider>
     </div>
-    <div className="bilder-butik">
-      <img src='./images/Butik/Coca-Cola_iconsvg.png'></img>
-      <img src='./images/Butik/Fanta_icons(2016).png'></img>
-      <img src='./images/Butik/Sprite_iconssvg.png'></img>
+
     </div>
-  </>
-}
+  );
+
+  
+  
+};
+
+export default Butik;

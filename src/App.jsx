@@ -10,6 +10,8 @@ import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
 import Spelschema from './components/pages/Spelschema';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 //import Navmenu  from './components/pages/Navmenu';
 import {
   BrowserRouter,
