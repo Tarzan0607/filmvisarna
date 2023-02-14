@@ -7,8 +7,6 @@ router.get('/:movieid', async (req, res) => {
 
     const movieId = req.params.movieid;
 
-    if (!movieId) return res.json({message: 'failed', response: 'Could not find MovieID!'}).status(403);
-
     if (isNaN(movieId)) return res.json({message: 'failed', response: 'MovieID must be valid number!'}).status(403);
 
     let data = undefined;
