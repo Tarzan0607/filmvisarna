@@ -7,13 +7,14 @@ router.get('/', async (req, res) => {
 
     let data = undefined;
     try {
-        const [dataTables, dataRows] = await pool.query('SELECT * FROM screenings RIGHT JOIN movies ON screenings.movie_id = movies.id');
+        const [dataTables, dataRows] = await pool.query('SELECT * FROM movies RIGHT JOIN screenings ON movies.id = screenings.movie_id LEFT JOIN auditoriums ON screenings.auditorium_id = auditoriums.id');
         data = dataTables;
     } catch {
         await pool.release();
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
     }
 
+    console.log(data);
     await pool.release();
     res.json({message: 'success', response: data}).status(200);
 });
@@ -27,7 +28,7 @@ router.get('/:movieid', async (req, res) => {
 
     let data = undefined;
     try {
-        const [dataTables, dataRows] = await pool.query('SELECT * FROM screenings RIGHT JOIN movies ON screenings.movie_id = movies.id WHERE screenings.id = ?', [movieId]);
+        const [dataTables, dataRows] = await pool.query('SELECT * FROM movies RIGHT JOIN screenings ON movies.id = screenings.movie_id LEFT JOIN auditoriums ON screenings.auditorium_id = auditoriums.id WHERE screenings.id = ?', [movieId]);
         data = dataTables;
     } catch {
         await pool.release();
