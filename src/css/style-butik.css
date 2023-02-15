@@ -5,8 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  color: rgb(39, 5, 40);
   background-color: rgb(39, 5, 40);
+  
+}
+.main{
+  background: rgb(39, 5, 40);
+  
 }
 
 img {
@@ -18,7 +22,7 @@ img {
 .butik {
  margin: 100px 200px;
  margin-top: 50px;
- background-color: rgb(39, 5, 40);
+ background: rgb(39, 5, 40);
 }
 
 

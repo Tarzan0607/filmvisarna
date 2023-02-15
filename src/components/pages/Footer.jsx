@@ -9,9 +9,9 @@ export default function Home() {
      <div className="sb_footer section_padding">
        <div className="sb_footer-links">
          <div className="sb_footer-links_div">
-           <h4>Contact With Us</h4>
+           <h4>Kontakta Oss</h4>
            <a href="/address">
-             <p>Address</p>
+             <p>Adress</p>
            </a>
            <a href="/address2">
              <p>Östra Fejkadress 28, </p>
@@ -23,7 +23,7 @@ export default function Home() {
 
          </div>
          <div className="sb_footer-links_div">
-           <h4>Theaters</h4>
+           <h4>Salonger</h4>
            <a href="/cinema">
              <p>IMAX</p>
            </a>
@@ -35,7 +35,7 @@ export default function Home() {
 
          </div>
          <div className="sb_footer-links_div">
-           <h4>Download App</h4>
+           <h4>Ladda ner appen</h4>
            <a href="/app">
              <p>Android</p>
            </a>
@@ -49,11 +49,12 @@ export default function Home() {
 
 
          <div className="sb_footer-links_div">
-           <h4>Follow Us</h4>
+           <h4>Följ oss</h4>
            <div className="socialmedia">
+             
+             <p><img src='/images/instagram.png' alt="" /></p>
              <p><img src='/images/facebook.png' alt=""/></p>
-             <p><img src='/images/instagram.png' alt=""/></p>
-             <p><img src='/images/twiter.png' alt=""/></p>
+             <p><img src='/images/twitter.png' alt=""/></p>
              <p><img src='/images/linkdin.png' alt=""/></p>
 
 
@@ -66,7 +67,7 @@ export default function Home() {
        <div className="sb_footer-below">
          <div className="sb_footer-copyright">
            <p>
-             @Filmvisarna - 2013.All rights reserved.
+             @Filmvisarna - 2013. All rights reserved.
            </p>
 
 

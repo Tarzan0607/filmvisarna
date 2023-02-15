@@ -25,7 +25,7 @@ export default function OmOss() {
  </div>
   
   <div className="textOmOss">
-  <h2 className="h2omoss">Theatres</h2> 
+  <h2 className="h2omoss">Salonger</h2> 
    <div className="theatre-options">
     <div className="option" onClick={() => handleOptionClick('IMAX')}>
           <h3>IMAX</h3>

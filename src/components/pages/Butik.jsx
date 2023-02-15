@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
@@ -20,7 +21,7 @@ const Butik = () => {
       <p className="description"> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
       </p>
-       <h1 className="title">Food & Drinks</h1>
+       <h1 className="title">Snacks och Drycker</h1>
      <div className="carousel-container">
       <Slider {...settings}>
         <div className="carousel-item">

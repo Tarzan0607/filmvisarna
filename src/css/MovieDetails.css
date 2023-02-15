@@ -4,7 +4,7 @@
 @import 'normalize.css';
 
 .detailsBody {
-    background-color: #000;
+    background-color: rgb(39, 5, 40);
     font-family: 'Karma', serif;
     color: white;
 }
