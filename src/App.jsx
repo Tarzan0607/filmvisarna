@@ -10,7 +10,7 @@ import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
 import Spelschema from './components/pages/Spelschema';
-//import Navmenu  from './components/pages/Navmenu';
+import MovieSeatBookingSystem from './components/pages/MovieSeatBookingSystem';
 import {
   BrowserRouter,
   Routes,
@@ -27,6 +27,7 @@ export default function App() {
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
+      { menuLabel: 'Booking', path: '/MovieSeatBookingSystem', Component: MovieSeatBookingSystem }, 
       {menuLabel: 'Butik', path: '/butik', Component: Butik },
       {menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss }, 
     ]
