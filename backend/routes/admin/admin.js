@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
         const [dataTables, dataRows] = await pool.query('SELECT * FROM booking RIGHT JOIN screenings ON booking.screening_id = screenings.id RIGHT JOIN bookingxseats ON booking.id = bookingxseats.booking_id');
         data = dataTables;
     } catch {
-        return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
+        return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500), await pool.release();
     }
 
     await pool.release();
@@ -47,20 +47,21 @@ router.get('/', async (req, res) => {
     res.json({message: 'success', response: data}).status(200);
 });*/
 
-router.get('/:bookingid', async (req, res) => {
+router.get('/:bookingnumber', async (req, res) => {
     const pool = await getPool().getConnection(); 
 
-    const bookingId = req.params.bookingid;
+    const bookingNumber = req.params.bookingnumber;
 
-    if (!bookingId) return res.json({message: 'failed', response: 'Could not find BookingID!'}).status(403);
+    if (!bookingNumber) return res.json({message: 'failed', response: 'Could not find BookingID!'}).status(403), await pool.release();
 
-    if (isNaN(bookingId)) return res.json({message: 'failed', response: 'BookingID must be valid number!'}).status(403);
+    if (isNaN(bookingNumber)) return res.json({message: 'failed', response: 'BookingID must be valid number!'}).status(403), await pool.release();
 
     let data = undefined;
     try {
-        const [dataTables, dataRows] = await pool.query('SELECT * FROM booking RIGHT JOIN screenings ON booking.screening_id = screenings.id RIGHT JOIN bookingxseats ON booking.id = bookingxseats.booking_id WHERE booking.id = ?', [bookingId]);
+        const [dataTables, dataRows] = await pool.query('SELECT * FROM booking RIGHT JOIN screenings ON booking.screening_id = screenings.id RIGHT JOIN bookingxseats ON booking.id = bookingxseats.booking_id WHERE booking.booking_number = ?', [bookingNumber]);
         data = dataTables;
     } catch {
+        await pool.release();
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
     }
 

@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
         const [dataTables, dataRows] = await pool.query('SELECT * FROM screenings RIGHT JOIN movies ON screenings.movie_id = movies.id');
         data = dataTables;
     } catch {
+        await pool.release();
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
     }
 
@@ -22,13 +23,14 @@ router.get('/:movieid', async (req, res) => {
 
     const movieId = req.params.movieid;
 
-    if (isNaN(movieId)) return res.json({message: 'failed', response: 'MovieID must be valid number!'}).status(403);
+    if (isNaN(movieId)) return res.json({message: 'failed', response: 'MovieID must be valid number!'}).status(403), await pool.release();
 
     let data = undefined;
     try {
         const [dataTables, dataRows] = await pool.query('SELECT * FROM screenings RIGHT JOIN movies ON screenings.movie_id = movies.id WHERE screenings.id = ?', [movieId]);
         data = dataTables;
     } catch {
+        await pool.release();
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
     }
 
