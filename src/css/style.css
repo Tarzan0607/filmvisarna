@@ -10,9 +10,7 @@ body {
   
   font-size: 100%;
 }
-main {
-background-color: #000;
-}
+
 
 /* border-box include paddings and borders in widths */
 * {
