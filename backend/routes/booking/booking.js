@@ -63,7 +63,21 @@ router.post('/', async (req, res) => {
 
     await pool.release();
 
-    res.json({message: 'success', response: null}).status(200);
+    res.json({message: 'success', response: bookingNumber}).status(200);
+});
+
+router.get('/', async (req, res) => {
+    const pool = await getPool().getConnection();
+
+    const [moviesData, moviesRows] = await pool.query('SELECT * FROM movies');
+
+    const [ticketTypes, ticketRows] = await pool.query('SELECT * FROM tickettypes');
+
+    const [screenings, screeningRows] = await pool.query('SELECT * FROM screenings');
+
+    const [seats, seatsRow] = await pool.query('SELECT * FROM seats');
+
+    res.json({message: 'success', response: {tickets: ticketTypes, movies: moviesData, screenings: screenings, seats: seats}}).status(200);
 });
 
 module.exports = router;
