@@ -13,6 +13,7 @@ import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
 import Spelschema from './components/pages/Spelschema';
+import Admin from './components/pages/Admin';
 
 //import Navmenu  from './components/pages/Navmenu';
 import {
@@ -29,6 +30,7 @@ export default function App() {
     routes: [
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
+      { path: '/admin', Component: Admin},
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       {menuLabel: 'Butik', path: '/butik', Component: Butik },
