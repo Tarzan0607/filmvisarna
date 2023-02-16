@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
+import { get } from "./utilities/backend-talk";
 import React from 'react';
 import OmOss from './components/pages/OmOss';
 import Footer from './components/pages/Footer';
@@ -27,8 +28,8 @@ export default function App() {
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
-      {menuLabel: 'Butik', path: '/butik', Component: Butik },
-      {menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss }, 
+      { menuLabel: 'Butik', path: '/butik', Component: Butik },
+      { menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss },
     ]
   });
 
@@ -56,9 +57,9 @@ export default function App() {
   }, []);
 
   return <BrowserRouter>
-		<React.Fragment>
-			<Navbar/>
-		</React.Fragment>
+    <React.Fragment>
+      <Navbar />
+    </React.Fragment>
     <main>
       <Routes>
         {s.routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}
