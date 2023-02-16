@@ -14,7 +14,7 @@ export default function OmOss() {
         <li>Var snäll och ställ in mobilen på ljudlös för att inte störa andra i publiken</li>
         <li>Nödutgångar finns tydligt skyltade i alla våra salonger</li>
       </ul>
-      <h2 className="h2omoss">Information</h2>
+      <h3 className="h3omoss">Information</h3>
       <p>Pris: 130kr/biljett </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum enim libero, non vulputate nunc mattis eget. Nullam tempor nisl nec facilisis sollicitudin. Morbi ultricies egestas justo eget pretium. Donec ut velit eget lorem varius lacinia. Nam sodales dictum elit, ac placerat massa fringilla vitae. Sed feugiat, erat quis convallis.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
@@ -24,21 +24,18 @@ export default function OmOss() {
       <img src='./images/Butik/theatre2.jpg'></img>
     </div>
 
-    <div className="textOmOss">
-      <h2 className="h2omoss">Salonger</h2>
-      <div className="theatre-options">
-        <div className="option" onClick={() => handleOptionClick('IMAX')}>
-          <h3>IMAX</h3>
-          <img src='./images/Butik/imax2.jpg' />
-
-        </div>
-        <div className="option" onClick={() => handleOptionClick('4DX')}>
-          <h3>4DX</h3>
-          <img src='./images/Butik/4dx.jpg' />
-
-        </div>
+    <div className="theatre-options">
+      <div className="option" onClick={() => handleOptionClick('IMAX')}>
+        <h3>IMAX</h3>
+        <img src='./images/Butik/imax2.jpg' />
 
       </div>
+      <div className="option" onClick={() => handleOptionClick('4DX')}>
+        <h3>4DX</h3>
+        <img src='./images/Butik/4dx.jpg' />
+
+      </div>
+
     </div>
   </>
 }
