@@ -28,15 +28,18 @@ router.post('/', async (req, res) => {
     const pool = await getPool().getConnection();
 
     const bookedTickets = req.body;
+
+    if (!Array.isArray(bookedTickets)) return res.json({message: 'failed', response: 'Recieved body with no valid Array!'}).status(403), await pool.release();
+
     const seatId = req.body[0].seatid;
     const screeningId = req.body[0].screeningid;
     const ticketType = req.body[0].tickettype;
     const currentDate = dateNow();
 
-
     if (!seatId) return res.json({message: 'failed', response: 'No SeatID could be found!'}).status(403), await pool.release();
     if (!screeningId) return res.json({message: 'failed', response: 'No ScreeningID could be found!'}).status(403), await pool.release();
     if (!ticketType) return res.json({message: 'failed', response: 'No TicketType could be found!'}).status(403), await pool.release();
+    if (ticketType !== 1 && ticketType !== 2 && ticketType !== 3) return res.json({message: 'failed', response: 'TicketType is not valid type!'}).status(403), await pool.release();
 
     const bookingNumber = generate();
     
