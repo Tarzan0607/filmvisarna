@@ -1,28 +1,37 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import '../../css/style-navbar.css';
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "../../css/style-nav.css";
+import { useStates } from '../../utilities/states';
 
-export default function Navbar() {
-  return (
-    <div className='nav-manu'>
-      <h1 id="h2title"><u className="trans">FilmVisarna</u></h1>
-      <ul id="main-nav">
-    <li>
-      <Link to="/">Home</Link>
-      </li>
-      <li>
-      <Link to="/OmOss">OmOss</Link>
-      </li>
-    <li>
-      <Link to="/Butik">Butik</Link>
-    </li>
-    <li>
-      <Link to="/MovieDetails">MovieDetails</Link>
-    </li>
-       <li>
-      <Link to="/Spelschema">Spelschema</Link>
-        </li>
-        </ul>
-  </div>
-  );
+function Navbar() {
+  const s = useStates('main');
+	const navRef = useRef();
+
+	const showNavbar = () => {
+		navRef.current.classList.toggle("responsive_nav");
+  };
+   
+	return (
+		<header>
+			<h2>Filmvisarna</h2>
+      <nav ref={navRef}>
+        
+        {s.routes.map(({ menuLabel, path }) =>
+          <a href={path}>{ menuLabel}</a>            
+        )}
+        {/* Loop through the menu and display menu items */}
+  
+				<button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes />
+				</button>
+			</nav>
+			<button className="nav-btn" onClick={showNavbar}>
+				<FaBars />
+			</button>
+		</header>
+	);
 }
+
+export default Navbar;

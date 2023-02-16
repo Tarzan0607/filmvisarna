@@ -1,7 +1,9 @@
-import '../../css/style-om-oss.css';
+
 
 export default function OmOss() {
   return <>
+
+
     <div className="textOmOss">
       <h2 className="h2omoss">Filmvisarna</h2>
       <p>Filmvisarna är en nyöppnad biograf i centrala Malmö.  Vi siktar på ett erbjuda en unik filmupplevelse med den bästa och nyaste tekniken på marknaden </p>
@@ -18,8 +20,25 @@ export default function OmOss() {
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
     </div>
     <div className="bilder">
-      <img src='./images/OmOss/Biograf_inside.jpg'></img>
-      <img src='./images/OmOss/Biograf_outside.jpg'></img>
+      <img src='./images/Butik/theatre1.jpg'></img>
+      <img src='./images/Butik/theatre2.jpg'></img>
+    </div>
+
+    <div className="textOmOss">
+      <h2 className="h2omoss">Salonger</h2>
+      <div className="theatre-options">
+        <div className="option" onClick={() => handleOptionClick('IMAX')}>
+          <h3>IMAX</h3>
+          <img src='./images/Butik/imax2.jpg' />
+
+        </div>
+        <div className="option" onClick={() => handleOptionClick('4DX')}>
+          <h3>4DX</h3>
+          <img src='./images/Butik/4dx.jpg' />
+
+        </div>
+
+      </div>
     </div>
   </>
 }

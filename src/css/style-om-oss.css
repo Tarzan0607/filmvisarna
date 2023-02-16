@@ -3,35 +3,43 @@
 
 @import 'normalize.css';
 
+body {
+  background-color: rgb(37, 6, 40);
+}
+
+.main {}
+
 .h2omoss {
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
-  font-size: 1.3em;
+  font-size: 36px;
 }
 
 .textOmOss {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 16px;
 }
 
 .textOmOss p {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   margin-bottom: 1%;
   width: 70%;
 }
 
 .bilder {
-  margin-top: 4%;
-  margin-left: 25.5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
 }
 
 .bilder img {
   display: inline-block;
   width: 500px;
   height: 250px;
-  margin-right: 2.5%;
+  margin: 0px 10px 30px 20px;
 }
 
 .textOmOss div .bilder {
@@ -52,6 +60,57 @@
   font-size: 18px;
   list-style-position: inside;
 }
+
+.theatre-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h3 {
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+  font-size: 24px;
+}
+
+.option {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.option img {
+  display: inline-block;
+  flex: 50%;
+  padding: 5px;
+  margin-right: 20%;
+  margin-left: 20%;
+
+  margin: 0px 10px 30px 20px;
+}
+
+.video-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-player iframe {
+  width: 80%;
+  height: 80%;
+}
+
+
+
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
