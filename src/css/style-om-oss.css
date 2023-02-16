@@ -68,7 +68,7 @@ body {
 
 .theatre-options {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -232,6 +232,7 @@ body {
 
   .textOmOss h2 {
     margin-left: 0%;
+    font-size: 1.7em;
 
   }
 

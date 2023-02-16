@@ -143,6 +143,7 @@ img {
 
   .title {
     margin-left: 2%;
+    margin-top: 5%;
   }
 
   .title-small {
@@ -168,18 +169,20 @@ img {
   }
 
   .title {
-    margin-left: 2%;
+    margin-left: 3%;
     font-size: 24px;
+    margin-top: 5%;
   }
 
   .title-small {
-    margin-left: 2%;
-    font-size: 20px;
+    margin-left: 3%;
+    font-size: 18px;
+
   }
 
   .description {
     padding-left: 0;
-    margin-left: 4%;
+    margin-left: 5%;
   }
 
   .description p {
