@@ -11,6 +11,8 @@ import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
 import Spelschema from './components/pages/Spelschema';
 import MovieSeatBookingSystem from './components/pages/MovieSeatBookingSystem';
+
+//import Navmenu  from './components/pages/Navmenu';
 import {
   BrowserRouter,
   Routes,

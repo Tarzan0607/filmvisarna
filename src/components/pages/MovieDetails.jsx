@@ -10,22 +10,17 @@ export default function moveDetails() {
 
     const { MoviePath } = useParams();
     const movie = s.films.find(movie => movie.path === '/movie/' + MoviePath);
-    if (!movie) return <h1>No movie could be found!</h1>
+    if (!movie) return <></>
 
     const { title, images, youtubeTrailers, director, productionYear, actors, language, subtitles, length } = movie;
 
     let description = movie && movie.description.split('<p>')
         .map(x => x.replace(/<\/p>/g, ''))
         .map(x => <p>{x}</p>)
-    function remakeLength(num) {
-        var hours = Math.floor(num / 60);
-        var minutes = num % 60;
-        return hours + " tim " + minutes + " min";
-    }
     //<iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
     return <div className='detailsBody'>
         <div className="container">
-            <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} frameBorder="0" className="video"></iframe>
+            <iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} allowFullScreen frameBorder="0" className="video"></iframe>
         </div>
 
         <img src={'/images/' + images} className="moviesPoster" />
@@ -44,7 +39,7 @@ export default function moveDetails() {
                 <div className='moviesInfoDesc'>{director}</div>
             </div>
             <div className='moviesInfo'>
-                <div className='moviesInfoTitle'>Cast:</div>
+                <div className='moviesInfoTitle'>Skådespelare:</div>
                 <div className='moviesInfoDesc'>{actors.join(', ')}</div>
             </div>
             <div className='moviesInfo'>
@@ -61,4 +56,10 @@ export default function moveDetails() {
             </div>
         </div>
     </div>
+}
+
+function remakeLength(num) {
+    const hours = Math.floor(num / 60);
+    const minutes = num % 60;
+    return hours >= 1 ? hours + " tim " + minutes + " min" : minutes + " min";
 }

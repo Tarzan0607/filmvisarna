@@ -1,25 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@500&display=swap');
 
 @import 'normalize.css';
 
+body{
+  background-color: rgb(37, 6, 40);
+}
+
+.main{
+  
+}
 .h2omoss {
   margin-left: 15%;
   margin-right: 15%;
   text-align: left;
-  font-size: 1.2em;
+  font-size: 36px;
 }
 
-p {
-  margin-left: 15%;
-  margin-right: 15%;
+.textOmOss {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 16px;
 }
 
-img {
-  display: inline-block;
-  width: 500px;
+.textOmOss p {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 1%;
+  width: 70%;
 }
 
-div .bilder {
+.bilder {
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+}
+
+.bilder img {
+ display: inline-block;
+ width: 500px;
+ height: 250px;
+ margin: 0px 10px 30px 20px;
+}
+
+.textOmOss div .bilder {
   text-align: center;
   margin-top: 100px
 }
+
+.textOmOss ul {
+  font-family: 'Noto Sans JP', sans-serif;
+  text-align: left;
+  font-size: 25px;
+  margin-left: 15%;
+  padding: 0;
+}
+
+.textOmOss li {
+  font-family: 'Karma', serif;
+  font-size: 18px;
+  list-style-position: inside;
+}
+
+.theatre-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.h3{
+  margin-left: 15%;
+  margin-right: 15%;
+  text-align: left;
+  font-size: 24px;
+}
+
+.option {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.option img {
+  display: inline-block;
+  flex:50% ;
+  padding: 5px;
+  margin-right: 20%;
+  margin-left: 20%;
+  
+  margin: 0px 10px 30px 20px;
+}
+
+.video-player {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-player iframe {
+  width: 80%;
+  height: 80%;
+}
+
+

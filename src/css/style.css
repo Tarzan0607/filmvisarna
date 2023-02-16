@@ -11,12 +11,28 @@
   
   font-size: 100%;
 }
+
+
 main {
-background-color: #000;
+
+  flex: 1;
+
+}
+
+.root {
+
+  display: flex;
+
+  min-height: 100vh;
+
+  flex-direction: column;
+
 }
 
 p {
-  font-family: 'Karma'
+  font-family: 'Karma';
+  margin-bottom: 2%;
+  font-size: 20px;
 }
 
 h1,
@@ -70,7 +86,6 @@ div {
   .movie {
     display: inline-block;
     width: 49%;
-    height: auto;
     border: 1px solid #000;
     margin-right: 1%;
     border-radius: 10px;
@@ -88,9 +103,11 @@ div {
 .moviePreview img {
   max-width: 100%;
   height: auto;
+  border-radius: 3px;
 }
 
 .movieTitle {
+  position: relative;
   text-align: center;
   font-size: 0.8em;
   margin-bottom: 3%;
