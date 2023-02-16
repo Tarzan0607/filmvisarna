@@ -20,7 +20,7 @@ export default function Spelschema() {
         const bokningsArray = [];
         bokningarArray.map(bokning => {
             const date = new Date(bokning[0].time);
-            bokningsArray.push({bokningsNummer: bokning[0].booking_number, visningsTid: remakeDate(date), bokningsID: bokning[0].booking_id, bokning: bokning});
+            bokningsArray.push({bokningsNummer: bokning[0].booking_number, Film: bokning[0].title, visningsTid: remakeDate(date), bokningsID: bokning[0].booking_id, bokning: bokning});
         });
 
         s.bokningar = bokningsArray;
@@ -29,8 +29,9 @@ export default function Spelschema() {
 
   return <div className='showingsTitle'>
     <h1 className="allaBokningar">Alla bokningar</h1>
-    {s.bokningar.map(({bokningsNummer, bokning, visningsTid, bokningsID}) => <div className="bokning">
+    {s.bokningar.map(({bokningsNummer, bokning, visningsTid, bokningsID, Film}) => <div className="bokning">
         <h2>Bokning: {bokningsNummer}</h2>
+        <p>Film: {Film}</p>
         <p>Visningstid: {visningsTid}</p>
         <p>BokningsID: {bokningsID}</p>
         <br />

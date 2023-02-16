@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
 
     let data = undefined;
     try {
-        const [dataTables, dataRows] = await pool.query('SELECT * FROM booking RIGHT JOIN screenings ON booking.screening_id = screenings.id RIGHT JOIN bookingsxseats ON booking.id = bookingsxseats.booking_id');
+        const [dataTables, dataRows] = await pool.query('SELECT * FROM booking RIGHT JOIN screenings ON booking.screening_id = screenings.id RIGHT JOIN bookingsxseats ON booking.id = bookingsxseats.booking_id LEFT JOIN movies ON screenings.movie_id = movies.id');
         data = dataTables;
     } catch {
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500), await pool.release();
