@@ -14,7 +14,7 @@ router.use('/schedule', scheduleRoute);
 router.use('/bookedseats', bookedSeatsRoute);
 
 router.get('/', (req, res) => {
-    res.json({message: 'This is the root endpoint'});
+    res.json({message: 'The API is up and running! (ROOT DIR)'}).status(200);
 });
 
 module.exports = router;
