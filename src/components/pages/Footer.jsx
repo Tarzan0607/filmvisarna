@@ -9,15 +9,15 @@ export default function Home() {
       <div className="sb_footer section_padding">
         <div className="sb_footer-links">
           <div className="sb_footer-links_div">
-            <h4>Kontakta Oss</h4>
+            <h4>Kontakta oss</h4>
             <a href="/address">
-              <p>Adress</p>
+              <p>Östra Fejkadress 28, 213 44 Malmö</p>
             </a>
             <a href="/address2">
-              <p>Östra Fejkadress 28, </p>
+              <p>040 - 00 00 00</p>
             </a>
             <a href="/address3">
-              <p>213 44 Malmö</p>
+              <p>info@filmvisarna.se</p>
             </a>
 
 
@@ -67,7 +67,7 @@ export default function Home() {
         <div className="sb_footer-below">
           <div className="sb_footer-copyright">
             <p>
-              @Filmvisarna - 2013. All rights reserved.
+              ©Filmvisarna - 2013. All rights reserved.
             </p>
 
 

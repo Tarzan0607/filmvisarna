@@ -13,7 +13,7 @@
 
 .sb_footer-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
@@ -37,18 +37,24 @@ a {
 }
 
 .socialmedia {
-  margin-top: 10px;
+  margin-top: 0%;
   display: flex;
   flex-direction: row;
+}
+
+.sb_footer-links_div .socialmedia p {
+  margin-right: 2%;
 }
 
 .socialmedia img {
   width: 40px;
   height: 40px;
+  margin-right: 10%;
+  margin-top: 0;
+  padding-left: 1%;
   line-height: 30px;
   display: inline-block;
   border-radius: 50%;
-  border: 2px solid #eee;
 }
 
 .sb_footer-links_div h4 {
@@ -94,56 +100,59 @@ hr {
   width: 100%;
 }
 
+.sb_footer-copyright {
+  width: 100%;
+}
+
 .sb_footer-copyright p {
-  font-size: 13px;
-  line-height: 15px;
+
+  font-size: 14px;
+  line-height: 20px;
   color: rgb(226, 239, 251);
-  font-weight: 600;
+  font-weight: 00;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-@media screen and (max-width: 850px) {
-  .sb_footer-heading h1 {
-    font-size: 44px;
-    line-height: 50px;
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .sb_footer.section_padding {
+    padding: 1rem 2rem;
   }
 
-}
-
-@media screen and (max-width: 550px) {
-  .sb_footer-heading h1 {
-    font-size: 34px;
-    line-height: 42px;
+  .sb_footer-links {
+    flex-wrap: nowrap;
   }
 
-  .sb_footer-links div {
-    margin: 1rem 0;
+  .socialmedia {
+    flex-wrap: wrap;
+    margin-bottom: 0;
   }
 
-  .sb_footer-btn p {
-    font-size: 14px;
-    line-height: 20px;
+  .socialmedia p {
+    margin-bottom: 0;
   }
 
   .sb_footer-below {
-    flex-direction: column;
-    justify-content: left;
+    margin-top: 2%;
   }
 
-  .sb_footer-below-links {
-    flex-direction: column;
-  }
-
-  .sb_footer-below-links p {
-    margin-right: 0rem;
-    margin-top: 1rem;
-    text-align: center;
-  }
 }
 
-@media screen and (max-width: 400px) {
-  .sb_footer-heading h6 {
-    font-size: 20px;
-    line-height: 38px;
+@media screen and (max-width: 576px) {
+  .sb_footer.section_padding {
+    padding: 0rem 0rem;
+  }
+
+  .socialmedia {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .sb_footer-below {
+    margin-top: -5%;
   }
 }
