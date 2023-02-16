@@ -31,6 +31,12 @@ img {
 .title {
   font-size: 36px;
   margin-top: 50px;
+  margin-left: 18.5%;
+}
+
+.title-small {
+  margin-left: 18.5%;
+  margin-bottom: 0%;
 }
 
 
@@ -39,7 +45,7 @@ img {
   font-size: 18px;
   color: rgb(251, 249, 249);
   max-width: 1800px;
-  margin-left: 10px;
+  margin-left: 18.5%;
   margin-right: 10px;
 }
 
@@ -103,37 +109,41 @@ img {
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
-  .textbutik p {
+  .title {
     margin-left: 0%;
-    margin-right: 0%;
-    margin-bottom: 1%;
-    width: 85%;
-    font-size: 18px;
   }
 
-  .h2butik {
-    margin-left: -2%;
-    font-size: 1.1em;
+  .title-small {
+    margin-left: 0;
+    padding-left: 01%;
   }
 
-  div .bilder-butik {
+  .butik p {
     text-align: left;
-    margin-top: 100px;
-    margin-left: 16%;
+    margin-left: 0%;
+  }
+
+  .description {
+    padding-left: 0;
+  }
+
+  .description p {
+    font-size: 18px;
   }
 
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
-
-  .h2butik {
-    margin-left: -2%;
+  .title {
+    margin-left: 0%;
   }
 
   .textbutik p {
     margin-left: 0%;
     font-size: 18px;
   }
+
+
 
   div .bilder-butik {
     text-align: left;
