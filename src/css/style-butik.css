@@ -110,17 +110,18 @@ img {
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
   .title {
-    margin-left: 0%;
+    margin-left: 1%;
   }
 
   .title-small {
     margin-left: 0;
-    padding-left: 01%;
+    padding-left: 02%;
+    font-size: larger;
   }
 
   .butik p {
     text-align: left;
-    margin-left: 0%;
+    margin-left: 0.5%;
   }
 
   .description {
@@ -134,45 +135,56 @@ img {
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
+
+  .butik {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
   .title {
-    margin-left: 0%;
+    margin-left: 2%;
   }
 
-  .textbutik p {
-    margin-left: 0%;
+  .title-small {
+    margin-left: 1%;
+  }
+
+  .description {
+    padding-left: 0;
+    margin-left: 4%;
+  }
+
+  .description p {
+    padding-left: 0%;
     font-size: 18px;
-  }
-
-
-
-  div .bilder-butik {
-    text-align: left;
-    margin-top: 5%;
-    margin-left: 15%;
-    margin-bottom: 2%;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 576px) {
+  .butik {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
 
-  .textbutik {
+  .title {
+    margin-left: 2%;
+    font-size: 24px;
+  }
+
+  .title-small {
+    margin-left: 2%;
+    font-size: 20px;
+  }
+
+  .description {
+    padding-left: 0;
     margin-left: 4%;
   }
 
-  .textbutik p {
-    margin-left: 0%;
-    width: 85%;
+  .description p {
+    padding-left: 0%;
     font-size: 18px;
-    margin-bottom: 2%;
-  }
-
-  .textbutik h2 {
-    margin-left: -0%;
-  }
-
-  div .bilder-butik {
-    margin-left: 5%;
-    margin-bottom: 3%;
-    margin-top: 8%;
+    margin-left: 0;
   }
 }
