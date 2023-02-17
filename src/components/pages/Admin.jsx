@@ -3,13 +3,28 @@ import '../../css/style-admin.css';
 import {
     get
 } from '../../utilities/backend-talk';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export default function Spelschema() {
+import Pagination from '../admin/Pagination';
 
-    const s = useStates({
-        bokningar: []
-    });
+export default function Admin() {
+
+    const [bokningarData, setBokningarData] = useState([]);
+    const [bokningarPerPage, setBokningarPerPage] = useState(2);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const [sortId, setSortId] = useState("");
+    const [sortDone, setSortDone] = useState("");
+    
+    function onInput(event) {
+        const input = document.getElementById("filterBox").value;
+
+        setSortId(input);
+    }
+
+    function filterById() {
+        return bokningarData.filter(bokning => bokning.bokningsNummer === sortId);
+    }
 
   useEffect(() => {
     (async () => {
@@ -23,24 +38,40 @@ export default function Spelschema() {
             bokningsArray.push({bokningsNummer: bokning[0].booking_number, Film: bokning[0].title, visningsTid: remakeDate(date), bokningsID: bokning[0].booking_id, bokning: bokning});
         });
 
-        s.bokningar = bokningsArray;
+        setBokningarData(bokningsArray);
     })();
   }, []);
 
+  useEffect(() => {
+    if (sortId === sortDone) { return; }
+
+    setSortDone(sortId);
+  }, [sortId]);
+
+  //POSSIBLY REMOVE SORTING?
+
+  const lastPostIndex = currentPage * bokningarPerPage;
+  const firstPostIndex = lastPostIndex - bokningarPerPage;
+  const currentPost = bokningarData.slice(firstPostIndex, lastPostIndex);
+
   return <div className='showingsTitle'>
     <h1 className="allaBokningar">Alla bokningar</h1>
-    {s.bokningar.map(({bokningsNummer, bokning, visningsTid, bokningsID, Film}) => <div className="bokning">
+    <div className="input">
+        <input className="input-box" id="filterBox" placeholder="Filter by ID" onInput={onInput} />
+    </div>
+    {bokningarData.filter(bokning => bokning.bokningsNummer.toLowerCase().includes(sortId)).map(({bokningsNummer, bokning, visningsTid, bokningsID, Film}) => <div className="bokning">
         <h2>Bokning: {bokningsNummer}</h2>
         <p>Film: {Film}</p>
         <p>Visningstid: {visningsTid}</p>
         <p>BokningsID: {bokningsID}</p>
         <br />
         {bokning.map(({ticketType_id, seat_id}) => <div className="ticketBox">
-            <p>TicketType: {ticketType_id}</p>
+            <p>TicketType: {ticketType_id === 1 ? "Vuxen" : ticketType_id === 2 ? "Barn" : ticketType_id === 3 ? "Pensionär" : "Undefined"}</p>
             <p>StolID: {seat_id}</p>
         </div>)}
         <hr />
     </div>)}
+    <Pagination totalPosts={bokningarData.length} bokningarPerPage={bokningarPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>
   </div>
 }
 
@@ -58,7 +89,7 @@ function grupperaIn(gruppFn, array) {
     });
   
     return groups;
-};
+}
 
 function remakeDate(date) {
     const AD = date;
