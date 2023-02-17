@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
+import {
+  get
+} from './utilities/backend-talk';
 import React from 'react';
 import OmOss from './components/pages/OmOss';
 import Footer from './components/pages/Footer';
@@ -51,6 +54,12 @@ export default function App() {
       // convert it from json to a js data structure
       let dataFromJson2 = await fetchedData2.json();
       s.spelschema = dataFromJson2;
+
+      /* Call API, store response in "bla" variable that can then be used in page code!
+      const bla = await get('/api/spelschema/1');
+      console.log(bla);
+      */
+
       // oneliner:
       // s.people = await (await fetch('/json/people.json')).json();
     })();
