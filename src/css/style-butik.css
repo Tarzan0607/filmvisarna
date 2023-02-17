@@ -27,6 +27,10 @@ img {
   background: rgb(39, 5, 40);
 }
 
+.butik img {
+  width: 70%;
+}
+
 
 .title {
   font-size: 36px;
@@ -124,6 +128,10 @@ img {
     margin-left: 0.5%;
   }
 
+  .butik img {
+    width: 100%;
+  }
+
   .description {
     padding-left: 0;
   }
@@ -139,6 +147,10 @@ img {
   .butik {
     margin-right: 10%;
     margin-left: 10%;
+  }
+
+  .butik img {
+    width: 100%;
   }
 
   .title {
@@ -166,6 +178,10 @@ img {
   .butik {
     margin-right: 10%;
     margin-left: 10%;
+  }
+
+  .butik img {
+    width: 100%;
   }
 
   .title {

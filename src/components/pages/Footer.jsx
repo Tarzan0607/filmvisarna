@@ -10,28 +10,19 @@ export default function Home() {
         <div className="sb_footer-links">
           <div className="sb_footer-links_div">
             <h4>Kontakta oss</h4>
-            <a href="/address">
-              <p>Östra Fejkadress 28, 213 44 Malmö</p>
-            </a>
-            <a href="/address2">
-              <p>040 - 00 00 00</p>
-            </a>
-            <a href="/address3">
-              <p>info@filmvisarna.se</p>
-            </a>
-
+            <p>Östra Fejkadress 28, 213 44 Malmö</p>
+            <p>040 - 00 00 00</p>
+            <p>info@filmvisarna.se</p>
 
           </div>
           <div className="sb_footer-links_div">
             <h4>Salonger</h4>
-            <a href="/cinema">
+            <a href="/OmOss">
               <p>IMAX</p>
             </a>
-            <a href="/cinema2">
+            <a href="/OmOss">
               <p>4DX</p>
             </a>
-
-
 
           </div>
           <div className="sb_footer-links_div">
@@ -42,26 +33,17 @@ export default function Home() {
             <a href="/app2">
               <p>ios</p>
             </a>
-
-
-
           </div>
-
 
           <div className="sb_footer-links_div">
             <h4>Följ oss</h4>
             <div className="socialmedia">
-
               <p><img src='/images/instagram.png' alt="" /></p>
               <p><img src='/images/facebook.png' alt="" /></p>
               <p><img src='/images/twitter.png' alt="" /></p>
               <p><img src='/images/linkdin.png' alt="" /></p>
-
-
             </div>
           </div>
-
-
         </div>
 
         <div className="sb_footer-below">
@@ -69,10 +51,7 @@ export default function Home() {
             <p>
               ©Filmvisarna - 2013. All rights reserved.
             </p>
-
-
           </div>
-
         </div>
 
 
