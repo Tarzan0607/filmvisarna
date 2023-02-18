@@ -27,7 +27,7 @@ export default function App() {
     routes: [
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
-      { menuLabel: 'Home', path: '/', Component: Home },
+      { menuLabel: 'Hem', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       { menuLabel: 'bokning & biljetter', path: '/MovieSeatBookingSystem', Component: MovieSeatBookingSystem }, 
       {menuLabel: 'Butik', path: '/butik', Component: Butik },
