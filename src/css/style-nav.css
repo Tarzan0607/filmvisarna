@@ -4,6 +4,12 @@
 
 @import 'normalize.css';
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arima", sans-serif;
+}
 
 :root {
   --topNavMainColor: linear-gradient(90deg, #411540 20%, #8949e3 100%);
