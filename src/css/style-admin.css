@@ -58,6 +58,12 @@
 .input-box {
     border-radius: 10px;
     text-align: center;
+    background-color: purple;
+    color: white;
+}
+
+.input-box::placeholder {
+    color: white;
 }
 
 .input {

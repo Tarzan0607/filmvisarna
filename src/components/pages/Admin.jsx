@@ -19,7 +19,7 @@ export default function Admin() {
     function onInput(event) {
         const input = document.getElementById("filterBox").value;
 
-        setSortId(input);
+        setSortId(input.toLowerCase());
     }
 
     function filterById() {
@@ -45,7 +45,7 @@ export default function Admin() {
   useEffect(() => {
     if (sortId === sortDone) { return; }
 
-    setSortDone(sortId);
+    setSortDone(sortId.toLowerCase());
   }, [sortId]);
 
   //POSSIBLY REMOVE SORTING?
