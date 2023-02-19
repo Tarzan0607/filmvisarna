@@ -28,15 +28,18 @@ router.post('/', async (req, res) => {
     const pool = await getPool().getConnection();
 
     const bookedTickets = req.body;
+
+    if (!Array.isArray(bookedTickets)) return res.json({message: 'failed', response: 'Recieved body with no valid Array!'}).status(403), await pool.release();
+
     const seatId = req.body[0].seatid;
     const screeningId = req.body[0].screeningid;
     const ticketType = req.body[0].tickettype;
     const currentDate = dateNow();
 
-
     if (!seatId) return res.json({message: 'failed', response: 'No SeatID could be found!'}).status(403), await pool.release();
     if (!screeningId) return res.json({message: 'failed', response: 'No ScreeningID could be found!'}).status(403), await pool.release();
     if (!ticketType) return res.json({message: 'failed', response: 'No TicketType could be found!'}).status(403), await pool.release();
+    if (ticketType !== 1 && ticketType !== 2 && ticketType !== 3) return res.json({message: 'failed', response: 'TicketType is not valid type!'}).status(403), await pool.release();
 
     const bookingNumber = generate();
     
@@ -63,7 +66,21 @@ router.post('/', async (req, res) => {
 
     await pool.release();
 
-    res.json({message: 'success', response: null}).status(200);
+    res.json({message: 'success', response: bookingNumber}).status(200);
+});
+
+router.get('/', async (req, res) => {
+    const pool = await getPool().getConnection();
+
+    const [moviesData, moviesRows] = await pool.query('SELECT * FROM movies');
+
+    const [ticketTypes, ticketRows] = await pool.query('SELECT * FROM tickettypes');
+
+    const [screenings, screeningRows] = await pool.query('SELECT * FROM screenings');
+
+    const [seats, seatsRow] = await pool.query('SELECT * FROM seats');
+
+    res.json({message: 'success', response: {tickets: ticketTypes, movies: moviesData, screenings: screenings, seats: seats}}).status(200);
 });
 
 module.exports = router;

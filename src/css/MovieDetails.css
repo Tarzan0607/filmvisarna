@@ -39,6 +39,7 @@
     object-fit: cover;
     margin: 2.5%;
     width: 25%;
+    border-radius: 3px;
 }
 
 .moviesContainer {
@@ -140,6 +141,7 @@
 
     .moviesInfo p {
         padding-left: 0%;
+        font-size: 18px;
     }
 
     .moviesInfo h2 {
@@ -154,6 +156,10 @@
 
     .moviesDescription p {
         margin: 0%;
+    }
+
+    .moviesTitle {
+        font-size: 24px;
     }
 
 }
@@ -180,7 +186,7 @@
         margin-left: 0%;
         margin-bottom: 4%;
         padding-left: 0%;
-        font-size: 2.7vw;
+        font-size: 18px;
     }
 }
 

@@ -63,8 +63,6 @@ router.get('/:bookingnumber', async (req, res) => {
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
     }
 
-    console.log(data);
-
     await pool.release();
     res.json({message: 'success', response: data}).status(200);
 });
