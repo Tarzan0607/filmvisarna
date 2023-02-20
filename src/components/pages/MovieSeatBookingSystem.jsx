@@ -9,6 +9,13 @@ export default function BookingPage() {
   const [ticketType, setTicketType] = useState('');
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [availableSeats, setAvailableSeats] = useState([]);
+  const [auditorium, setAuditorium] = useState('');
+
+  
+  const [email, setEmail] = useState('');
+  const [numSeats, setNumSeats] = useState('');
+
+  const [bookingInfo, setBookingInfo] = useState('');
 
   const s = useStates('main');
 
@@ -44,15 +51,64 @@ export default function BookingPage() {
     setMovie(event.target.value);
   };
 
-  const handleTimeChange = (event) => {
-    setTime(event.target.value);
-  };
-
   const handleTicketTypeChange = (event) => {
     setTicketType(event.target.value);
   };
 
+  const handleTimeChange = (event) => {
+    setTime(event.target.value);
+  };
 
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleNumSeatsChange = (event) => {
+    setNumSeats(event.target.value);
+  };
+
+  const handleBooking = (event) => {
+    event.preventDefault();
+
+    const info = `Movie: ${movie}\nTicket Type: ${ticketType}\nTime: ${time}\nEmail: ${email}\nNumber of Seats: ${numSeats}`;
+    setBookingInfo(info);
+  };
+
+   const handleAuditoriumChange = (event) => {
+    setAuditorium(event.target.value);
+   };
+  
+   const handleSeatSelection = (seatNumber) => {
+    setSelectedSeats([...selectedSeats, seatNumber]);
+  };
+
+  // function to handle canceling seat selection
+  const handleSeatCancel = (seatNumber) => {
+    setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber));
+  };
+
+   const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(`Name: ${name}, Email: ${email}, Selected Seats: ${selectedSeats}`);
+  };
+  const bokaNu = () => {
+    const auditoriumName = 'Lilla Salongen';
+    const { seatsPerRow } = seats.auditoriumsAndSeats.find((x) => x.name === auditoriumName) || {};
+    if (!seatsPerRow) {
+      return null;
+    }
+    const selectedSeatsInfo = selectedSeats.map((seatNumber) => {
+      const seatIndex = seatNumber - 1;
+      const row = Math.floor(seatIndex / seatsPerRow.length) + 1;
+      const seatInRow = seatIndex % seatsPerRow.length + 1;
+      return `Seat ${seatNumber} - Row ${row}, Seat ${seatInRow}`;
+    });
+    const info = `Auditorium: ${auditoriumName}\nSelected Seats: ${selectedSeatsInfo.join('\n')}\nName: ${name}\nEmail: ${email}`;
+    console.log(info);
+    alert(`Your booking has been confirmed with the following details:\n\n${info}`);
+  };
+
+   
 
   return (
     <div className="booking-page">
@@ -96,10 +152,12 @@ export default function BookingPage() {
        
         
        <div className="form-group">
-         <label htmlFor="type-email">Email</label>
-         <input type="email" id="type-email" />
-       </div>
-          <button className="book-button">Boka nu</button>
+            <label htmlFor="type-email">Email</label>
+            <input type="email" id="type-email" />
+        </div>
+        
+       
+          
      <div className="showcase">
         <div className="auditorium">
           <div className="screen"></div>
@@ -107,37 +165,67 @@ export default function BookingPage() {
             {rows.map((row, index) => (
               <div className="row" key={index}>
                 {row.map((seat) => (
-                            <div
-                             className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                              key={seat}
-                               onClick={() => handleSeatClick(seat)}
-                                >
-                              {seat}
-                            </div>
-                          ))}
-                       </div>
-                      ))}
-                   </div>
-                </div>
-              <div className="seat-info">
-          
-       
-           </div>
-
+                  <div
+                    className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+                    key={seat}
+                    onClick={() => handleSeatClick(seat)}
+                  >
+                    {seat}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
-            <div className="selected-seats">
-            <div className="seat-info">
-              <div className="seat selected"></div>
-               <span>Valda platser</span>
-            </div>
+              
+              
         
+      </div>
+      
+
+        <div>
+            <h2>Current Auditorium :- "{name}"</h2>
+              
+                
+
+           
         <div className="seat-info">
           <div className="seat sold"></div>
           <span>Upptagna platser</span>
-          </div>
-          
-          
         </div>
+      </div>
+      <div className="selected-seats">
+          <div className="seat-info">
+              <div className="seat selected"></div>
+                <span>Valda platser :-</span>
+                <span>{selectedSeats.length}</span>
+              </div>
+        </div>
+         <div>
+      <form onSubmit={handleSubmit}>
+       <br />
+          <label>
+             Selected Seats:
+               <ul>
+                 {selectedSeats.map((seat) => (
+                <li key={seat}>
+                  Seat {seat}
+                   <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
+                  Cancel
+                  </button>
+                </li>
+              ))}
+          </ul>
+         </label>
+       <br />
+      </form>
+      <button className="book-button" onClick={bokaNu}>Boka nu</button>
+    </div>
+        
+
+        
+        
+            
         
       
     </div>
@@ -148,4 +236,3 @@ export default function BookingPage() {
       
       
 }
-
