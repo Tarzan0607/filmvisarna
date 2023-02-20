@@ -12,7 +12,6 @@ import './css/style-om-oss.css';
 =======
 import './css/MovieSeatBookingSystem.css';
 >>>>>>> feature-navbar
->>>>>>> Stashed changes
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
