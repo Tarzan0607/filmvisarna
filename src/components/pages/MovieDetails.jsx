@@ -4,6 +4,8 @@ import {
 } from 'react-router-dom'
 import { useStates } from '../../utilities/states';
 
+import '../../components/pages/MovieSeatBookingSystem';
+
 export default function moveDetails() {
 
     const s = useStates('main');
@@ -17,6 +19,10 @@ export default function moveDetails() {
     let description = movie && movie.description.split('<p>')
         .map(x => x.replace(/<\/p>/g, ''))
         .map(x => <p>{x}</p>)
+    
+    
+
+  
     //<iframe src={'https://www.youtube.com/embed/' + youtubeTrailers[0]} className="moviesTrailer" height="750"></iframe>
     return <div className='detailsBody'>
         <div className="container">
@@ -25,7 +31,8 @@ export default function moveDetails() {
 
         <img src={'/images/' + images} className="moviesPoster" />
         <div className='moviesContainer'>
-            <button className='moviesBuyTicket'>Köp Biljetter</button>
+            <button className='moviesBuyTicket' onClick={() => handleClick(movie.title)}>Köp Biljetter</button>
+
             <div className='moviesInfo'>
                 <h2 className='moviesTitle'>{title}</h2>
                 <div className='moviesDescription'>{description}</div>
