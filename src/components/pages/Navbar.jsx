@@ -14,7 +14,7 @@ function Navbar() {
    
 	return (
 		<header>
-			<h2 className="logo"><a href="{path}"></a> Filmvisarna</h2>
+			<h2 className="logo"><Link to="/">Filmvisarna</Link></h2>
 
 			<nav ref={navRef}>   
 				
