@@ -12,8 +12,8 @@ export default function Home() {
             <h4>Kontakta oss</h4>
             <p className='footer-adress'>Östra Fejkadress 28</p>
             <p className='footer-adress-postcode'>213 44 Malmö</p>
-            <p>040 - 00 00 00</p>
-            <p>info@filmvisarna.se</p>
+            <p className='footer-text'>040 - 00 00 00</p>
+            <p className='footer-text'>info@filmvisarna.se</p>
 
           </div>
           <div className="sb_footer-links_div">

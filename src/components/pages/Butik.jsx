@@ -50,11 +50,11 @@ const Butik = () => {
         <Slider {...settings}>
           <div className="carousel-item">
             <img src='./images/Butik/marabou.jpg' />
-            <h3>Marabou</h3>
+            <h3>Marabou - 200g</h3>
           </div>
           <div className="carousel-item">
             <img src='./images/Butik/chips.jpg' />
-            <h3>OLW</h3>
+            <h3>OLW - liten</h3>
           </div>
           <div className="carousel-item">
             <img src='./images/Butik/coffe.jpg' />
