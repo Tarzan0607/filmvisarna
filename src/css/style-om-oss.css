@@ -7,7 +7,14 @@ body{
   background-color: rgb(37, 6, 40);
 }
 
+<<<<<<< Updated upstream
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature-navbar
+>>>>>>> Stashed changes
 .h2omoss {
   margin-left: 15%;
   margin-right: 15%;
@@ -111,3 +118,166 @@ body{
 
 
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+
+  .h2omoss {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 1%;
+    font-size: 1.5em;
+  }
+
+  .h3omoss {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding-left: 1%;
+    font-size: 1.1em;
+  }
+
+  .textOmOss p {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .textOmOss ul {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
+
+  .textOmOss ul h2 {
+    margin-left: -2%;
+    font-size: 1.1em;
+  }
+
+  .textOmOss li {
+    margin-left: 1%;
+  }
+
+  .bilder {
+    margin-left: 9%;
+  }
+
+  .bilder img {
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+
+  .textOmOss p {
+    margin-left: 0%;
+    margin-right: 0%;
+    margin-bottom: 1%;
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .textOmOss ul {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
+
+  .textOmOss li {
+    margin-left: 1%;
+  }
+
+  .textOmOss ul h2 {
+    margin-left: -2%;
+    font-size: 1.1em;
+  }
+
+  .bilder {
+    height: auto;
+    width: 80%;
+    display: flex;
+    margin-left: 8%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .bilder img {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 40%;
+    height: auto;
+  }
+
+  .h2omoss {
+    margin-left: -2%;
+
+  }
+
+  .h3omoss {
+    margin-left: 1%;
+    font-size: 1.1em;
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+
+  .textOmOss {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .textOmOss p {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+  }
+
+  .textOmOss h2 {
+    margin-left: 0%;
+    font-size: 1.7em;
+
+  }
+
+  .textOmOss h3 {
+    margin-left: 1%;
+    font-size: 1.1em;
+  }
+
+  .bilder {
+    display: none;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .bilder img {
+    width: 60%;
+    height: auto;
+  }
+
+  .textOmOss ul {
+    margin-left: 0;
+    font-size: 1.1em;
+  }
+
+  .textOmOss ul h2 {
+    font-size: 1.1em;
+  }
+
+  .textOmOss li {
+    margin-left: 1%;
+  }
+
+  .theatre-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+=======
+>>>>>>> feature-navbar
+>>>>>>> Stashed changes
