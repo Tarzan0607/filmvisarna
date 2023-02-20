@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
+import {
+  get
+} from './utilities/backend-talk';
 import React from 'react';
 import OmOss from './components/pages/OmOss';
 import Footer from './components/pages/Footer';
@@ -9,9 +12,7 @@ import Home from './components/pages/Home';
 import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
-import MovieSeatBookingSystem from './components/pages/MovieSeatBookingSystem';
 import Spelschema from './components/pages/Spelschema';
-
 
 //import Navmenu  from './components/pages/Navmenu';
 import {
@@ -25,13 +26,11 @@ export default function App() {
   const s = useStates('main', {
     films: [],
     spelschema: [],
-    auditoriumsAndSeats: [],
     routes: [
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { menuLabel: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
-      { menuLabel: 'Booking', path: '/MovieSeatBookingSystem', Component: MovieSeatBookingSystem },
       {menuLabel: 'Butik', path: '/butik', Component: Butik },
       {menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss }, 
     ]

@@ -1,6 +1,4 @@
-import React from "react";
-import '../../css/style-om-oss.css';
-import '../../utilities/states';
+
 
 export default function OmOss() {
 
