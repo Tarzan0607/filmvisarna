@@ -31,6 +31,14 @@
   color: white;
 }
 
+.sb_footer-links_div .footer-adress {
+  margin-bottom: 0;
+}
+
+.sb_footer-links_div .footer-adress-postcode {
+  margin-top: 0;
+}
+
 a {
   color: rgb(253, 255, 240);
   text-decoration: none;
@@ -116,11 +124,19 @@ hr {
 }
 
 
-@media screen and (min-width: 769px) and (max-width: 1199px) {}
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+  .sb_footer-links_div h4 {
+    margin-bottom: 0.3rem;
+  }
+}
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .sb_footer.section_padding {
     padding: 1rem 2rem;
+  }
+
+  .sb_footer-links_div h4 {
+    margin-bottom: 0.3rem;
   }
 
   .sb_footer-links {
@@ -154,5 +170,9 @@ hr {
 
   .sb_footer-below {
     margin-top: -5%;
+  }
+
+  .sb_footer-links_div h4 {
+    margin-bottom: 0.3rem;
   }
 }
