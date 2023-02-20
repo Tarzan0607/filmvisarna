@@ -14,8 +14,7 @@ function Navbar() {
    
 	return (
 		<header>
-<<<<<<< HEAD
-			<h2 className="header-home">Filmvisarna</h2>
+			<h2 className="header-home"><Link to="/">Filmvisarna</Link></h2>
 			<nav ref={navRef}>
 
 				{s.routes.map(({ menuLabel, path }) =>
@@ -23,17 +22,6 @@ function Navbar() {
 				)}
 				{/* Loop through the menu and display menu items */}
 
-=======
-			<h2 className="logo"><Link to="/">Filmvisarna</Link></h2>
-
-			<nav ref={navRef}>   
-				
-        {s.routes.map(({ menuLabel, path }) =>
-          <a href={path}>{ menuLabel}</a>            
-        )}
-        {/* Loop through the menu and display menu items */}
-  
->>>>>>> feature-navbar
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

@@ -56,18 +56,8 @@ export default function App() {
       let dataFromJson2 = await fetchedData2.json();
       s.spelschema = dataFromJson2;
 
-<<<<<<< Updated upstream
+
       s.auditoriumsAndSeats = await (await fetch('json/auditoriums-and-seats.json')).json();
-=======
-<<<<<<< HEAD
-      /* Call API, store response in "bla" variable that can then be used in page code!
-      const bla = await get('/api/spelschema/1');
-      console.log(bla);
-      */
-=======
-      s.auditoriumsAndSeats = await (await fetch('json/auditoriums-and-seats.json')).json();
->>>>>>> feature-navbar
->>>>>>> Stashed changes
 
       // oneliner:
       // s.people = await (await fetch('/json/people.json')).json();

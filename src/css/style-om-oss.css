@@ -7,14 +7,6 @@ body{
   background-color: rgb(37, 6, 40);
 }
 
-<<<<<<< Updated upstream
-
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> feature-navbar
->>>>>>> Stashed changes
 .h2omoss {
   margin-left: 15%;
   margin-right: 15%;
@@ -116,11 +108,6 @@ body{
 }
 
 
-
-
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
   .h2omoss {
@@ -278,6 +265,3 @@ body{
     flex-direction: column;
   }
 }
-=======
->>>>>>> feature-navbar
->>>>>>> Stashed changes
