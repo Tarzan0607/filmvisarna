@@ -273,9 +273,8 @@ body {
   }
 }
 
-  .theatre-options {
+ .theatre-options {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
   }
-}
