@@ -21,7 +21,7 @@ export default function Home() {
             <a href="/OmOss">
               <p>IMAX</p>
             </a>
-            <a href="/OmOss">
+            <a href="/OmOss#theatre-anchor">
               <p>4DX</p>
             </a>
 

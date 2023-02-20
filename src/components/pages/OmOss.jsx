@@ -24,7 +24,7 @@ export default function OmOss() {
       <img src='./images/Butik/theatre2.jpg'></img>
     </div>
 
-    <div className="theatre-options">
+    <div className="theatre-options" id='theatre-anchor'>
       <div className="option" onClick={() => handleOptionClick('IMAX')}>
         <h3>IMAX</h3>
         <img src='./images/Butik/imax2.jpg' />
