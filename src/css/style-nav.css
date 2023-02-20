@@ -85,6 +85,7 @@ nav {
   }
 
   header .responsive_nav {
+    z-index: 1;
     transform:none;
     background-image: var(--topNavMainColor);
   
