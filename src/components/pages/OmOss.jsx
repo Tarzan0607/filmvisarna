@@ -1,6 +1,16 @@
-
+import React from "react";
+import '../../css/style-om-oss.css';
+import '../../utilities/states';
 
 export default function OmOss() {
+  const handleImaxClick = () => {
+    window.location.href = 'https://www.youtube.com/watch?v=B_UvdLYSk7Q&t=3s&ab_channel=IMAX';
+  }
+
+  const handle4dxClick = () => {
+    window.location.href = 'https://www.youtube.com/watch?v=-Wm2y5028ds&t=5s&ab_channel=4DX';
+  }
+
  return <>
  
   
@@ -27,14 +37,14 @@ export default function OmOss() {
   <div className="textOmOss">
   <h2 className="h2omoss">Salonger</h2> 
    <div className="theatre-options">
-    <div className="option" onClick={() => handleOptionClick('IMAX')}>
+    <div className="option" >
           <h3>IMAX</h3>
-            <img src='./images/Butik/imax2.jpg' />
+            <img src='./images/Butik/imax2.jpg' onClick={handleImaxClick}  />
       
        </div>
-       <div className="option" onClick={() => handleOptionClick('4DX')}>
+       <div className="option" >
          <h3>4DX</h3>
-            <img src='./images/Butik/4dx.jpg'  />
+            <img src='./images/Butik/4dx.jpg' onClick={handle4dxClick}  />
         
        </div> 
         
