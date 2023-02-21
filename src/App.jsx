@@ -29,11 +29,11 @@ export default function App() {
     routes: [
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
-      { menuLabel: 'Start', path: '/', Component: Home },
+      { menuLabel2: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       { menuLabel: 'Bokning & Biljetter', path: '/MovieSeatBookingSystem', Component: MovieSeatBookingSystem },
-      {menuLabel: 'Butik', path: '/butik', Component: Butik },
-      {menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss }, 
+      { menuLabel: 'Butik', path: '/butik', Component: Butik },
+      { menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss },
     ]
   });
 
@@ -64,9 +64,9 @@ export default function App() {
   }, []);
 
   return <BrowserRouter>
-		<React.Fragment>
-			<Navbar/>
-		</React.Fragment>
+    <React.Fragment>
+      <Navbar />
+    </React.Fragment>
     <main>
       <Routes>
         {s.routes.map(({ path, Component }) => <Route path={path} element={<Component />} />)}

@@ -3,17 +3,27 @@
 
 @import 'normalize.css';
 
+
 body{
   margin: 0;
   padding: 0;
   background-color: rgb(39, 5, 40);
 }
 
+body {
+  margin-left: 20px;
+}
+
+
+
 .showingsTitle {
   background-color: rgb(39, 5, 40);
   font-family: 'Karma', serif;
   color: white;
+
   margin-left: 20px;
+
+
   padding-left: 8%;
 }
 
@@ -21,29 +31,42 @@ h1 {
   text-align: 'left';
   font-size: 36px;
   margin-bottom: 20px;
+
   margin-left: 20px;
+
+
   padding-left: 8%;
 }
 
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
+
   margin-left: 20px;
+
+
   padding-left: 8%;
 }
 
 p {
   font-size: 18px;
   margin: 0;
+
  margin-left: 20px;
+
+
   padding-left: 8%;
 }
 
 hr {
   border: 1px solid rgb(63, 8, 72);
   margin: 20px 0;
+
   margin-left: 10px;
   padding-left: 5%;
+
+  padding-left: 4%;
+
 }
 
 @media screen and (min-width: 577px) and (max-width: 1199px) {
@@ -51,7 +74,9 @@ hr {
     background-color: rgb(39, 5, 40);
     font-family: 'Karma', serif;
     color: white;
+
     margin-left: 20px;
+
     padding-left: 8%;
   }
 
@@ -60,7 +85,12 @@ hr {
     font-size: 36px;
     margin-bottom: 20px;
     padding-left: 8%;
+
     margin-left: 20px;
+
+    margin-left: 10%;
+    
+
   }
 
   h2 {
@@ -76,14 +106,22 @@ hr {
     font-size: 24px;
     margin: 0;
     padding-left: 8%;
+
     margin-left: 20px;
+
+    margin-left: 10%;
+
   }
 
   hr {
     border: 1px solid rgb(50, 13, 109);
     margin: 20px 0;
+
     margin-left: 10px;
     
+
+    padding-left: 4%;
+
   }
 }
 
@@ -92,7 +130,9 @@ hr {
     background-color: #000;
     font-family: 'Karma', serif;
     color: white;
+
    margin-left: 20px;
+
     padding-left: 8%;
   }
 
@@ -101,26 +141,42 @@ hr {
     font-size: 36px;
     margin-bottom: 20px;
     padding-left: 8%;
+
    margin-left: 20px;
+
+    margin-left: 10%;
+
   }
 
   h2 {
     font-size: 24px;
     margin-bottom: 10px;
     padding-left: 8%;
+
     margin-left: 20px;
+
+    margin-left: 10%;
+
   }
 
   p {
     font-size: 18px;
     margin: 0;
     padding-left: 8%;
+
     margin-left: 20px;
+
+    margin-left: 10%;
+
   }
 
   hr {
     border: 1px solid rgb(50, 13, 109);
     margin: 20px 0;
+
     margin-left: 10px;
+
+    padding-left: 4%;
+
   }
 }

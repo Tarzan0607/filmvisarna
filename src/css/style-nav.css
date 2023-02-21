@@ -18,11 +18,12 @@
   /*greenyellow;*/
   --topNavTextColor: #eee;
 }
-.logo{
+
+.logo {
   display: block;
-    font-weight: bold;
-    padding: 5px;
-    margin: 10px;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px;
 }
 
 header {
@@ -38,7 +39,7 @@ header {
 .header-home {
   margin-top: -12px;
   font-size: 24px;
-  margin-bottom: 0px;
+  margin-bottom: -8px;
   padding-left: 0%;
   margin-left: 0%;
 }
@@ -105,9 +106,9 @@ nav {
 
   header .responsive_nav {
     z-index: 1;
-    transform:none;
+    transform: none;
     background-image: var(--topNavMainColor);
-  
+
 
   }
 
