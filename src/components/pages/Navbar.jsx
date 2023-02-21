@@ -18,7 +18,7 @@ function Navbar() {
 			<nav ref={navRef}>
 
 				{s.routes.map(({ menuLabel, path }) =>
-					<a href={path}>{menuLabel}</a>
+					<Link to={path}>{menuLabel}</Link>
 				)}
 				{/* Loop through the menu and display menu items */}
 
