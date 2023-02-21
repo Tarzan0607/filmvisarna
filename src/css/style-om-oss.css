@@ -124,6 +124,11 @@ body {
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
+  .h1omoss {
+    font-size: 36px;
+    margin-left: 0%;
+  }
+
   .h2omoss {
     margin-left: 0%;
     margin-right: 0%;

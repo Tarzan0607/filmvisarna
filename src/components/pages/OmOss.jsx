@@ -30,7 +30,10 @@ export default function OmOss() {
         <li>Nödutgångar finns tydligt skyltade i alla våra salonger</li>
       </ul>
       <h2 className="h2omoss">Information</h2>
-      <p>Pris: 130kr/biljett </p>
+      <p>Pris: </p>
+      <p>Vuxen: 130kr/biljett </p>
+      <p>Barn: 110kr/biljett </p>
+      <p>Senior: 110kr/biljett </p>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rutrum enim libero, non vulputate nunc mattis eget. Nullam tempor nisl nec facilisis sollicitudin. Morbi ultricies egestas justo eget pretium. Donec ut velit eget lorem varius lacinia. Nam sodales dictum elit, ac placerat massa fringilla vitae. Sed feugiat, erat quis convallis.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae minus consequuntur, aliquid sapiente alias possimus numquam, cupiditate earum vitae iure labore debitis incidunt quam? Iure quae quasi ea aperiam inventore.</p>
     </div>
