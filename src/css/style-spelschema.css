@@ -3,33 +3,41 @@
 
 @import 'normalize.css';
 
+body {
+  margin-left: 20px;
+}
 
 
 .showingsTitle {
   background-color: rgb(39, 5, 40);
   font-family: 'Karma', serif;
   color: white;
+  padding-left: 8%;
 }
 
 h1 {
   text-align: 'left';
   font-size: 36px;
   margin-bottom: 20px;
+  padding-left: 8%;
 }
 
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
+  padding-left: 8%;
 }
 
 p {
   font-size: 18px;
   margin: 0;
+  padding-left: 8%;
 }
 
 hr {
   border: 1px solid rgb(50, 13, 109);
   margin: 20px 0;
+  padding-left: 4%;
 }
 
 @media screen and (min-width: 577px) and (max-width: 1199px) {
@@ -37,35 +45,38 @@ hr {
     background-color: #000;
     font-family: 'Karma', serif;
     color: white;
+    padding-left: 8%;
   }
 
   h1 {
     text-align: 'center';
     font-size: 36px;
     margin-bottom: 20px;
-    padding-left: 1%;
+    padding-left: 8%;
     margin-left: 10%;
+    
   }
 
   h2 {
     text-align: 'center';
     font-size: 30px;
     margin-bottom: 10px;
-    padding-left: 3%;
-    margin-left: 15%;
+    padding-left: 8%;
+    margin-left: 20px;
   }
 
   p {
     text-align: 'center';
     font-size: 24px;
     margin: 0;
-    padding-left: 1%;
+    padding-left: 8%;
     margin-left: 10%;
   }
 
   hr {
     border: 1px solid rgb(50, 13, 109);
     margin: 20px 0;
+    padding-left: 4%;
   }
 }
 
@@ -74,32 +85,34 @@ hr {
     background-color: #000;
     font-family: 'Karma', serif;
     color: white;
+    padding-left: 8%;
   }
 
   h1 {
     text-align: 'center';
     font-size: 36px;
     margin-bottom: 20px;
-    padding-left: 1%;
+    padding-left: 8%;
     margin-left: 10%;
   }
 
   h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    padding-left: 1%;
+    padding-left: 8%;
     margin-left: 10%;
   }
 
   p {
     font-size: 18px;
     margin: 0;
-    padding-left: 1%;
+    padding-left: 8%;
     margin-left: 10%;
   }
 
   hr {
     border: 1px solid rgb(50, 13, 109);
     margin: 20px 0;
+    padding-left: 4%;
   }
 }
