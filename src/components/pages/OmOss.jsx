@@ -20,7 +20,7 @@ export default function OmOss() {
 
 
     <div className="textOmOss">
-      <h2 className="h2omoss">Filmvisarna</h2>
+      <h1 className="h1omoss">Filmvisarna</h1>
       <p>Filmvisarna är en nyöppnad biograf i centrala Malmö.  Vi siktar på ett erbjuda en unik filmupplevelse med den bästa och nyaste tekniken på marknaden </p>
       <ul>
         <h2>Regler</h2>
@@ -40,7 +40,7 @@ export default function OmOss() {
     </div>
 
     <div className="textOmOss">
-      <h2 className="h2omoss">Salonger</h2>
+      <h2 className="h2omoss"></h2>
       <div className="theatre-options">
         <div className="option" >
           <h3>IMAX</h3>
