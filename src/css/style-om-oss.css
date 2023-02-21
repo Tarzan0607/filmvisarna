@@ -115,8 +115,6 @@ body {
 }
 
 
-
-
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
   .h2omoss {
@@ -274,3 +272,9 @@ body {
     flex-direction: column;
   }
 }
+
+ .theatre-options {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }

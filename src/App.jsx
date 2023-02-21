@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
 import { useStates } from './utilities/states';
 import { urlify } from './utilities/urlify';
-import {
-  get
-} from './utilities/backend-talk';
 import React from 'react';
 import OmOss from './components/pages/OmOss';
 import Footer from './components/pages/Footer';
@@ -12,7 +9,9 @@ import Home from './components/pages/Home';
 import Error from './components/pages/Error';
 import Butik from './components/pages/Butik';
 import MoveDetails from './components/pages/MovieDetails';
+import MovieSeatBookingSystem from './components/pages/MovieSeatBookingSystem';
 import Spelschema from './components/pages/Spelschema';
+
 
 //import Navmenu  from './components/pages/Navmenu';
 import {
@@ -26,11 +25,13 @@ export default function App() {
   const s = useStates('main', {
     films: [],
     spelschema: [],
+    auditoriumsAndSeats: [],
     routes: [
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { menuLabel2: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
+      { menuLabel: 'Bokning & Biljetter', path: '/MovieSeatBookingSystem', Component: MovieSeatBookingSystem },
       { menuLabel: 'Butik', path: '/butik', Component: Butik },
       { menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss },
     ]
@@ -55,10 +56,7 @@ export default function App() {
       let dataFromJson2 = await fetchedData2.json();
       s.spelschema = dataFromJson2;
 
-      /* Call API, store response in "bla" variable that can then be used in page code!
-      const bla = await get('/api/spelschema/1');
-      console.log(bla);
-      */
+      s.auditoriumsAndSeats = await (await fetch('json/auditoriums-and-seats.json')).json();
 
       // oneliner:
       // s.people = await (await fetch('/json/people.json')).json();
