@@ -112,6 +112,10 @@ img {
 }
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
+  .butik {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 
   .title {
     margin-left: 1%;
@@ -172,6 +176,7 @@ img {
     font-size: 18px;
     margin-left: 0;
   }
+
 }
 
 @media screen and (max-width: 576px) {
