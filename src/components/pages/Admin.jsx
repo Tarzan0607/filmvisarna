@@ -22,8 +22,12 @@ export default function Admin() {
         setSortId(input.toLowerCase());
     }
 
-    function filterById() {
-        return bokningarData.filter(bokning => bokning.bokningsNummer === sortId);
+    function sortById() {
+        return bokningarData.sort(a => {
+            return a.bokningsNummer.toLowerCase() ==~ sortId ? 1 : -1;
+        });
+
+        //return bokningarData.filter(bokning => bokning.bokningsNummer.toLowerCase().includes(sortId));
     }
 
   useEffect(() => {
@@ -54,21 +58,23 @@ export default function Admin() {
   const firstPostIndex = lastPostIndex - bokningarPerPage;
   const currentPost = bokningarData.slice(firstPostIndex, lastPostIndex);
 
-  return <div className='showingsTitle'>
+  //currenPost.map will map up one page at a time and make pagination work (HAVE TO FIX ISSUES WITH FILTERING)
+
+  return <div>
     <h1 className="allaBokningar">Alla bokningar</h1>
     <div className="input">
-        <input className="input-box" id="filterBox" placeholder="Filter by ID" onInput={onInput} />
+        <input className="input-box" id="filterBox" placeholder="Filtrera på ID" onInput={onInput} />
     </div>
     {bokningarData.filter(bokning => bokning.bokningsNummer.toLowerCase().includes(sortId)).map(({bokningsNummer, bokning, visningsTid, bokningsID, Film}) => <div className="bokning">
         <h2>Bokning: {bokningsNummer}</h2>
         <p>Film: {Film}</p>
         <p>Visningstid: {visningsTid}</p>
         <p>BokningsID: {bokningsID}</p>
-        <br />
         {bokning.map(({ticketType_id, seat_id}) => <div className="ticketBox">
-            <p>TicketType: {ticketType_id === 1 ? "Vuxen" : ticketType_id === 2 ? "Barn" : ticketType_id === 3 ? "Pensionär" : "Undefined"}</p>
-            <p>StolID: {seat_id}</p>
-        </div>)}
+           <p>TicketType: {ticketType_id === 1 ? "Vuxen" : ticketType_id === 2 ? "Barn" : ticketType_id === 3 ? "Pensionär" : "Undefined"}</p>
+           <p>StolID: {seat_id}</p>
+        </div>
+        )}
         <hr />
     </div>)}
     <Pagination totalPosts={bokningarData.length} bokningarPerPage={bokningarPerPage} setCurrentPage={setCurrentPage} currentPage={currentPage}/>

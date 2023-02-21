@@ -1,8 +1,11 @@
+
+
 .ticketBox {
     padding: 2% 1%;
     border: 1px solid #000;
     border-radius: 10px;
     margin-left: 0.5%;
+    margin-top: 0.5%;
     margin-bottom: 0.5%;
     text-align: center;
     max-width: 15%;
@@ -11,9 +14,10 @@
 }
 
 .bokning {
+
     position: relative;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 100%;
     margin-bottom: 2.5%;
 }
 
@@ -60,6 +64,7 @@
     text-align: center;
     background-color: purple;
     color: white;
+    margin-bottom: 0.5%;
 }
 
 .input-box::placeholder {
@@ -70,4 +75,114 @@
     text-align: center;
     margin: auto;
     display: block;
+}
+
+.crypto_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 576px) {
+    .ticketBox {
+        padding: 2% 1%;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin-left: 0.5%;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        text-align: center;
+        max-width: 15%;
+        height: auto;
+        display: inline-block;
+    }
+    
+    .bokning {
+        position: relative;
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 2.5%;
+    }
+    
+    .bokning h2 {
+        margin-right: 17.5%;
+    }
+    
+    .bokning p {
+        margin-right: 10%;
+    }
+    
+    .allaBokningar {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .ticketBox {
+        padding: 2% 1%;
+        border: 1px solid #000;
+        border-radius: 10px;
+        margin-left: 0.5%;
+        margin-top: 0.5%;
+        margin-bottom: 0.5%;
+        text-align: center;
+        max-width: 15%;
+        height: auto;
+        display: inline-block;
+    }
+    
+    .bokning {
+        position: relative;
+        text-align: center;
+        font-size: 0.5em;
+        margin-bottom: 2.5%;
+    }
+    
+    .bokning h2 {
+        margin-right: 17.5%;
+    }
+    
+    .bokning p {
+        margin-right: 10%;
+    }
+    
+    .allaBokningar {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+.ticketBox {
+    padding: 2% 1%;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-left: 0.5%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    text-align: center;
+    max-width: 15%;
+    height: auto;
+    display: inline-block;
+}
+
+.bokning {
+    position: relative;
+    text-align: center;
+    font-size: 0.5em;
+    margin-bottom: 2.5%;
+}
+
+.bokning h2 {
+    margin-right: 17.5%;
+}
+
+.bokning p {
+    margin-right: 10%;
+}
+
+.allaBokningar {
+    text-align: center;
+}
+
 }
