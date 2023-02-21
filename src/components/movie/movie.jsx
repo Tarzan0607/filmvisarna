@@ -1,4 +1,5 @@
 import { useStates } from "../../utilities/states";
+import { Link } from "react-router-dom";
 
 export default function Movie({ id }) {
     let s = useStates('main');
