@@ -23,6 +23,8 @@ export default function BookingPage() {
 
   const [bookingData, setBookingData] = useState([]);
 
+  const [bookedSeats, setBookedSeats] = useState([]);
+
 
   useEffect(() => {
     (async () => {
@@ -72,6 +74,15 @@ export default function BookingPage() {
 
   const handleTimeChange = (event) => {
     setTime(event.target.value);
+
+    (async () => {
+      const data = await get('/api/bookedseats?screening=' + event.target.value);
+
+      const occupiedSeats = [];
+      data.response.map(seatData => occupiedSeats.push(seatData.seat_id));
+
+      setBookedSeats(occupiedSeats);
+    })();
   };
 
   const handleEmailChange = (event) => {
@@ -189,15 +200,22 @@ export default function BookingPage() {
           <div className="rows">
             {rows.map((row, index) => (
               <div className="row" key={index}>
-                {row.map((seat) => (
-                  <div
-                    className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                    key={seat}
-                    onClick={() => handleSeatClick(seat)}
-                  >
-                    {seat}
-                  </div>
-                ))}
+                {row.map((seat) =>
+                <div
+                className={`seat ${bookedSeats.includes(seat) ? "sold" : selectedSeats.includes(seat) ? "selected" : ""}`}
+                key={seat}
+                onClick={() => bookedSeats.includes(seat) ? null : handleSeatClick(seat)}
+                >
+                  {seat}
+                </div>
+                  //<div
+                  //  className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+                  //  key={seat}
+                  //  onClick={() => handleSeatClick(seat)}
+                  //>
+                  //  {seat}
+                  //</div>
+                )}
               </div>
             ))}
           </div>
