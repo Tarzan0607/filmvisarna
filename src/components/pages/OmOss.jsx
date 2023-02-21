@@ -1,9 +1,15 @@
-
+import { useEffect } from 'react';
 
 export default function OmOss() {
+
+  useEffect(() => {
+    let elementToScrollTo = location.hash && document.querySelector(location.hash);
+    if (!elementToScrollTo) { return; }
+    window.scrollTo(0, elementToScrollTo.getBoundingClientRect().top + window.innerHeight - elementToScrollTo.offsetHeight)
+  }, []);
+
+
   return <>
-
-
     <div className="textOmOss">
       <h2 className="h2omoss">Filmvisarna</h2>
       <p>Filmvisarna är en nyöppnad biograf i centrala Malmö.  Vi siktar på ett erbjuda en unik filmupplevelse med den bästa och nyaste tekniken på marknaden </p>
