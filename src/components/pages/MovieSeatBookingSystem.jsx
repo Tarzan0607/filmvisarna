@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { useStates } from '../../utilities/states';
-import { useEffect } from 'react';
+
 import '../../css/MovieSeatBookingSystem.css';
-import {
-  get
-} from '../../utilities/backend-talk';
 
 export default function BookingPage() {
   const [movie, setMovie] = useState('');
@@ -14,25 +11,13 @@ export default function BookingPage() {
   const [availableSeats, setAvailableSeats] = useState([]);
   const [auditorium, setAuditorium] = useState('');
 
-
+  
   const [email, setEmail] = useState('');
   const [numSeats, setNumSeats] = useState('');
 
   const [bookingInfo, setBookingInfo] = useState('');
 
   const s = useStates('main');
-
-  useEffect(() => {
-    (async () => {
-      const bokningar2 = await get('/api/booking');
-      let movies = bokningar2.response.movies;
-      let moviesTitle = []
-      for (let i = 0; i < movies.length; i++) {
-        moviesTitle.push(movies[i].title)
-      }
-      console.log(moviesTitle)
-    })();
-  }, []);
 
   // Find the seat info for the audtiorium with matching name
   let name = 'Lilla Salongen';
@@ -89,11 +74,11 @@ export default function BookingPage() {
     setBookingInfo(info);
   };
 
-  const handleAuditoriumChange = (event) => {
+   const handleAuditoriumChange = (event) => {
     setAuditorium(event.target.value);
-  };
-
-  const handleSeatSelection = (seatNumber) => {
+   };
+  
+   const handleSeatSelection = (seatNumber) => {
     setSelectedSeats([...selectedSeats, seatNumber]);
   };
 
@@ -102,7 +87,7 @@ export default function BookingPage() {
     setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber));
   };
 
-  const handleSubmit = (event) => {
+   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`Name: ${name}, Email: ${email}, Selected Seats: ${selectedSeats}`);
   };
@@ -123,147 +108,131 @@ export default function BookingPage() {
     alert(`Your booking has been confirmed with the following details:\n\n${info}`);
   };
 
-  function grupperaIn(gruppFn, array) {
-    const groups = {};
-
-    array.forEach((bokning) => {
-      const key = gruppFn(bokning);
-
-      if (groups[key] !== undefined) {
-        groups[key].push(bokning);
-      } else {
-        groups[key] = [bokning];
-      }
-    });
-
-    return groups;
-  }
-
-
+   
 
   return (
     <div className="booking-page">
       <div className="booking-form">
         <h2>Boka biljetter</h2>
         <div className="form-group">
-          <label htmlFor="movie-select">Movie:</label>
-          <select id="movie-select" value={movie} onChange={handleMovieChange}>
+        <label htmlFor="movie-select">Movie:</label>
+         <select id="movie-select" value={movie} onChange={handleMovieChange}>
             <option value="">Välj en film</option>
             <option value="Dune">Dune</option>
             <option value="John Wick">John Wick</option>
             <option value="Sagan">Sagan Om Konungens Återkomst</option>
             <option value="Spiderman">Spiderman-Into the spider-verse</option>
             <option value="Call Me By Your Name">Call Me By Your Name</option>
-          </select>
-
-        </div>
-        <div className="form-group">
-          <label htmlFor="time-select">Time:</label>
-          <select id="time-select" value={time} onChange={handleTimeChange}>
-            <option value="">Välj en tid</option>
+        </select>
+        
+      </div>
+      <div className="form-group">
+        <label htmlFor="time-select">Time:</label>
+        <select id="time-select" value={time} onChange={handleTimeChange}>
+          <option value="">Välj en tid</option>
             <option value="12:00 pm">14:40 pm</option>
             <option value="3:00 pm">15:00 pm</option>
             <option value="4:00 pm">16:40 pm</option>
             <option value="7:00 pm">19:00 pm</option>
             <option value="9:00 pm">21:00 pm</option>
-
-          </select>
-
-        </div>
-        <div className="form-group">
-          <label htmlFor="ticket-type-select">Ticket Type:</label>
-          <select id="ticket-type-select" value={ticketType} onChange={handleTicketTypeChange}>
-            <option value="">Välj en biljetttyp</option>
-            <option value="Standard">Vuxen</option>
-            <option value="Premium">Barn</option>
-            <option value="">Pensionerad</option>
-          </select>
-
-        </div>
-
-
-        <div className="form-group">
-          <label htmlFor="type-email">Email</label>
-          <input type="email" id="type-email" />
-        </div>
-
-
-
-        <div className="showcase">
-          <div className="auditorium">
-            <div className="screen"></div>
-            <div className="rows">
-              {rows.map((row, index) => (
-                <div className="row" key={index}>
-                  {row.map((seat) => (
-                    <div
-                      className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                      key={seat}
-                      onClick={() => handleSeatClick(seat)}
-                    >
-                      {seat}
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-
-
-
-        </div>
-
-
-        <div>
-          <h2>Current Auditorium :- "{name}"</h2>
-
-
-
-
-          <div className="seat-info">
-            <div className="seat sold"></div>
-            <span>Upptagna platser</span>
-          </div>
-        </div>
-        <div className="selected-seats">
-          <div className="seat-info">
-            <div className="seat selected"></div>
-            <span>Valda platser :-</span>
-            <span>{selectedSeats.length}</span>
-          </div>
-        </div>
-        <div>
-          <form onSubmit={handleSubmit}>
-            <br />
-            <label>
-              Selected Seats:
-              <ul>
-                {selectedSeats.map((seat) => (
-                  <li key={seat}>
-                    Seat {seat}
-                    <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
-                      Cancel
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </label>
-            <br />
-          </form>
-          <button className="book-button" onClick={bokaNu}>Boka nu</button>
-        </div>
-
-
-
-
-
-
-
+         
+        </select>
+        
       </div>
+      <div className="form-group">
+        <label htmlFor="ticket-type-select">Ticket Type:</label>
+        <select id="ticket-type-select" value={ticketType} onChange={handleTicketTypeChange}>
+          <option value="">Välj en biljetttyp</option>
+          <option value="Standard">Vuxen</option>
+          <option value="Premium">Barn</option>
+          <option value="">Pensionerad</option>
+        </select>
+       
+      </div>
+       
+        
+       <div className="form-group">
+            <label htmlFor="type-email">Email</label>
+            <input type="email" id="type-email" />
+        </div>
+        
+       
+          
+     <div className="showcase">
+        <div className="auditorium">
+          <div className="screen"></div>
+          <div className="rows">
+            {rows.map((row, index) => (
+              <div className="row" key={index}>
+                {row.map((seat) => (
+                  <div
+                    className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+                    key={seat}
+                    onClick={() => handleSeatClick(seat)}
+                  >
+                    {seat}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+              
+              
+        
+      </div>
+      
+
+        <div>
+            <h2>Current Auditorium :- "{name}"</h2>
+              
+                
+
+           
+        <div className="seat-info">
+          <div className="seat sold"></div>
+          <span>Upptagna platser</span>
+        </div>
+      </div>
+      <div className="selected-seats">
+          <div className="seat-info">
+              <div className="seat selected"></div>
+                <span>Valda platser :-</span>
+                <span>{selectedSeats.length}</span>
+              </div>
+        </div>
+         <div>
+      <form onSubmit={handleSubmit}>
+       <br />
+          <label>
+             Selected Seats:
+               <ul>
+                 {selectedSeats.map((seat) => (
+                <li key={seat}>
+                  Seat {seat}
+                   <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
+                  Cancel
+                  </button>
+                </li>
+              ))}
+          </ul>
+         </label>
+       <br />
+      </form>
+      <button className="book-button" onClick={bokaNu}>Boka nu</button>
     </div>
-  );
+        
 
+        
+        
+            
+        
+      
+    </div>
+  </div>
+);
 
-
-
+      
+      
+      
 }
