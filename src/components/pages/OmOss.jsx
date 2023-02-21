@@ -1,15 +1,15 @@
-import React from "react";
-import '../../css/style-om-oss.css';
-import '../../utilities/states';
+
 
 export default function OmOss() {
+
   const handleImaxClick = () => {
-    window.location.href = 'https://www.youtube.com/watch?v=B_UvdLYSk7Q&t=3s&ab_channel=IMAX';
+    open('https://www.youtube.com/watch?v=B_UvdLYSk7Q&t=3s&ab_channel=IMAX');
   }
 
   const handle4dxClick = () => {
-    window.location.href = 'https://www.youtube.com/watch?v=-Wm2y5028ds&t=5s&ab_channel=4DX';
+    open('https://www.youtube.com/watch?v=-Wm2y5028ds&t=5s&ab_channel=4DX');
   }
+
 
  return <>
  

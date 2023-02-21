@@ -1,8 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma&family=Noto+Sans:wght@500&display=swap');
+
+@import 'normalize.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karma", sans-serif;
+}
+
 :root {
   --topNavMainColor: linear-gradient(90deg, #411540 20%, #8949e3 100%);
   --topNavMainColorLight: #5767aa;
-  --topNavSecondaryColor: greenyellow;
+  --topNavSecondaryColor: rgb(255, 255, 255);
+  /*greenyellow;*/
   --topNavTextColor: #eee;
+}
+.logo{
+  display: block;
+    font-weight: bold;
+    padding: 5px;
+    margin: 10px;
 }
 
 header {
@@ -10,15 +30,24 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  padding: 0 2rem;
+  padding: 0 8rem;
   background-image: var(--topNavMainColor);
   color: var(--topNavTextColor);
+}
+
+.header-home {
+  margin-top: -12px;
+  font-size: 24px;
+  margin-bottom: 0px;
+  padding-left: 0%;
+  margin-left: 0%;
 }
 
 nav a {
   margin: 0 1rem;
   color: var(--topNavTextColor);
   text-decoration: none;
+  font-family: 'Arima';
 }
 
 nav a:hover {
@@ -43,7 +72,16 @@ nav {
   align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 0 2rem;
+  }
+
+  .responsive_nav {
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 3;
+  }
+
   header .nav-btn {
     visibility: visible;
     opacity: 1;
@@ -66,7 +104,11 @@ nav {
   }
 
   header .responsive_nav {
-    transform: none;
+    z-index: 1;
+    transform:none;
+    background-image: var(--topNavMainColor);
+  
+
   }
 
   nav .nav-close-btn {
