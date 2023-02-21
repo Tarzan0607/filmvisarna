@@ -45,7 +45,7 @@ const Butik = () => {
       <h1 className="title">Butik</h1>
       <p className="description"> <p>I lobbyn finner du vår butik som erbjuder godis, läsk och lättare snacks från flera populära aktörer</p>
       </p>
-      <h2 className="title-small">Snacks och Drycker</h2>
+      <h2 className="title-small"></h2>
       <div className="carousel-container">
         <Slider {...settings}>
           <div className="carousel-item">
