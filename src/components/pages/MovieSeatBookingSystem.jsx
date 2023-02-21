@@ -128,7 +128,8 @@ export default function BookingPage() {
 
     const res = await post('/api/booking', toPost);
 
-    return alert("Booking successfully made!\n\nBooking Numer: " + res.response);
+    alert("Booking successfully made!\n\nBooking Numer: " + res.response);
+    return window.location.reload();
     const auditoriumName = 'Lilla Salongen';
     const { seatsPerRow } = seats.auditoriumsAndSeats.find((x) => x.name === auditoriumName) || {};
     if (!seatsPerRow) {
