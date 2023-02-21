@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStates } from '../../utilities/states';
+import {
+  get,
+  post
+} from '../../utilities/backend-talk'
 
 import '../../css/MovieSeatBookingSystem.css';
 
@@ -16,6 +20,17 @@ export default function BookingPage() {
   const [numSeats, setNumSeats] = useState('');
 
   const [bookingInfo, setBookingInfo] = useState('');
+
+  const [bookingData, setBookingData] = useState([]);
+
+
+  useEffect(() => {
+    (async () => {
+      const data = await get('/api/booking');
+      
+      setBookingData(data.response);
+    })();
+  }, []);
 
   const s = useStates('main');
 
@@ -91,7 +106,18 @@ export default function BookingPage() {
     event.preventDefault();
     console.log(`Name: ${name}, Email: ${email}, Selected Seats: ${selectedSeats}`);
   };
-  const bokaNu = () => {
+  const bokaNu = async () => {
+    if (!movie) return alert("No movie chosen!");
+    if (!time) return alert("No time chosen!");
+    if (!ticketType) return alert("No ticket type chosen!");
+    if (selectedSeats.length === 0) return alert("No selected seats for booking!");
+
+    const toPost = [];
+    selectedSeats.map(seat => toPost.push({seatid: parseInt(seat), screeningid: parseInt(time), tickettype: parseInt(ticketType)}));
+
+    const res = await post('/api/booking', toPost);
+
+    return alert("Booking successfully made!\n\nBooking Numer: " + res.response);
     const auditoriumName = 'Lilla Salongen';
     const { seatsPerRow } = seats.auditoriumsAndSeats.find((x) => x.name === auditoriumName) || {};
     if (!seatsPerRow) {
@@ -103,12 +129,14 @@ export default function BookingPage() {
       const seatInRow = seatIndex % seatsPerRow.length + 1;
       return `Seat ${seatNumber} - Row ${row}, Seat ${seatInRow}`;
     });
+    console.log(selectedSeatsInfo)
     const info = `Auditorium: ${auditoriumName}\nSelected Seats: ${selectedSeatsInfo.join('\n')}\nName: ${name}\nEmail: ${email}`;
     console.log(info);
     alert(`Your booking has been confirmed with the following details:\n\n${info}`);
   };
 
-   
+  if (!bookingData.movies) return <></>
+  if (!bookingData.screenings) return <></>
 
   return (
     <div className="booking-page">
@@ -118,11 +146,7 @@ export default function BookingPage() {
         <label htmlFor="movie-select">Movie:</label>
          <select id="movie-select" value={movie} onChange={handleMovieChange}>
             <option value="">Välj en film</option>
-            <option value="Dune">Dune</option>
-            <option value="John Wick">John Wick</option>
-            <option value="Sagan">Sagan Om Konungens Återkomst</option>
-            <option value="Spiderman">Spiderman-Into the spider-verse</option>
-            <option value="Call Me By Your Name">Call Me By Your Name</option>
+            {bookingData.movies.map(movie => <option value={movie.id}>{movie.title}</option>)}
         </select>
         
       </div>
@@ -130,12 +154,7 @@ export default function BookingPage() {
         <label htmlFor="time-select">Time:</label>
         <select id="time-select" value={time} onChange={handleTimeChange}>
           <option value="">Välj en tid</option>
-            <option value="12:00 pm">14:40 pm</option>
-            <option value="3:00 pm">15:00 pm</option>
-            <option value="4:00 pm">16:40 pm</option>
-            <option value="7:00 pm">19:00 pm</option>
-            <option value="9:00 pm">21:00 pm</option>
-         
+          {bookingData.screenings.filter(screening => screening.movie_id == movie).map(screening => <option value={screening.id}>{remakeDate(new Date(screening.time))}</option>)}
         </select>
         
       </div>
@@ -143,9 +162,15 @@ export default function BookingPage() {
         <label htmlFor="ticket-type-select">Ticket Type:</label>
         <select id="ticket-type-select" value={ticketType} onChange={handleTicketTypeChange}>
           <option value="">Välj en biljetttyp</option>
-          <option value="Standard">Vuxen</option>
-          <option value="Premium">Barn</option>
-          <option value="">Pensionerad</option>
+          {time === '' ? '' :
+          <option value="1">Vuxen</option>
+          }
+          {time === '' ? '' :
+          <option value="2">Barn</option>
+          }
+          {time === '' ? '' :
+          <option value="3">Pensionär</option>
+          }
         </select>
        
       </div>
@@ -230,9 +255,47 @@ export default function BookingPage() {
       
     </div>
   </div>
-);
-
-      
-      
-      
+);     
 }
+
+function remakeDate(date) {
+  const AD = date;
+  const ADY = AD.getFullYear();
+  let ADM = AD.getMonth() + 1;
+  let ADD = AD.getDate();
+  let ADH = AD.getHours();
+  let ADMI = AD.getMinutes();
+  let ADS = AD.getSeconds();
+
+  if (ADD < 10) {
+      ADD = '0' + AD.getDate();
+  }
+  if (ADM < 10) {
+      ADM = '0' + ADM;
+  }
+  if (ADH < 10) {
+      ADH = '0' + AD.getHours();
+  }
+  if (ADMI < 10) {
+      ADMI = '0' + AD.getMinutes();
+  }
+  if (ADS < 10) {
+      ADS = '0' + AD.getSeconds();
+  }
+
+  return `${ADY}-${ADM}-${ADD} ${ADH}:${ADMI}:${ADS}`;
+}
+
+/* 
+            <option value="Dune">Dune</option>
+            <option value="John Wick">John Wick</option>
+            <option value="Sagan">Sagan Om Konungens Återkomst</option>
+            <option value="Spiderman">Spiderman-Into the spider-verse</option>
+            <option value="Call Me By Your Name">Call Me By Your Name</option>
+
+            <option value="12:00 pm">14:40 pm</option>
+            <option value="3:00 pm">15:00 pm</option>
+            <option value="4:00 pm">16:40 pm</option>
+            <option value="7:00 pm">19:00 pm</option>
+            <option value="9:00 pm">21:00 pm</option>
+*/
