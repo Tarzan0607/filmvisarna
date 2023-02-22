@@ -124,17 +124,18 @@ export default function BookingPage() {
     console.log(`Name: ${name}, Email: ${email}, Selected Seats: ${selectedSeats}`);
   };
   const bokaNu = async () => {
-    if (!movie) return alert("No movie chosen!");
-    if (!time) return alert("No time chosen!");
-    if (!ticketType) return alert("No ticket type chosen!");
-    if (selectedSeats.length === 0) return alert("No selected seats for booking!");
+    if (!movie) return alert("Ingen film vald!");
+    if (!time) return alert("Ingen tid vald!");
+    if (!ticketType) return alert("Ingen biljetttyp vald!");
+    if (selectedSeats.length === 0) return alert("Inga valda platser!");
+    if (!email.match(/^\S+@\S+\.\S+$/)) return alert("Ingen giltig e-postadress!")
 
     const toPost = [];
-    selectedSeats.map(seat => toPost.push({seatid: parseInt(seat), screeningid: parseInt(time), tickettype: parseInt(ticketType)}));
+    selectedSeats.map(seat => toPost.push({seatid: parseInt(seat), screeningid: parseInt(time), tickettype: parseInt(ticketType), email: email}));
 
     const res = await post('/api/booking', toPost);
 
-    alert("Booking successfully made!\n\nBooking Numer: " + res.response);
+    alert("Bokningen är gjord!\n\nBokningsnummer: " + res.response);
     return window.location.reload();
     const auditoriumName = 'Lilla Salongen';
     const { seatsPerRow } = seats.auditoriumsAndSeats.find((x) => x.name === auditoriumName) || {};
@@ -196,7 +197,7 @@ export default function BookingPage() {
         
        <div className="form-group">
             <label htmlFor="type-email">Email</label>
-            <input type="email" id="type-email" />
+            <input onChange={handleEmailChange} type="email" id="type-email" />
         </div>
         
        
@@ -304,11 +305,8 @@ function remakeDate(date) {
   if (ADMI < 10) {
       ADMI = '0' + AD.getMinutes();
   }
-  if (ADS < 10) {
-      ADS = '0' + AD.getSeconds();
-  }
 
-  return `${ADY}-${ADM}-${ADD} ${ADH}:${ADMI}:${ADS}`;
+  return `${ADY}-${ADM}-${ADD} ${ADH}:${ADMI}`;
 }
 
 

@@ -35,18 +35,20 @@ router.post('/', async (req, res) => {
     const seatId = bookedTickets[0].seatid;
     const screeningId = bookedTickets[0].screeningid;
     const ticketType = bookedTickets[0].tickettype;
+    const bookingEmail = bookedTickets[0].email;
 
     const currentDate = dateNow();
 
     if (!seatId) return res.json({message: 'failed', response: 'No SeatID could be found!'}).status(403), await pool.release();
     if (!screeningId) return res.json({message: 'failed', response: 'No ScreeningID could be found!'}).status(403), await pool.release();
     if (!ticketType) return res.json({message: 'failed', response: 'No TicketType could be found!'}).status(403), await pool.release();
+    if (!bookingEmail) return res.json({message: 'failed', response: 'No Email could be found!'}).status(403), await pool.release();
     if (ticketType !== 1 && ticketType !== 2 && ticketType !== 3) return res.json({message: 'failed', response: 'TicketType is not valid type!'}).status(403), await pool.release();
 
     const bookingNumber = generate();
     
     try {
-        await pool.query('INSERT INTO booking (time,booking_number,screening_id) VALUES(?, ?, ?)', [currentDate, bookingNumber, screeningId]);
+        await pool.query('INSERT INTO booking (time,booking_number,screening_id,email) VALUES(?, ?, ?, ?)', [currentDate, bookingNumber, screeningId, bookingEmail]);
     } catch {
         await pool.release();
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
@@ -57,7 +59,6 @@ router.post('/', async (req, res) => {
     const bookingId = lastInserted[0]['LAST_INSERT_ID()'];
 
     for (let ticket of bookedTickets) {
-        console.log(ticket.seatid)
         try {
             await pool.query('INSERT INTO bookingsxseats (booking_id, seat_id, ticketType_id) VALUES(?, ?, ?)', [bookingId, ticket.seatid, ticket.tickettype]);
         } catch(e) {
