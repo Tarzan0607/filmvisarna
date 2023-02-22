@@ -84,7 +84,13 @@ export default function BookingPage() {
 
   // function to handle canceling seat selection
   const handleSeatCancel = (seatNumber) => {
-    setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber));
+    console.log("selectedSeats", selectedSeats);
+    console.log("seatToCancel", seatNumber);
+    // For some reason we get double calls to handleSeatCanncel
+    // TODO: Find why
+    // For now: Fix by delaying the actual removal with a setTimeout of 1 ms
+    // -> run the removal separately from the actual click
+    setTimeout(() => setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber)), 1);
   };
 
    const handleSubmit = (event) => {
