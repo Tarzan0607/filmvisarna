@@ -18,7 +18,7 @@ const Spelschema = () => {
   return <div className='showingsTitle'>
     <h1>Spelschema</h1>
     {filtered.map(({ auditorium, films }) => <>
-      <h2>{auditorium}</h2>
+      <h2 className="auditorium">{auditorium}</h2>
       {films.map(({ film, date, time }) => <div>
         <p>Film: {film}</p>
         <p>Datum: {date}</p>
