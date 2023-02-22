@@ -33,9 +33,9 @@ export default function App() {
       { path: '/admin', Component: Admin},
       { menuLabel2: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
-      { menuLabel: 'Bokning & Biljetter', path: '/MovieSeatBookingSystem', Component: MovieSeatBookingSystem },
+      { menuLabel: 'Bokning & Biljetter', path: '/bokning', Component: MovieSeatBookingSystem },
       { menuLabel: 'Butik', path: '/butik', Component: Butik },
-      { menuLabel: 'Om Oss', path: '/OmOss', Component: OmOss },
+      { menuLabel: 'Om Oss', path: '/omoss', Component: OmOss },
     ]
   });
 
