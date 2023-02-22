@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useStates } from '../../utilities/states';
 
-
 import '../../css/MovieSeatBookingSystem.css';
 
 export default function BookingPage() {
@@ -19,8 +18,6 @@ export default function BookingPage() {
   const [bookingInfo, setBookingInfo] = useState('');
 
   const s = useStates('main');
-
-  
 
   // Find the seat info for the audtiorium with matching name
   let name = 'Lilla Salongen';
