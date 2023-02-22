@@ -38,7 +38,7 @@ h1 {
   padding-left: 8%;
 }
 
-h2 {
+h2.auditorium {
   font-size: 30px;
   font-weight: 200;
   color: rgb(55, 195, 195);
@@ -95,11 +95,11 @@ hr {
 
   }
 
-  h2 {
+  h2.auditorium {
     text-align: 'center';
     font-size: 30px;
     font-weight: 200;
-    color: rgb(138, 63, 159);
+    color: rgb(55, 195, 195);
     margin-bottom: 10px;
     padding-left: 8%;
     margin-left: 20px;
@@ -156,7 +156,7 @@ hr {
     font-size: 24px;
     margin-bottom: 10px;
     padding-left: 8%;
-
+    color: rgb(55, 195, 195);
     margin-left: 20px;
 
     margin-left: 10%;
