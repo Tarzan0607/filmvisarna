@@ -28,8 +28,11 @@ body {
 
 .booking-form h2 {
   font-size: 24px;
+  color: #ddd;
   margin-bottom: 20px;
-  border: 1px solid rgb(52, 1, 50)
+  margin-left: 3px;
+  padding-left:3px ;
+  border: 1px solid rgb(35, 4, 29);
 }
 
 .form-group {
@@ -227,7 +230,14 @@ button[type="button"] {
     width: 150%;
     padding: 5px;
   }
-
+ .booking-form h2{
+  font-size: 24px;
+  color: #ddd;
+  margin-bottom: 20px;
+  margin-left: 3px;
+  padding-left:3px ;
+  border: 1px solid rgb(35, 4, 29);
+ }
   .booking-seating-plan {
     padding: 40px;
   }
