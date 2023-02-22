@@ -3,6 +3,9 @@ import {
     useParams
 } from 'react-router-dom'
 import { useStates } from '../../utilities/states';
+import {
+    Link
+} from 'react-router-dom';
 
 export default function moveDetails() {
 
@@ -25,7 +28,9 @@ export default function moveDetails() {
 
         <img src={'/images/' + images} className="moviesPoster" />
         <div className='moviesContainer'>
+        <Link to='/bokning'>
             <button className='moviesBuyTicket'>Köp Biljetter</button>
+        </Link>
             <div className='moviesInfo'>
                 <h2 className='moviesTitle'>{title}</h2>
                 <div className='moviesDescription'>{description}</div>

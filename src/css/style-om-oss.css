@@ -19,7 +19,8 @@ body {
   margin-right: 15%;
   text-align: left;
   font-size: 24px;
-  margin-top: 1%
+  margin-top: 1%;
+  margin-bottom: 1%;
 }
 
 .h1omoss {
@@ -64,6 +65,11 @@ body {
   font-size: 25px;
   margin-left: 15%;
   padding: 0;
+}
+
+.textOmOss ul h2 {
+  font-size: 24px;
+  margin-bottom: 1%;
 }
 
 .textOmOss li {
@@ -124,11 +130,15 @@ body {
 
 @media screen and (min-width: 769px) and (max-width: 1199px) {
 
+  .h1omoss {
+    margin-left: 0%;
+  }
+
   .h2omoss {
     margin-left: 0%;
     margin-right: 0%;
-    padding-left: 1%;
-    font-size: 1.5em;
+    padding-left: 0%;
+    font-size: 20px;
   }
 
   .h3omoss {
@@ -152,7 +162,7 @@ body {
   }
 
   .textOmOss ul h2 {
-    margin-left: -2%;
+    margin-left: 0%;
     font-size: 1.1em;
   }
 
@@ -190,7 +200,7 @@ body {
   }
 
   .textOmOss ul h2 {
-    margin-left: -2%;
+    margin-left: 0%;
     font-size: 1.1em;
   }
 
@@ -211,7 +221,7 @@ body {
   }
 
   .h2omoss {
-    margin-left: -2%;
+    margin-left: 0%;
 
   }
 
@@ -243,7 +253,8 @@ body {
 
   .textOmOss h2 {
     margin-left: 0%;
-    font-size: 1.7em;
+    font-size: 20px;
+    margin-bottom: 1%;
 
   }
 
