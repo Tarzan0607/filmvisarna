@@ -71,7 +71,7 @@ export default function Admin() {
         <p>Visningstid: {visningsTid}</p>
         <p>BokningsID: {bokningsID}</p>
         {bokning.map(({ticketType_id, seat_id}) => <div className="ticketBox">
-           <p>TicketType: {ticketType_id === 1 ? "Vuxen" : ticketType_id === 2 ? "Barn" : ticketType_id === 3 ? "Pensionär" : "Undefined"}</p>
+           <p>TicketType: {ticketType_id === 1 ? "Vuxen" : ticketType_id === 2 ? "Barn" : ticketType_id === 3 ? "Senior" : "Undefined"}</p>
            <p>StolID: {seat_id}</p>
         </div>
         )}

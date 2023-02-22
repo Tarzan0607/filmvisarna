@@ -187,7 +187,7 @@ export default function BookingPage() {
           <option value="2">Barn</option>
           }
           {time === '' ? '' :
-          <option value="3">Pensionär</option>
+          <option value="3">Senior</option>
           }
         </select>
        
