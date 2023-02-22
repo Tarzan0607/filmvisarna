@@ -223,7 +223,7 @@ export default function BookingPage() {
                 <div
                 className={`seat ${bookedSeats.includes(seat) ? "sold" : selectedSeats.includes(seat) ? "selected" : ""}`}
                 key={seat}
-                onClick={() => bookedSeats.includes(seat) ? null : handleSeatClick(seat)}
+                onClick={() => !ticketType || !email || !time ? null : bookedSeats.includes(seat) ? null : handleSeatClick(seat)}
                 >
                   {seat}
                 </div>
