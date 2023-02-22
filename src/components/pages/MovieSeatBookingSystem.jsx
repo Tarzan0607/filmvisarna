@@ -13,7 +13,6 @@ export default function BookingPage() {
   const [ticketType, setTicketType] = useState('');
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [availableSeats, setAvailableSeats] = useState([]);
-  const [auditorium, setAuditorium] = useState('');
 
   
   const [email, setEmail] = useState('');
@@ -24,6 +23,8 @@ export default function BookingPage() {
   const [bookingData, setBookingData] = useState([]);
 
   const [bookedSeats, setBookedSeats] = useState([]);
+
+  const [currentAuditorium, setCurrentAuditorium] = useState('Lilla Salongen');
 
 
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function BookingPage() {
   const s = useStates('main');
 
   // Find the seat info for the audtiorium with matching name
-  let name = 'Lilla Salongen';
+  let name = currentAuditorium;
   let { seatsPerRow } = s.auditoriumsAndSeats.find(x => x.name === name) || {};
   if (!seatsPerRow) { return null; }
 
@@ -101,7 +102,8 @@ export default function BookingPage() {
   };
 
    const handleAuditoriumChange = (event) => {
-    setAuditorium(event.target.value);
+    console.log(event.target.value)
+    setCurrentAuditorium(event.target.value);
    };
   
    const handleSeatSelection = (seatNumber) => {
@@ -123,6 +125,7 @@ export default function BookingPage() {
     event.preventDefault();
     console.log(`Name: ${name}, Email: ${email}, Selected Seats: ${selectedSeats}`);
   };
+
   const bokaNu = async () => {
     if (!movie) return alert("Ingen film vald!");
     if (!time) return alert("Ingen tid vald!");
@@ -154,15 +157,23 @@ export default function BookingPage() {
     alert(`Your booking has been confirmed with the following details:\n\n${info}`);
   };
 
-  if (!bookingData.movies) return <></>
-  if (!bookingData.screenings) return <></>
+  if (!bookingData.movies) return <>{console.log("RETURNED NOTHING")}</>
+  if (!bookingData.screenings) return <>{console.log("RETURNED NOTHING")}</>
 
   return (
     <div className="booking-page">
+      {console.log(currentAuditorium)}
       <div className="booking-form">
         <h2>Boka biljetter</h2>
         <div className="form-group">
-        <label htmlFor="movie-select">Movie:</label>
+        <label htmlFor="movie-select">Salong:</label>
+         <select id="movie-select" onChange={handleAuditoriumChange}>
+            <option value="Lilla Salongen">Lilla Salongen</option>
+            <option value="Stora Salongen">Stora Salongen</option>
+        </select>
+        </div>
+        <div className="form-group">
+        <label htmlFor="movie-select">Film:</label>
          <select id="movie-select" value={movie} onChange={handleMovieChange}>
             <option value="">Välj en film</option>
             {bookingData.movies.map(movie => <option value={movie.id}>{movie.title}</option>)}
@@ -170,7 +181,7 @@ export default function BookingPage() {
         
       </div>
       <div className="form-group">
-        <label htmlFor="time-select">Time:</label>
+        <label htmlFor="time-select">Tid:</label>
         <select id="time-select" value={time} onChange={handleTimeChange}>
           <option value="">Välj en tid</option>
           {bookingData.screenings.filter(screening => screening.movie_id == movie).map(screening => <option value={screening.id}>{remakeDate(new Date(screening.time))}</option>)}
@@ -178,7 +189,7 @@ export default function BookingPage() {
         
       </div>
       <div className="form-group">
-        <label htmlFor="ticket-type-select">Ticket Type:</label>
+        <label htmlFor="ticket-type-select">Biljettyp:</label>
         <select id="ticket-type-select" value={ticketType} onChange={handleTicketTypeChange}>
           <option value="">Välj en biljetttyp</option>
           {time === '' ? '' :
@@ -235,7 +246,7 @@ export default function BookingPage() {
       
 
         <div>
-            <h2>Current Auditorium :- "{name}"</h2>
+            <h2>Nuvarande Salong :- "{name}"</h2>
               
                 
 
@@ -256,11 +267,11 @@ export default function BookingPage() {
       <form onSubmit={handleSubmit}>
        <br />
           <label>
-             Selected Seats:
+             Valda platser:
                <ul>
                  {selectedSeats.map((seat) => (
                 <li key={seat}>
-                  Seat {seat}
+                  Säte {seat}
                    <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
                   Cancel
                   </button>
