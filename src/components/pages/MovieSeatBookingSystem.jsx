@@ -160,9 +160,12 @@ export default function BookingPage() {
   if (!bookingData.movies) return <>{console.log("RETURNED NOTHING")}</>
   if (!bookingData.screenings) return <>{console.log("RETURNED NOTHING")}</>
 
+  let currentAuditoriumId;
+  if (currentAuditorium === 'Lilla Salongen') currentAuditoriumId = 4;
+  if (currentAuditorium === 'Stora Salongen') currentAuditoriumId = 3;
+
   return (
     <div className="booking-page">
-      {console.log(currentAuditorium)}
       <div className="booking-form">
         <h2>Boka biljetter</h2>
         <div className="form-group">
@@ -184,7 +187,7 @@ export default function BookingPage() {
         <label htmlFor="time-select">Tid:</label>
         <select id="time-select" value={time} onChange={handleTimeChange}>
           <option value="">Välj en tid</option>
-          {bookingData.screenings.filter(screening => screening.movie_id == movie).map(screening => <option value={screening.id}>{remakeDate(new Date(screening.time))}</option>)}
+          {bookingData.screenings.filter(screening => screening.movie_id == movie && screening.auditorium_id === currentAuditoriumId).map(screening => <option value={screening.id}>{remakeDate(new Date(screening.time))}</option>)}
         </select>
         
       </div>
