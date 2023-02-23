@@ -15,7 +15,7 @@ export default function BookingPage() {
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [availableSeats, setAvailableSeats] = useState([]);
 
-  
+
   const [email, setEmail] = useState('');
   const [numSeats, setNumSeats] = useState('');
 
@@ -31,7 +31,7 @@ export default function BookingPage() {
   useEffect(() => {
     (async () => {
       const data = await get('/api/booking');
-      
+
       setBookingData(data.response);
     })();
   }, []);
@@ -105,15 +105,15 @@ export default function BookingPage() {
     setBookingInfo(info);
   };
 
-   const handleAuditoriumChange = (event) => {
+  const handleAuditoriumChange = (event) => {
     setCurrentAuditorium(event.target.value);
     setTime('');
     setMovie('');
     setTicketType('');
     setSelectedSeats([]);
-   };
-  
-   const handleSeatSelection = (seatNumber) => {
+  };
+
+  const handleSeatSelection = (seatNumber) => {
     setSelectedSeats([...selectedSeats, seatNumber]);
   };
 
@@ -128,24 +128,24 @@ export default function BookingPage() {
     setTimeout(() => setSelectedSeats(selectedSeats.filter((seat) => seat !== seatNumber)), 1);
   };
 
-   const handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log(`Namn: ${name}, Email: ${email}, Valda säten: ${selectedSeats}`);
   };
 
   const bokaNu = async () => {
-    if (!movie) return Swal.fire({title: 'Inmatningsfel', text: 'Välj en film först', icon: 'error', confirmButtonText: 'Bekräfta'});
-    if (!time) return Swal.fire({title: 'Inmatningsfel', text: 'Välj en tid först', icon: 'error', confirmButtonText: 'Bekräfta'});
-    if (!ticketType) return Swal.fire({title: 'Inmatningsfel', text: 'Välj en biljettyp först', icon: 'error', confirmButtonText: 'Bekräfta'});
-    if (!email.match(/^\S+@\S+\.\S+$/)) return Swal.fire({title: 'Inmatningsfel', text: 'Använd en giltig email-adress', icon: 'error', confirmButtonText: 'Bekräfta'});
-    if (selectedSeats.length === 0) return Swal.fire({title: 'Inmatningsfel', text: 'Välj säten först', icon: 'error', confirmButtonText: 'Bekräfta'});
+    if (!movie) return Swal.fire({ title: 'Inmatningsfel', text: 'Välj en film först', icon: 'error', confirmButtonText: 'Bekräfta' });
+    if (!time) return Swal.fire({ title: 'Inmatningsfel', text: 'Välj en tid först', icon: 'error', confirmButtonText: 'Bekräfta' });
+    if (!ticketType) return Swal.fire({ title: 'Inmatningsfel', text: 'Välj en biljettyp först', icon: 'error', confirmButtonText: 'Bekräfta' });
+    if (!email.match(/^\S+@\S+\.\S+$/)) return Swal.fire({ title: 'Inmatningsfel', text: 'Använd en giltig email-adress', icon: 'error', confirmButtonText: 'Bekräfta' });
+    if (selectedSeats.length === 0) return Swal.fire({ title: 'Inmatningsfel', text: 'Välj säten först', icon: 'error', confirmButtonText: 'Bekräfta' });
 
     const toPost = [];
-    selectedSeats.map(seat => toPost.push({seatid: parseInt(seat), screeningid: parseInt(time), tickettype: parseInt(ticketType), email: email}));
+    selectedSeats.map(seat => toPost.push({ seatid: parseInt(seat), screeningid: parseInt(time), tickettype: parseInt(ticketType), email: email }));
 
     const res = await post('/api/booking', toPost);
 
-    return Swal.fire({title: 'Bokning genomförd', text: `Bokning gjord, bokningsID: ${res.response}`, icon: 'success', confirmButtonText: 'Bekräfta'}).then((result) => {
+    return Swal.fire({ title: 'Bokning genomförd', text: `Bokning gjord, bokningsID: ${res.response}`, icon: 'success', confirmButtonText: 'Bekräfta' }).then((result) => {
       return window.location.reload();
     });
   };
@@ -162,133 +162,133 @@ export default function BookingPage() {
       <div className="booking-form">
         <h2>Boka biljetter</h2>
         <div className="form-group">
-        <label htmlFor="movie-select">Salong:</label>
-         <select id="movie-select" onChange={handleAuditoriumChange}>
+          <label htmlFor="movie-select">Salong:</label>
+          <select id="movie-select" onChange={handleAuditoriumChange}>
             <option value="Lilla Salongen">Lilla Salongen</option>
             <option value="Stora Salongen">Stora Salongen</option>
-        </select>
+          </select>
         </div>
         <div className="form-group">
-        <label htmlFor="movie-select">Film:</label>
-         <select id="movie-select" value={movie} onChange={handleMovieChange}>
+          <label htmlFor="movie-select">Film:</label>
+          <select id="movie-select" value={movie} onChange={handleMovieChange}>
             <option value="">Välj en film</option>
             {bookingData.movies.map(movie => <option value={movie.id}>{movie.title}</option>)}
-        </select>
-        
-      </div>
-      <div className="form-group">
-        <label htmlFor="time-select">Tid:</label>
-        <select id="time-select" value={time} onChange={handleTimeChange}>
-          <option value="">Välj en tid</option>
-          {bookingData.screenings.filter(screening => screening.movie_id == movie && screening.auditorium_id === currentAuditoriumId).map(screening => <option value={screening.id}>{remakeDate(new Date(screening.time))}</option>)}
-        </select>
-        
-      </div>
-      <div className="form-group">
-        <label htmlFor="ticket-type-select">Biljettyp:</label>
-        <select id="ticket-type-select" value={ticketType} onChange={handleTicketTypeChange}>
-          <option value="">Välj en biljetttyp</option>
-          {time === '' ? '' :
-          <option value="1">Vuxen</option>
-          }
-          {time === '' ? '' :
-          <option value="2">Barn</option>
-          }
-          {time === '' ? '' :
-          <option value="3">Senior</option>
-          }
-        </select>
-       
-      </div>
-       
-        
-       <div className="form-group">
-            <label htmlFor="type-email">Email</label>
-            <input onChange={handleEmailChange} type="email" id="type-email" />
+          </select>
+
         </div>
-        
-       
-          
-     <div className="showcase">
-        <div className="auditorium">
-          <div className="screen"></div>
-          <div className="rows">
-            {rows.map((row, index) => (
-              <div className="row" key={index}>
-                {row.map((seat) =>
-                <div
-                className={`seat ${bookedSeats.includes(seat) ? "sold" : selectedSeats.includes(seat) ? "selected" : ""}`}
-                key={seat}
-                onClick={() => !ticketType || !email || !time ? null : bookedSeats.includes(seat) ? null : handleSeatClick(seat)}
-                >
-                  {seat}
+        <div className="form-group">
+          <label htmlFor="time-select">Tid:</label>
+          <select id="time-select" value={time} onChange={handleTimeChange}>
+            <option value="">Välj en tid</option>
+            {bookingData.screenings.filter(screening => screening.movie_id == movie && screening.auditorium_id === currentAuditoriumId).map(screening => <option value={screening.id}>{remakeDate(new Date(screening.time))}</option>)}
+          </select>
+
+        </div>
+        <div className="form-group">
+          <label htmlFor="ticket-type-select">Biljettyp:</label>
+          <select id="ticket-type-select" value={ticketType} onChange={handleTicketTypeChange}>
+            <option value="">Välj en biljetttyp</option>
+            {time === '' ? '' :
+              <option value="1">Vuxen</option>
+            }
+            {time === '' ? '' :
+              <option value="2">Barn</option>
+            }
+            {time === '' ? '' :
+              <option value="3">Senior</option>
+            }
+          </select>
+
+        </div>
+
+
+        <div className="form-group">
+          <label htmlFor="type-email">Email</label>
+          <input onChange={handleEmailChange} type="email" id="type-email" />
+        </div>
+
+
+
+        <div className="showcase">
+          <div className="auditorium">
+            <div className="screen"></div>
+            <div className="rows">
+              {rows.map((row, index) => (
+                <div className="row" key={index}>
+                  {row.map((seat) =>
+                    <div
+                      className={`seat ${bookedSeats.includes(seat) ? "sold" : selectedSeats.includes(seat) ? "selected" : ""}`}
+                      key={seat}
+                      onClick={() => !ticketType || !email || !time ? null : bookedSeats.includes(seat) ? null : handleSeatClick(seat)}
+                    >
+                      {seat}
+                    </div>
+                    //<div
+                    //  className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
+                    //  key={seat}
+                    //  onClick={() => handleSeatClick(seat)}
+                    //>
+                    //  {seat}
+                    //</div>
+                  )}
                 </div>
-                  //<div
-                  //  className={`seat ${selectedSeats.includes(seat) ? "selected" : ""}`}
-                  //  key={seat}
-                  //  onClick={() => handleSeatClick(seat)}
-                  //>
-                  //  {seat}
-                  //</div>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+
+
         </div>
-              
-              
-        
-      </div>
-      
+
 
         <div>
-            <h2>Nuvarande Salong :- "{name}"</h2>
-              
-                
+          <h2>Nuvarande Salong :- "{name}"</h2>
 
-           
-        <div className="seat-info">
-          <div className="seat sold"></div>
-          <span>Upptagna platser</span>
-        </div>
-      </div>
-      <div className="selected-seats">
+
+
+
           <div className="seat-info">
-              <div className="seat selected"></div>
-                <span>Valda platser :-</span>
-                <span>{selectedSeats.length}</span>
-              </div>
+            <div className="seat sold"></div>
+            <span>Upptagna platser</span>
+          </div>
         </div>
-         <div>
-      <form onSubmit={handleSubmit}>
-       <br />
-          <label>
-             Valda platser:
-               <ul>
-                 {selectedSeats.map((seat) => (
-                <li key={seat}>
-                  Säte {seat}
-                   <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
-                  Cancel
-                  </button>
-                </li>
-              ))}
-          </ul>
-         </label>
-       <br />
-      </form>
-      <button className="book-button" onClick={bokaNu}>Boka nu</button>
-    </div>
-        
+        <div className="selected-seats">
+          <div className="seat-info">
+            <div className="seat selected"></div>
+            <span>Valda platser :-</span>
+            <span>{selectedSeats.length}</span>
+          </div>
+        </div>
+        <div>
+          <form onSubmit={handleSubmit}>
+            <br />
+            <label>
+              Valda platser:
+              <ul>
+                {selectedSeats.map((seat) => (
+                  <li key={seat}>
+                    Säte {seat}
+                    <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
+                      Ta bort
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </label>
+            <br />
+          </form>
+          <button className="book-button" onClick={bokaNu}>Boka nu</button>
+        </div>
 
-        
-        
-            
-        
-      
+
+
+
+
+
+
+      </div>
     </div>
-  </div>
-);     
+  );
 }
 
 function remakeDate(date) {
@@ -301,16 +301,16 @@ function remakeDate(date) {
   let ADS = AD.getSeconds();
 
   if (ADD < 10) {
-      ADD = '0' + AD.getDate();
+    ADD = '0' + AD.getDate();
   }
   if (ADM < 10) {
-      ADM = '0' + ADM;
+    ADM = '0' + ADM;
   }
   if (ADH < 10) {
-      ADH = '0' + AD.getHours();
+    ADH = '0' + AD.getHours();
   }
   if (ADMI < 10) {
-      ADMI = '0' + AD.getMinutes();
+    ADMI = '0' + AD.getMinutes();
   }
 
   return `${ADY}-${ADM}-${ADD} ${ADH}:${ADMI}`;
