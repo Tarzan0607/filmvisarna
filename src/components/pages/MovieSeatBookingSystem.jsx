@@ -4,7 +4,8 @@ import {
   get,
   post
 } from '../../utilities/backend-talk'
-
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss'
 import '../../css/MovieSeatBookingSystem.css';
 
 export default function BookingPage() {
@@ -129,42 +130,28 @@ export default function BookingPage() {
 
    const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Name: ${name}, Email: ${email}, Selected Seats: ${selectedSeats}`);
+    console.log(`Namn: ${name}, Email: ${email}, Valda säten: ${selectedSeats}`);
   };
 
   const bokaNu = async () => {
-    if (!movie) return alert("Ingen film vald!");
-    if (!time) return alert("Ingen tid vald!");
-    if (!ticketType) return alert("Ingen biljetttyp vald!");
-    if (selectedSeats.length === 0) return alert("Inga valda platser!");
-    if (!email.match(/^\S+@\S+\.\S+$/)) return alert("Ingen giltig e-postadress!")
+    if (!movie) return Swal.fire({title: 'Inmatningsfel', text: 'Välj en film först', icon: 'error', confirmButtonText: 'Bekräfta'});
+    if (!time) return Swal.fire({title: 'Inmatningsfel', text: 'Välj en tid först', icon: 'error', confirmButtonText: 'Bekräfta'});
+    if (!ticketType) return Swal.fire({title: 'Inmatningsfel', text: 'Välj en biljettyp först', icon: 'error', confirmButtonText: 'Bekräfta'});
+    if (!email.match(/^\S+@\S+\.\S+$/)) return Swal.fire({title: 'Inmatningsfel', text: 'Använd en giltig email-adress', icon: 'error', confirmButtonText: 'Bekräfta'});
+    if (selectedSeats.length === 0) return Swal.fire({title: 'Inmatningsfel', text: 'Välj säten först', icon: 'error', confirmButtonText: 'Bekräfta'});
 
     const toPost = [];
     selectedSeats.map(seat => toPost.push({seatid: parseInt(seat), screeningid: parseInt(time), tickettype: parseInt(ticketType), email: email}));
 
     const res = await post('/api/booking', toPost);
 
-    alert("Bokningen är gjord!\n\nBokningsnummer: " + res.response);
-    return window.location.reload();
-    const auditoriumName = 'Lilla Salongen';
-    const { seatsPerRow } = seats.auditoriumsAndSeats.find((x) => x.name === auditoriumName) || {};
-    if (!seatsPerRow) {
-      return null;
-    }
-    const selectedSeatsInfo = selectedSeats.map((seatNumber) => {
-      const seatIndex = seatNumber - 1;
-      const row = Math.floor(seatIndex / seatsPerRow.length) + 1;
-      const seatInRow = seatIndex % seatsPerRow.length + 1;
-      return `Seat ${seatNumber} - Row ${row}, Seat ${seatInRow}`;
+    return Swal.fire({title: 'Bokning genomförd', text: `Bokning gjord, bokningsID: ${res.response}`, icon: 'success', confirmButtonText: 'Bekräfta'}).then((result) => {
+      return window.location.reload();
     });
-    console.log(selectedSeatsInfo)
-    const info = `Auditorium: ${auditoriumName}\nSelected Seats: ${selectedSeatsInfo.join('\n')}\nName: ${name}\nEmail: ${email}`;
-    console.log(info);
-    alert(`Your booking has been confirmed with the following details:\n\n${info}`);
   };
 
-  if (!bookingData.movies) return <>{console.log("RETURNED NOTHING")}</>
-  if (!bookingData.screenings) return <>{console.log("RETURNED NOTHING")}</>
+  if (!bookingData.movies) return <></>
+  if (!bookingData.screenings) return <></>
 
   let currentAuditoriumId;
   if (currentAuditorium === 'Lilla Salongen') currentAuditoriumId = 4;
