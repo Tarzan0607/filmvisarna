@@ -133,6 +133,17 @@ export default function BookingPage() {
     console.log(`Namn: ${name}, Email: ${email}, Valda säten: ${selectedSeats}`);
   };
 
+  let typeMultiplier;
+  if (ticketType === '1') {
+    typeMultiplier = 130;
+  } else if (ticketType === '2') {
+    typeMultiplier = 110;
+  } else if (ticketType === '3') {
+    typeMultiplier = 110;
+  } else {
+    typeMultiplier = 0;
+  }
+
   const bokaNu = async () => {
     if (!movie) return Swal.fire({ title: 'Inmatningsfel', text: 'Välj en film först', icon: 'error', confirmButtonText: 'Bekräfta' });
     if (!time) return Swal.fire({ title: 'Inmatningsfel', text: 'Välj en tid först', icon: 'error', confirmButtonText: 'Bekräfta' });
@@ -145,7 +156,7 @@ export default function BookingPage() {
 
     const res = await post('/api/booking', toPost);
 
-    return Swal.fire({ title: 'Bokning genomförd', text: `Bokning gjord, bokningsID: ${res.response}`, icon: 'success', confirmButtonText: 'Bekräfta' }).then((result) => {
+    return Swal.fire({ title: 'Bokning genomförd', text: `Bokning gjord, bokningsID: ${res.response}\n\nPris: ${(selectedSeats.length * typeMultiplier).toLocaleString('en-US')}:-`, icon: 'success', confirmButtonText: 'Bekräfta' }).then((result) => {
       return window.location.reload();
     });
   };
@@ -242,7 +253,7 @@ export default function BookingPage() {
 
 
         <div>
-          <h2>Nuvarande Salong :- "{name}"</h2>
+          <h2>Nuvarande Salong: "{name}"</h2>
 
 
 
@@ -255,11 +266,12 @@ export default function BookingPage() {
         <div className="selected-seats">
           <div className="seat-info">
             <div className="seat selected"></div>
-            <span>Valda platser :-</span>
-            <span>{selectedSeats.length}</span>
+            <span>Valda platser: </span>
+            <span>{selectedSeats.length}st</span>
           </div>
         </div>
         <div>
+          <span>Totalt Pris: {(selectedSeats.length * typeMultiplier).toLocaleString('en-US')}:-</span>
           <form onSubmit={handleSubmit}>
             <br />
             <label>
@@ -269,7 +281,7 @@ export default function BookingPage() {
                   <li key={seat}>
                     Säte {seat}
                     <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
-                      Ta bort
+                      Cancel
                     </button>
                   </li>
                 ))}
