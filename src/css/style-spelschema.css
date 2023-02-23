@@ -23,8 +23,8 @@ body {
   font-family: 'Karma', serif;
   font-weight: bold;
   color: white;
-  margin-left: 20px;
   padding-left: 8%;
+  width: 92%;
 }
 
 .spelschema {
@@ -61,13 +61,56 @@ hr {
 
 }
 
+
 @media screen and (min-width: 577px) and (max-width: 1199px) {
   .showingsTitle {
     background-color: rgb(39, 5, 40);
     font-family: 'Karma', serif;
     color: white;
-    margin-left: 20px;
+    margin-left: 0px;
     padding-left: 8%;
+    width: 90%;
+  }
+
+  .spelschema {
+    text-align: 'center';
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .auditorium {
+    text-align: 'center';
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(55, 195, 195);
+    margin-bottom: 20px;
+    /* Decrease the left margin */
+    padding-left: 0rem;
+  }
+
+  .auditorium p {
+    font-size: 18px;
+    margin: 0;
+    margin-left: 10px;
+    padding-left: 8rem;
+    line-height: 1.2;
+  }
+
+  hr {
+    border: 1px solid rgb(50, 13, 109);
+    margin: 20px 0;
+    margin-left: 10px;
+    padding-left: 8%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .showingsTitle {
+    background-color: rgb(39, 5, 40);
+    font-family: 'Karma', serif;
+    color: white;
+    margin-left: 2%;
+    width: 90%;
   }
 
   .spelschema {
@@ -75,33 +118,22 @@ hr {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 20px;
-    margin-left: 30px;
-    /* match other sections */
-    padding-left: 0rem;
+
   }
 
   .auditorium {
-    text-align: 'center';
-    font-size: 30px;
-    font-weight: 200;
+    font-size: 24px;
+    margin-bottom: 20px;
     color: rgb(55, 195, 195);
-    margin-bottom: 10px;
-    padding-left: 8%;
-    margin-left: 20px;
-  }
-
-  .p {
-    line-height: 1;
-    /* make all p tags have the same line height */
   }
 
   .auditorium p {
-    text-align: 'center';
-    font-size: 24px;
+    font-size: 18px;
     margin: 0;
     padding-left: 8%;
     margin-left: 20px;
     margin-left: 10%;
+
   }
 
   hr {
@@ -110,96 +142,4 @@ hr {
     margin-left: 10px;
     padding-left: 4%;
   }
-
-  @media screen and (min-width: 577px) and (max-width: 1199px) {
-    .showingsTitle {
-      background-color: rgb(39, 5, 40);
-      font-family: 'Karma', serif;
-      color: white;
-      margin-left: 20px;
-      padding-left: 8%;
-    }
-
-    .spelschema {
-      text-align: 'center';
-      font-size: 36px;
-      margin-bottom: 20px;
-      padding-left: 8%;
-      margin-left: 20px;
-      margin-left: 10%;
-    }
-
-    .auditorium {
-      text-align: 'center';
-      font-size: 30px;
-      font-weight: bold;
-      color: rgb(55, 195, 195);
-      margin-bottom: 10px;
-      margin-left: 3px;
-      /* Decrease the left margin */
-      padding-left: 0rem;
-    }
-
-    .auditorium p {
-      font-size: 18px;
-      margin: 0;
-      margin-left: 10px;
-      padding-left: 8rem;
-      line-height: 1.2;
-    }
-
-    hr {
-      border: 1px solid rgb(50, 13, 109);
-      margin: 20px 0;
-      margin-left: 10px;
-      padding-left: 8%;
-    }
-  }
-
-  @media screen and (max-width: 576px) {
-    .showingsTitle {
-      background-color: rgb(39, 5, 40);
-      font-family: 'Karma', serif;
-      color: white;
-      margin-left: 30px;
-      padding-left: 3rem;
-    }
-
-    .spelschema {
-      text-align: 'center';
-      font-size: 36px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      padding-left: 8%;
-      margin-left: 20px;
-      margin-left: 10%;
-
-    }
-
-    .auditorium {
-      font-size: 24px;
-      margin-bottom: 10px;
-      padding-left: 8%;
-      color: rgb(55, 195, 195);
-      margin-left: 20px;
-      margin-left: 10%;
-    }
-
-    .auditorium p {
-      font-size: 18px;
-      margin: 0;
-      padding-left: 8%;
-      margin-left: 20px;
-      margin-left: 10%;
-
-    }
-
-    hr {
-      border: 1px solid rgb(50, 13, 109);
-      margin: 20px 0;
-      margin-left: 10px;
-      padding-left: 4%;
-    }
-  }
-
 }
