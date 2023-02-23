@@ -67,6 +67,8 @@ export default function BookingPage() {
 
   const handleMovieChange = (event) => {
     setMovie(event.target.value);
+    setTime('');
+    setTicketType('');
   };
 
   const handleTicketTypeChange = (event) => {
@@ -75,6 +77,7 @@ export default function BookingPage() {
 
   const handleTimeChange = (event) => {
     setTime(event.target.value);
+    setSelectedSeats([]);
 
     (async () => {
       const data = await get('/api/bookedseats?screening=' + event.target.value);
@@ -102,8 +105,11 @@ export default function BookingPage() {
   };
 
    const handleAuditoriumChange = (event) => {
-    console.log(event.target.value)
     setCurrentAuditorium(event.target.value);
+    setTime('');
+    setMovie('');
+    setTicketType('');
+    setSelectedSeats([]);
    };
   
    const handleSeatSelection = (seatNumber) => {
