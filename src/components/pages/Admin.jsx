@@ -37,7 +37,7 @@ export default function Admin() {
   return <div>
     <h1 className="allaBokningar">Alla bokningar</h1>
     <div className="input">
-        <input className="input-box" id="filterBox" placeholder="Filtrera på ID" onInput={onInput} />
+        <input className="input-box" id="filterBox" placeholder="Filtrera på bokningsnummer" onInput={onInput} />
     </div>
     {bokningarData.filter(bokning => bokning.bokningsNummer.toLowerCase().includes(sortId)).map(({bokningsNummer, bokning, visningsTid, bokningsID, Film, email}) => <div key={bokningsNummer} className="bokning">
         <h2>Bokning: {bokningsNummer}</h2>
