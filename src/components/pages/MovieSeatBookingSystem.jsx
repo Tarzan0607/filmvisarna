@@ -267,7 +267,7 @@ export default function BookingPage() {
           <div className="seat-info">
               <div className="seat selected"></div>
                 <span>Valda platser: </span>
-                <span>{selectedSeats.length}</span>
+                <span>{selectedSeats.length}st</span>
               </div>
         </div>
          <div>
