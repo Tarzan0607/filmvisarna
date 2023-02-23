@@ -281,7 +281,7 @@ export default function BookingPage() {
                   <li key={seat}>
                     Säte {seat}
                     <button type="button" onClick={() => handleSeatCancel(seat)} className="cancel-button">
-                      Cancel
+                      Ta bort
                     </button>
                   </li>
                 ))}
