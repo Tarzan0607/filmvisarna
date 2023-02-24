@@ -156,8 +156,20 @@ export default function BookingPage() {
 
     const res = await post('/api/booking', toPost);
 
+    if (res.response === 'Database query failed to execute!') return Swal.fire({ title: 'Serverfel', text: 'Databasen kunde inte skicka in bokningsdatan korrekt', icon: 'error', confirmButtonText: 'Bekräfta' });
+
     return Swal.fire({ title: 'Bokning genomförd', text: `Bokning gjord, bokningsID: ${res.response}\n\nPris: ${(selectedSeats.length * typeMultiplier).toLocaleString('en-US')}:-`, icon: 'success', confirmButtonText: 'Bekräfta' }).then((result) => {
-      return window.location.reload();
+
+      setEmail('');
+      setTime('');
+      setSelectedSeats([]);
+      setMovie('');
+      setTicketType('');
+
+      //Most simple way of setting email to empty string
+      const emailBox = document.getElementById('type-email');
+      emailBox.value = '';
+      return;
     });
   };
 
