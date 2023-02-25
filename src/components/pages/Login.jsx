@@ -44,7 +44,7 @@ export default function Admin() {
     }, []);
 
   return <div className='login-bokningar'>
-    <h1>Login</h1>
+    <h1 className='login-title'>Login</h1>
     <div className="input-login">
         <input className="login-box center-block" placeholder="Username / Email" onInput={handleAuthChange} />
         <input className="login-box center-block" placeholder="Password" onInput={handlePasswordChange} />

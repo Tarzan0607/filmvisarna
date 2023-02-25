@@ -4,6 +4,10 @@
     margin-left: auto;
 }
 
+.login-title {
+    margin-top: 5%;
+}
+
 .login-bokningar {
     text-align: center;
 }
