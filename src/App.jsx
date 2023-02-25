@@ -12,6 +12,7 @@ import MoveDetails from './components/pages/MovieDetails';
 import MovieSeatBookingSystem from './components/pages/MovieSeatBookingSystem';
 import Spelschema from './components/pages/Spelschema';
 import Admin from './components/pages/Admin';
+import Login from './components/pages/Login';
 
 
 //import Navmenu  from './components/pages/Navmenu';
@@ -31,12 +32,14 @@ export default function App() {
       { path: '*', Component: Error },
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { path: '/admin', Component: Admin},
+      { path: '/login', Component: Login},
       { menuLabel2: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       { menuLabel: 'Bokning & Biljetter', path: '/bokning', Component: MovieSeatBookingSystem },
       { menuLabel: 'Butik', path: '/butik', Component: Butik },
-      { menuLabel: 'Om Oss', path: '/omoss', Component: OmOss },
-    ]
+      { menuLabel: 'Om Oss', path: '/omoss', Component: OmOss }
+    ],
+    cookies: {}
   });
 
   useEffect(() => {

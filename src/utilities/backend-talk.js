@@ -23,6 +23,7 @@ async function postAndPut(url, data, method) {
   return await (await fetch(url, {
     method,
     body: JSON.stringify(data),
-    headers: { 'Content-Type': 'application/json' }
+    headers: { 'Content-Type': 'application/json' },
+    withCredentials: 'same-origin'
   })).json();
 }

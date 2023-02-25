@@ -4,8 +4,8 @@ import {
     get
 } from '../../utilities/backend-talk';
 import { useEffect, useState } from "react";
-
-import Pagination from '../admin/Pagination';
+import Swal from 'sweetalert2';
+import 'sweetalert2/src/sweetalert2.scss'
 
 export default function Admin() {
 
@@ -19,6 +19,9 @@ export default function Admin() {
     }
 
   useEffect(() => {
+    if (!localStorage.user) return Swal.fire({title: 'Inte inloggad', text: 'Du måste vara inloggad för att komma åt denna sidan', icon: 'error', confirmButtonText: 'Bekräfta'}).then( window.location.href = '/login');
+    if (localStorage.admin !== '1') return Swal.fire({title: 'Inga behörigheter', text: 'Du har inte behörigheten att komma åt denna sidan', icon: 'error', confirmButtonText: 'Bekräfta'}).then( window.location.href = '/');
+
     (async () => {
         const bokningar = await get('/api/admin');
         

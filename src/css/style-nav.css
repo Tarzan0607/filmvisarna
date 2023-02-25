@@ -44,6 +44,11 @@ header {
   margin-left: 0%;
 }
 
+.pushLogin {
+  position: relative;
+  left: 45%;
+}
+
 nav a {
   margin: 0 1rem;
   color: var(--topNavTextColor);
