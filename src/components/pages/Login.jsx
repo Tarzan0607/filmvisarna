@@ -1,4 +1,4 @@
-import '../../css/style-admin.css';
+import '../../css/style-login.css';
 import {
     post,
     del
@@ -43,12 +43,12 @@ export default function Admin() {
         if (localStorage.user) return window.location.href = '/';
     }, []);
 
-  return <div>
-    <h1 className="allaBokningar">Login</h1>
-    <div className="input">
-        <input className="input-box" placeholder="Username / Email" onInput={handleAuthChange} />
-        <input className="input-box" placeholder="Password" onInput={handlePasswordChange} />
-        <button className="input-box" onClick={handleLogin}>Login</button>
+  return <div className='login-bokningar'>
+    <h1>Login</h1>
+    <div className="input-login">
+        <input className="login-box center-block" placeholder="Username / Email" onInput={handleAuthChange} />
+        <input className="login-box center-block" placeholder="Password" onInput={handlePasswordChange} />
+        <button className="login-button center-block" onClick={handleLogin}>Login</button>
     </div>
   </div>
 }

@@ -1,0 +1,40 @@
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-bokningar {
+    text-align: center;
+}
+
+.input-login {
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.login-box {
+    border-radius: 10px;
+    text-align: center;
+    background-color: purple;
+    color: white;
+    margin-bottom: 1%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.login-button {
+    border-radius: 10px;
+    text-align: center;
+    padding: 0.2% 1% 0.2% 1%;
+    background-color: purple;
+    color: white;
+    margin-bottom: 1%;
+    display: block;
+    box-sizing: border-box;
+}
+
+.login-box::placeholder {
+    color: white;
+}
