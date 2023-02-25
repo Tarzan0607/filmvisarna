@@ -62,7 +62,7 @@ router.post('/token-refresh', async(req, res) => {
     const pool = await getPool().getConnection();
 
     if (!req.session.loggedIn) return res.json({message: 'failed', response: 'Not logged in!'}).status(403), await pool.release();
-    if (req.session.user !== 'PGamingHD') return res.json({message: 'failed', response: 'PGamingHD is only allowed to refresh tokens!'}).status(403), await pool.release();
+    if (!req.body.admin) return res.json({message: 'failed', response: 'Must be admin to perform this action!'}).status(403), await pool.release();
 
     const userId = req.body.userid;
 

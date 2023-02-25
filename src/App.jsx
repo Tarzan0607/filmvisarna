@@ -13,6 +13,7 @@ import MovieSeatBookingSystem from './components/pages/MovieSeatBookingSystem';
 import Spelschema from './components/pages/Spelschema';
 import Admin from './components/pages/Admin';
 import Login from './components/pages/Login';
+import Profile from './components/pages/Profile';
 
 
 //import Navmenu  from './components/pages/Navmenu';
@@ -33,6 +34,7 @@ export default function App() {
       { path: '/movie/:MoviePath', Component: MoveDetails },
       { path: '/admin', Component: Admin},
       { path: '/login', Component: Login},
+      { path: '/profile', Component: Profile},
       { menuLabel2: 'Start', path: '/', Component: Home },
       { menuLabel: 'Spelschema', path: '/spelschema', Component: Spelschema },
       { menuLabel: 'Bokning & Biljetter', path: '/bokning', Component: MovieSeatBookingSystem },

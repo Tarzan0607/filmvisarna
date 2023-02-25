@@ -42,6 +42,9 @@ function Navbar() {
 					localStorage.user && localStorage.admin === '1' ? <Link className="pushLogin" to="/admin">Admin</Link> : null
 				}
 				{
+					localStorage.user ? <Link className="pushLogin" to="/profile">Profile</Link> : null
+				}
+				{
 					localStorage.user ? <Link className="pushLogin" onClick={handleLogout}>Logout</Link> : <Link className="pushLogin" to="/login">Login</Link>
 				}
 
