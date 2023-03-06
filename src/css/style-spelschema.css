@@ -4,102 +4,142 @@
 @import 'normalize.css';
 
 
+body {
+  margin: 0;
+  padding: initial;
+  background-color: rgb(39, 5, 40);
+
+}
+
+* {
+  padding: initial;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Karma', serif;
+}
 
 .showingsTitle {
   background-color: rgb(39, 5, 40);
   font-family: 'Karma', serif;
+  font-weight: bold;
   color: white;
+  padding-left: 8%;
+  width: 92%;
 }
 
-h1 {
+.spelschema {
   text-align: 'left';
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 1%;
 }
 
-h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.auditorium {
+  font-size: 30px;
+  font-weight: 200;
+  color: rgb(55, 195, 195);
+  margin-bottom: 30px;
 }
 
-p {
+
+.p {
+  line-height: 1;
+  /* make all p tags have the same line height */
+}
+
+.auditorium p {
   font-size: 18px;
   margin: 0;
+  margin-left: 20px;
+  padding-left: 8%;
 }
 
 hr {
-  border: 1px solid rgb(50, 13, 109);
+  border: 1px solid rgb(72, 2, 83);
   margin: 20px 0;
+  margin-left: 5px;
+  padding-left: 0rem;
+
 }
+
 
 @media screen and (min-width: 577px) and (max-width: 1199px) {
   .showingsTitle {
-    background-color: #000;
+    background-color: rgb(39, 5, 40);
     font-family: 'Karma', serif;
     color: white;
+    margin-left: 0px;
+    padding-left: 8%;
+    width: 90%;
   }
 
-  h1 {
+  .spelschema {
     text-align: 'center';
     font-size: 36px;
     margin-bottom: 20px;
-    padding-left: 1%;
-    margin-left: 10%;
   }
 
-  h2 {
+  .auditorium {
     text-align: 'center';
     font-size: 30px;
-    margin-bottom: 10px;
-    padding-left: 3%;
-    margin-left: 15%;
+    font-weight: bold;
+    color: rgb(55, 195, 195);
+    margin-bottom: 20px;
+    /* Decrease the left margin */
+    padding-left: 0rem;
   }
 
-  p {
-    text-align: 'center';
-    font-size: 24px;
+  .auditorium p {
+    font-size: 18px;
     margin: 0;
-    padding-left: 1%;
-    margin-left: 10%;
+    margin-left: 10px;
+    padding-left: 8rem;
+    line-height: 1.2;
   }
 
   hr {
     border: 1px solid rgb(50, 13, 109);
     margin: 20px 0;
+    margin-left: 10px;
+    padding-left: 8%;
   }
 }
 
 @media screen and (max-width: 576px) {
   .showingsTitle {
-    background-color: #000;
+    background-color: rgb(39, 5, 40);
     font-family: 'Karma', serif;
     color: white;
+    margin-left: 2%;
+    width: 90%;
   }
 
-  h1 {
+  .spelschema {
     text-align: 'center';
     font-size: 36px;
+    font-weight: bold;
     margin-bottom: 20px;
-    padding-left: 1%;
-    margin-left: 10%;
+
   }
 
-  h2 {
+  .auditorium {
     font-size: 24px;
-    margin-bottom: 10px;
-    padding-left: 1%;
-    margin-left: 10%;
+    margin-bottom: 20px;
+    color: rgb(55, 195, 195);
   }
 
-  p {
+  .auditorium p {
     font-size: 18px;
     margin: 0;
-    padding-left: 1%;
+    padding-left: 8%;
+    margin-left: 20px;
     margin-left: 10%;
+
   }
 
   hr {
     border: 1px solid rgb(50, 13, 109);
     margin: 20px 0;
+    margin-left: 10px;
+    padding-left: 4%;
   }
 }

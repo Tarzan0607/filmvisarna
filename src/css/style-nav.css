@@ -1,9 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karma&family=Noto+Sans:wght@500&display=swap');
+
+@import 'normalize.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karma", sans-serif;
+}
+
 :root {
   --topNavMainColor: linear-gradient(90deg, #411540 20%, #8949e3 100%);
   --topNavMainColorLight: #5767aa;
   --topNavSecondaryColor: rgb(255, 255, 255);
   /*greenyellow;*/
   --topNavTextColor: #eee;
+}
+
+.logo {
+  display: block;
+  font-weight: bold;
+  padding: 5px;
+  margin: 10px;
 }
 
 header {
@@ -19,7 +39,7 @@ header {
 .header-home {
   margin-top: -12px;
   font-size: 24px;
-  margin-bottom: 0px;
+  margin-bottom: -8px;
   padding-left: 0%;
   margin-left: 0%;
 }
@@ -28,7 +48,7 @@ nav a {
   margin: 0 1rem;
   color: var(--topNavTextColor);
   text-decoration: none;
-  font-family: 'Karma';
+  font-family: 'Arima';
 }
 
 nav a:hover {
@@ -85,7 +105,11 @@ nav {
   }
 
   header .responsive_nav {
+    z-index: 1;
     transform: none;
+    background-image: var(--topNavMainColor);
+
+
   }
 
   nav .nav-close-btn {

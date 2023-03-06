@@ -27,24 +27,28 @@ router.get('/:movieid', async (req, res) => {
 router.post('/', async (req, res) => {
     const pool = await getPool().getConnection();
 
-    const bookedTickets = req.body;
+    const postData = JSON.stringify(req.body);
+    const bookedTickets = JSON.parse(postData);
 
     if (!Array.isArray(bookedTickets)) return res.json({message: 'failed', response: 'Recieved body with no valid Array!'}).status(403), await pool.release();
 
-    const seatId = req.body[0].seatid;
-    const screeningId = req.body[0].screeningid;
-    const ticketType = req.body[0].tickettype;
+    const seatId = bookedTickets[0].seatid;
+    const screeningId = bookedTickets[0].screeningid;
+    const ticketType = bookedTickets[0].tickettype;
+    const bookingEmail = bookedTickets[0].email;
+
     const currentDate = dateNow();
 
     if (!seatId) return res.json({message: 'failed', response: 'No SeatID could be found!'}).status(403), await pool.release();
     if (!screeningId) return res.json({message: 'failed', response: 'No ScreeningID could be found!'}).status(403), await pool.release();
     if (!ticketType) return res.json({message: 'failed', response: 'No TicketType could be found!'}).status(403), await pool.release();
+    if (!bookingEmail) return res.json({message: 'failed', response: 'No Email could be found!'}).status(403), await pool.release();
     if (ticketType !== 1 && ticketType !== 2 && ticketType !== 3) return res.json({message: 'failed', response: 'TicketType is not valid type!'}).status(403), await pool.release();
 
     const bookingNumber = generate();
     
     try {
-        await pool.query('INSERT INTO booking (time,booking_number,screening_id) VALUES(?, ?, ?)', [currentDate, bookingNumber, screeningId]);
+        await pool.query('INSERT INTO booking (time,booking_number,screening_id,email) VALUES(?, ?, ?, ?)', [currentDate, bookingNumber, screeningId, bookingEmail]);
     } catch {
         await pool.release();
         return res.json({message: 'failed', response: 'Database query failed to execute!'}).status(500);
